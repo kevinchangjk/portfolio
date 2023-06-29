@@ -1,3 +1,4 @@
+import Layout from "@/components/Layout";
 import "../styles/globals.css";
 import { Inter } from "next/font/google";
 
@@ -17,7 +18,9 @@ export default function Application({
 }) {
   return (
     <main className={inter.className}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </main>
   );
 }
