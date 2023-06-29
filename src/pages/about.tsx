@@ -4,10 +4,10 @@ const Main = styled.div`
   margin-top: 2rem;
 `;
 
-export default function Home() {
+export default function About() {
   return (
     <Main>
-      <p>Home</p>
+      <p>About</p>
     </Main>
   );
 }
