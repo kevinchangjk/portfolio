@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
-import "../styles/globals.css";
+import { ChakraProvider } from "@chakra-ui/react";
+import theme from "../styles/theme";
 
 export const metadata = {
   title: "Create Next App",
@@ -14,8 +15,10 @@ export default function Application({
   pageProps: {};
 }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ChakraProvider theme={theme}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ChakraProvider>
   );
 }

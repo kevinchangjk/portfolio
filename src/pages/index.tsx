@@ -1,3 +1,4 @@
+import Profile from "@/components/Profile";
 import { styled } from "styled-components";
 
 const Main = styled.div`
@@ -7,7 +8,7 @@ const Main = styled.div`
 export default function Home() {
   return (
     <Main>
-      <p>Home</p>
+      <Profile />
     </Main>
   );
 }

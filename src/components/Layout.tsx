@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import { styled } from "styled-components";
+import theme from "../styles/theme";
 
 const Main = styled.div`
-  padding: 4rem;
+  padding: 2rem 8rem 2rem 8rem;
   background-color: #191919;
 `;
 
