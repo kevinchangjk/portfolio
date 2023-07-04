@@ -1,8 +1,5 @@
 import Layout from "@/components/Layout";
 import "../styles/globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -17,10 +14,8 @@ export default function Application({
   pageProps: {};
 }) {
   return (
-    <main className={inter.className}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </main>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }

@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <Main>
       <Navbar />
-      {children}
+      <main>{children}</main>
     </Main>
   );
 }
