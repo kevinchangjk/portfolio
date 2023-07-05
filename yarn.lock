@@ -1027,6 +1027,16 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.43.0.tgz#559ca3d9ddbd6bf907ad524320a0d14b85586af0"
   integrity sha512-s2UHCoiXfxMvmfzqoN+vrQ84ahUSYde9qNO1MdxmoEhyHWsfmwOpFlwYV+ePJEVc7gFnATGUi376WowX1N7tFg==
 
+"@fontsource/dm-sans@^5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/dm-sans/-/dm-sans-5.0.4.tgz#e0ea8492647ed7d76fa20ff36410b3585912a0f2"
+  integrity sha512-5ZmOv3P7TgldnkqYbBjny/H1fGdvl6LRqGCc7WgisrJeCoe4kikorUsbncrbZVQ8kwcp8+UJi3pBA2AZU25ApQ==
+
+"@fontsource/poppins@^5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-5.0.4.tgz#15d81b0d63081b6a9be0a04adbb8c1e802a68e24"
+  integrity sha512-9D7qztWP7prwrBMCf7pTbKDAfRG6KT1P9kEGimMUfRfznvfBIZ9H+y9Sr2vrE1O1Ybn4F8rrFZaLjtTxJZcTng==
+
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.10.tgz#5a3ffe32cc9306365fb3fd572596cd602d5e12d2"

@@ -16,8 +16,8 @@ const theme = {
     pink: "#E70FAA",
   },
   fonts: {
-    body: "system-ui, sans-serif",
-    heading: "Georgia, serif",
+    body: `'DM Sans', sans-serif`,
+    heading: "Poppins, serif",
     mono: "Menlo, monospace",
   },
   components: {
