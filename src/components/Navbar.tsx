@@ -1,6 +1,6 @@
-import { HStack, Link, defineStyle, defineStyleConfig } from "@chakra-ui/react";
+import { HStack, Link, defineStyle, defineStyleConfig, extendTheme } from "@chakra-ui/react";
 import Logo from "./Logo";
-import { styled } from "styled-components";
+import styled from "@emotion/styled";
 import NextLink from "next/link";
 
 const Main = styled.header`
@@ -9,34 +9,41 @@ const Main = styled.header`
   justify-content: space-between;
 `;
 
-const navLink = defineStyle({
-  textDecoration: "none",
-  color: "#A7A7A7",
-  fontWeight: "normal",
-});
-
-export const linkTheme = defineStyleConfig({
-  variants: { navLink },
+export const LinkStyles = defineStyleConfig({
+  baseStyle: {
+    textDecoration: "none",
+    fontWeight: "500",
+    fontStyle: "normal"
+  },
+  sizes: {},
+  variants: {
+    nav: {
+      fontSize: "20px",
+      color: "gray.3",
+    }
+  },
+  defaultProps: {
+  }
 });
 
 export default function Navbar() {
   return (
     <Main>
       <Logo />
-      <HStack>
-        <Link as={NextLink} variant="navLink" href="/">
+      <HStack spacing="3rem">
+        <Link as={NextLink} variant="nav" href="/">
           Home
         </Link>
-        <Link as={NextLink} variant="navLink" href="/about">
+        <Link as={NextLink} variant="nav" href="/about">
           About
         </Link>
-        <Link as={NextLink} variant="navLink" href="/projects">
+        <Link as={NextLink} variant="nav" href="/projects">
           Projects
         </Link>
-        <Link as={NextLink} variant="navLink" href="/interests">
+        <Link as={NextLink} variant="nav" href="/interests">
           Interests
         </Link>
-        <Link as={NextLink} variant="navLink" href="/contact-me">
+        <Link as={NextLink} variant="nav" href="/contact-me">
           Contact
         </Link>
       </HStack>

@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
-import { styled } from "styled-components";
-import theme from "../styles/theme";
+import styled from "@emotion/styled";
 
 const Main = styled.div`
   padding: 2rem 8rem 2rem 8rem;

@@ -1,8 +1,8 @@
 import Profile from "@/components/Profile";
-import { styled } from "styled-components";
+import styled from "@emotion/styled";
 
 const Main = styled.div`
-  margin-top: 2rem;
+  margin-top: 16rem;
 `;
 
 export default function Home() {
