@@ -1,4 +1,4 @@
-import { HStack, VStack } from "@chakra-ui/react";
+import { HStack, Image, VStack } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
 const name = "Kevin Chang";
@@ -27,11 +27,12 @@ function displayAcrostic(acrostic: string[]) {
 
 export default function Profile() {
   return (
-    <HStack>
+    <HStack justify="space-between" align="center">
       <VStack align="start" spacing="0">
         <Name>{name}</Name>
         {displayAcrostic(acrostic)}
       </VStack>
+      <Image src="/images/profile.jpg" padding="0.5rem" boxSize="22rem" objectFit="cover" borderRadius="full" bgGradient="linear-gradient(to-t, #13B0F5, #E70FAA)"/>
     </HStack>
   );
 }
