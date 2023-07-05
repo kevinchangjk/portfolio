@@ -1,4 +1,5 @@
 import Profile from "@/components/Profile";
+import TechStackSummary from "@/components/TechStackSummary";
 import styled from "@emotion/styled";
 
 const Main = styled.div`
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <Main>
       <Profile />
+      <TechStackSummary />
     </Main>
   );
 }

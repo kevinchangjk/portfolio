@@ -9,6 +9,7 @@ function displayAcrostic(acrostic: string[]) {
     const newLine = <Heading
                       key={`acrostic${line}`}
                       fontSize="48px"
+                      color="gray.4"
                     >
                       {line}
                     </Heading>;
@@ -20,7 +21,7 @@ function displayAcrostic(acrostic: string[]) {
 
 export default function Profile() {
   return (
-    <HStack justify="space-between" align="center">
+    <HStack justify="space-between" align="center" marginBottom="20rem" >
       <VStack align="start" spacing="0">
         <Heading
           fontSize="64px"
