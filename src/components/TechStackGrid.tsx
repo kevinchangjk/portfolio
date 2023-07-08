@@ -1,19 +1,37 @@
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
+import TechStackCell from "./TechStackCell";
+import data from "../data/tech-stack.json" assert { type: "json" };
 
-/* List of Tech that I actually use
- * Javascript
- * React.js
- * Node.js
- * Git
- * Vim
- * Python
- * Java
- * Next.js
- * PostgreSQL
- * Redis
- * MongoDB
- * C++
- */
+interface Tech {
+  name: string;
+  imageUrl: string;
+  sourceUrl: string;
+};
+
+function extractUrls(allUrls: Tech[]) {
+  const imageUrls = [];
+  const sourceUrls = [];
+  for (const tech of allUrls) {
+    imageUrls.push(tech.imageUrl);
+    sourceUrls.push(tech.sourceUrl);
+  }
+  return { imageUrls, sourceUrls };
+}
+
+function buildCell(imageUrl: string, sourceUrl: string) {
+  return (<TechStackCell imageUrl={imageUrl} sourceUrl={sourceUrl} />);
+}
+
+function buildGrid(allUrls: Tech[]) {
+  const { imageUrls, sourceUrls } = extractUrls(allUrls);
+  const result = [];
+  for (let i = 0; i < imageUrls.length; i++) {
+    const cell = buildCell(imageUrls[i], sourceUrls[i]);
+    result.push(cell);
+  }
+  
+  return result;
+}
 
 export default function TechStackGrid() {
   return (
@@ -24,16 +42,7 @@ export default function TechStackGrid() {
       spacingY="5rem"
       marginBottom="13rem"
     >
-      <Box bg="tomato" height="8rem"></Box>
-      <Box bg="tomato" height="8rem"></Box>
-      <Box bg="tomato" height="8rem"></Box>
-      <Box bg="tomato" height="8rem"></Box>
-      <Box bg="tomato" height="8rem"></Box>
-      <Box bg="tomato" height="8rem"></Box>
-      <Box bg="tomato" height="8rem"></Box>
-      <Box bg="tomato" height="8rem"></Box>
-      <Box bg="tomato" height="8rem"></Box>
-      <Box bg="tomato" height="8rem"></Box>
+    {buildGrid(data.techStack)}
     </SimpleGrid>
   );
 }

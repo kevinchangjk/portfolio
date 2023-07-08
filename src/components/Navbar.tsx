@@ -44,13 +44,13 @@ export default function Navbar() {
         </Link>
         <HStack spacing="1rem">
           <Link href={githubUrl} isExternal={true}>
-            <Image src="/images/github-dark.svg" />
+            <Image src="/images/social-media/github-dark.svg" />
           </Link>
           <Link href={twitterUrl} isExternal={true}>
-            <Image src="/images/twitter-dark.svg" />
+            <Image src="/images/social-media/twitter-dark.svg" />
           </Link>
           <Link href={linkedinUrl} isExternal={true}>
-            <Image src="/images/linkedin-dark.svg" />
+            <Image src="/images/social-media/linkedin-dark.svg" />
           </Link>
         </HStack>
       </HStack>
