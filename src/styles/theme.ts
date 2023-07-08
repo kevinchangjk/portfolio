@@ -1,5 +1,24 @@
-import { extendTheme } from "@chakra-ui/react";
+import { defineStyleConfig, extendTheme } from "@chakra-ui/react";
 import { LinkStyles as Link } from "../components/Navbar";
+
+const Heading = defineStyleConfig({
+  baseStyle: {
+    fontWeight: "bold"
+  },
+  sizes: {},
+  variants: {
+    primary: {
+      fontSize: "48px",
+      color: "gray.4",
+    }, 
+    secondary: {
+      fontSize: "32px",
+      fontWeight: "normal",
+      color: "gray.3"
+    }
+  },
+  defaultProps: {}
+});
 
 const extensions = {
   colors: {
@@ -22,7 +41,8 @@ const extensions = {
     mono: "Menlo, monospace",
   },
   components: {
-    Link
+    Link,
+    Heading,
   }
 };
 

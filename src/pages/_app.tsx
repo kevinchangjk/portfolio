@@ -1,8 +1,8 @@
 import Layout from "@/components/Layout";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../styles/theme";
-import "@fontsource/dm-sans/400.css";
-import "@fontsource/poppins/700.css";
+import "@fontsource/dm-sans";
+import "@fontsource/poppins";
 
 export const metadata = {
   title: "Create Next App",

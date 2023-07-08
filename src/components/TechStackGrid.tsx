@@ -9,24 +9,26 @@ interface Tech {
 };
 
 function extractUrls(allUrls: Tech[]) {
+  const names = [];
   const imageUrls = [];
   const sourceUrls = [];
   for (const tech of allUrls) {
+    names.push(tech.name);
     imageUrls.push(tech.imageUrl);
     sourceUrls.push(tech.sourceUrl);
   }
-  return { imageUrls, sourceUrls };
+  return { names, imageUrls, sourceUrls };
 }
 
-function buildCell(imageUrl: string, sourceUrl: string) {
-  return (<TechStackCell imageUrl={imageUrl} sourceUrl={sourceUrl} />);
+function buildCell(name: string, imageUrl: string, sourceUrl: string) {
+  return (<TechStackCell techName={name} imageUrl={imageUrl} sourceUrl={sourceUrl} />);
 }
 
 function buildGrid(allUrls: Tech[]) {
-  const { imageUrls, sourceUrls } = extractUrls(allUrls);
+  const { names, imageUrls, sourceUrls } = extractUrls(allUrls);
   const result = [];
   for (let i = 0; i < imageUrls.length; i++) {
-    const cell = buildCell(imageUrls[i], sourceUrls[i]);
+    const cell = buildCell(names[i], imageUrls[i], sourceUrls[i]);
     result.push(cell);
   }
   
@@ -40,7 +42,7 @@ export default function TechStackGrid() {
       width="full"
       spacingX="7rem"
       spacingY="5rem"
-      marginBottom="13rem"
+      justifyItems="center"
     >
     {buildGrid(data.techStack)}
     </SimpleGrid>

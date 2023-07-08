@@ -14,10 +14,14 @@ export const LinkStyles = defineStyleConfig({
   },
   sizes: {},
   variants: {
-    nav: {
+    header: {
       fontSize: "20px",
       color: "gray.3",
     },
+    footer: {
+      fontSize: "18px",
+      color: "gray.3",
+    }
   },
   defaultProps: {},
 });
@@ -27,19 +31,19 @@ export default function Navbar() {
     <HStack justifyContent="space-between">
       <Logo />
       <HStack spacing="3rem">
-        <Link as={NextLink} variant="nav" href="/">
+        <Link as={NextLink} variant="header" href="/">
           Home
         </Link>
-        <Link as={NextLink} variant="nav" href="/about">
+        <Link as={NextLink} variant="header" href="/about">
           About
         </Link>
-        <Link as={NextLink} variant="nav" href="/projects">
+        <Link as={NextLink} variant="header" href="/projects">
           Projects
         </Link>
-        <Link as={NextLink} variant="nav" href="/interests">
+        <Link as={NextLink} variant="header" href="/interests">
           Interests
         </Link>
-        <Link as={NextLink} variant="nav" href="/contact-me">
+        <Link as={NextLink} variant="header" href="/contact-me">
           Contact
         </Link>
         <HStack spacing="1rem">
