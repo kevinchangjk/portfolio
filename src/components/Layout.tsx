@@ -1,16 +1,11 @@
 import Navbar from "@/components/Navbar";
-import styled from "@emotion/styled";
-
-const Main = styled.div`
-  padding: 2rem 8rem 2rem 8rem;
-  background-color: #191919;
-`;
+import { Box } from "@chakra-ui/react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <Main>
+    <Box padding="2rem 8rem 2rem 8rem" backgroundColor="gray.0" alignItems="center">
       <Navbar />
-      <main>{children}</main>
-    </Main>
+      {children}
+    </Box>
   );
 }

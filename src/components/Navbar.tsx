@@ -1,38 +1,30 @@
 import { HStack, Image, Link, defineStyleConfig } from "@chakra-ui/react";
 import Logo from "./Logo";
-import styled from "@emotion/styled";
 import NextLink from "next/link";
 
 const githubUrl = "https://github.com/kevinchangjk";
 const twitterUrl = "https://twitter.com/kevinchangjk";
 const linkedinUrl = "https://linkedin.com/in/kevinchangjk";
 
-const Main = styled.header`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
 export const LinkStyles = defineStyleConfig({
   baseStyle: {
     textDecoration: "none",
     fontWeight: "500",
-    fontStyle: "normal"
+    fontStyle: "normal",
   },
   sizes: {},
   variants: {
     nav: {
       fontSize: "20px",
       color: "gray.3",
-    }
+    },
   },
-  defaultProps: {
-  }
+  defaultProps: {},
 });
 
 export default function Navbar() {
   return (
-    <Main>
+    <HStack justifyContent="space-between">
       <Logo />
       <HStack spacing="3rem">
         <Link as={NextLink} variant="nav" href="/">
@@ -51,17 +43,17 @@ export default function Navbar() {
           Contact
         </Link>
         <HStack spacing="1rem">
-          <Link href={githubUrl} target="_blank">
+          <Link href={githubUrl} isExternal={true}>
             <Image src="/images/github-dark.svg" />
           </Link>
-          <Link href={twitterUrl} target="_blank">
+          <Link href={twitterUrl} isExternal={true}>
             <Image src="/images/twitter-dark.svg" />
           </Link>
-          <Link href={linkedinUrl} target="_blank">
+          <Link href={linkedinUrl} isExternal={true}>
             <Image src="/images/linkedin-dark.svg" />
           </Link>
         </HStack>
       </HStack>
-    </Main>
+    </HStack>
   );
 }

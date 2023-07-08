@@ -21,7 +21,7 @@ function displayAcrostic(acrostic: string[]) {
 
 export default function Profile() {
   return (
-    <HStack justify="space-between" align="center" marginBottom="20rem" >
+    <HStack width="5xl" justify="space-between" align="center" marginBottom="20rem" >
       <VStack align="start" spacing="0">
         <Heading
           fontSize="64px"

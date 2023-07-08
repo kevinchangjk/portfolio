@@ -3,7 +3,7 @@ import TechStackGrid from "./TechStackGrid";
 
 export default function TechStackSummary() {
   return (
-    <VStack>
+    <VStack width="6xl">
       <VStack spacing="3rem" marginBottom="9rem">
         <Heading fontSize="48px" color="gray.4">
           My Tech Stack

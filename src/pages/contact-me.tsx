@@ -1,13 +1,11 @@
-import styled from "@emotion/styled";
-
-const Main = styled.div`
-  margin-top: 2rem;
-`;
+import { VStack } from "@chakra-ui/react";
 
 export default function ContactMe() {
   return (
-    <Main>
-      <p>Contact Me</p>
-    </Main>
+    <main>
+      <VStack marginTop="8rem">
+        <p>Contact Me</p>
+      </VStack>
+    </main>
   );
 }

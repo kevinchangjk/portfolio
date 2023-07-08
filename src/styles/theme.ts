@@ -1,12 +1,13 @@
 import { extendTheme } from "@chakra-ui/react";
 import { LinkStyles as Link } from "../components/Navbar";
 
-const theme = {
+const extensions = {
   colors: {
     transparent: "transparent",
     black: "#000",
     white: "#FFF",
     gray: {
+      0: "#191919",
       1: "#363636",
       2: "#42446E",
       3: "#A7A7A7",
@@ -25,4 +26,4 @@ const theme = {
   }
 };
 
-export default extendTheme(theme);
+export default extendTheme(extensions);
