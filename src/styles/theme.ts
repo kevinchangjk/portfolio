@@ -3,21 +3,56 @@ import { LinkStyles as Link } from "../components/Navbar";
 
 const Heading = defineStyleConfig({
   baseStyle: {
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   sizes: {},
   variants: {
     primary: {
       fontSize: "48px",
       color: "gray.4",
-    }, 
+    },
     secondary: {
       fontSize: "32px",
       fontWeight: "normal",
-      color: "gray.3"
-    }
+      color: "gray.3",
+    },
+    card: {
+      fontSize: "28px",
+      fontWeight: "semibold",
+      color: "gray.4",
+    },
   },
-  defaultProps: {}
+  defaultProps: {},
+});
+
+const Text = defineStyleConfig({
+  baseStyle: {
+    fontWeight: "normal",
+  },
+  sizes: {},
+  variants: {
+    cardBody: {
+      fontSize: "18px",
+      fontWeight: "light",
+      color: "gray.4",
+    },
+    cardFooter: {
+      fontSize: "16px",
+      fontWeight: "normal",
+      color: "white",
+    },
+    techStack: {
+      fontSize: "16px",
+      fontWeight: "normal",
+      color: "gray.4",
+    },
+    tech: {
+      fontSize: "14px",
+      fontWeight: "light",
+      color: "gray.4",
+    },
+  },
+  defaultProps: {},
 });
 
 const extensions = {
@@ -30,7 +65,7 @@ const extensions = {
       1: "#363636",
       2: "#42446E",
       3: "#A7A7A7",
-      4: "#CCCCCC"
+      4: "#CCCCCC",
     },
     blue: "#13B0F5",
     pink: "#E70FAA",
@@ -43,7 +78,8 @@ const extensions = {
   components: {
     Link,
     Heading,
-  }
+    Text,
+  },
 };
 
 export default extendTheme(extensions);

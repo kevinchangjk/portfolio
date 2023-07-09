@@ -1,0 +1,11 @@
+{
+  "projects": [
+    {
+      "title": "CraiyoNFT",
+      "description": "AI-based generative NFT platform.",
+      "imageUrl": "/images/profile.jpg",
+      "sourceUrl": "https://github.com/VMP-SG/CraiyoNFT",
+      "previewUrl": "https://craiyonft.vmpsg.xyz/"
+    }
+  ]
+}
