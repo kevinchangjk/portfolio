@@ -15,7 +15,8 @@ import {
 } from "@chakra-ui/react";
 
 export default function ProjectCard({ projectData }: { projectData: Project }) {
-  const { title, description, imageUrl, sourceUrl, previewUrl } = projectData;
+  const { title, description, imageUrl, techStack, sourceUrl, previewUrl } =
+    projectData;
   return (
     <Card width="20rem" height="30rem" borderRadius="0.5rem">
       <Image
@@ -48,7 +49,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
         <VStack width="full" margin="0rem" padding="0rem">
           <HStack width="full" alignItems="end">
             <Text variant="techStack">Tech Stack: </Text>
-            <Text variant="tech">HTML, JavaScript, SASS</Text>
+            <Text variant="tech">{techStack}</Text>
           </HStack>
           <HStack width="full">
             <Box width="50%">

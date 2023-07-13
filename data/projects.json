@@ -2,8 +2,9 @@
   "projects": [
     {
       "title": "CraiyoNFT",
-      "description": "AI-based generative NFT platform.",
+      "description": "AI-based generative NFT platform. Lorem ipsum don't know what something here I guess.",
       "imageUrl": "/images/profile.jpg",
+      "techStack": "React.js, Flask, SmartPy",
       "sourceUrl": "https://github.com/VMP-SG/CraiyoNFT",
       "previewUrl": "https://craiyonft.vmpsg.xyz/"
     }

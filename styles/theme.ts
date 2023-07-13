@@ -35,6 +35,7 @@ const Text = defineStyleConfig({
       fontSize: "18px",
       fontWeight: "light",
       color: "gray.4",
+      textAlign: "justify",
     },
     cardFooter: {
       fontSize: "16px",
@@ -47,7 +48,7 @@ const Text = defineStyleConfig({
       color: "gray.4",
     },
     tech: {
-      fontSize: "14px",
+      fontSize: "16px",
       fontWeight: "light",
       color: "gray.4",
     },
