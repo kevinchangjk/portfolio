@@ -1,18 +1,16 @@
 import { HStack, Heading, Image, VStack } from "@chakra-ui/react";
+import profile from "@/data/profile.json";
 
-const name = "Kevin Chang";
-const acrostic = ["Challenger", "Journeyer", "Kickstarter"];
+const { name, tagline } = profile;
 
 function displayAcrostic(acrostic: string[]) {
   const result = [];
   for (const line of acrostic) {
-    const newLine = <Heading
-                      key={`acrostic${line}`}
-                      fontSize="48px"
-                      color="gray.4"
-                    >
-                      {line}
-                    </Heading>;
+    const newLine = (
+      <Heading key={`acrostic${line}`} fontSize="48px" color="gray.4">
+        {line}
+      </Heading>
+    );
     result.push(newLine);
   }
 
@@ -21,7 +19,7 @@ function displayAcrostic(acrostic: string[]) {
 
 export default function Profile() {
   return (
-    <HStack width="5xl" justify="space-between" marginBottom="20rem" >
+    <HStack width="5xl" justify="space-between" marginBottom="20rem">
       <VStack align="start" spacing="0">
         <Heading
           fontSize="64px"
@@ -31,7 +29,7 @@ export default function Profile() {
         >
           {name}
         </Heading>
-        {displayAcrostic(acrostic)}
+        {displayAcrostic(tagline)}
       </VStack>
       <Image
         src="/images/profile.jpg"

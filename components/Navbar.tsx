@@ -1,10 +1,9 @@
 import { HStack, Image, Link, defineStyleConfig } from "@chakra-ui/react";
 import Logo from "./Logo";
 import NextLink from "next/link";
+import profile from "@/data/profile.json";
 
-const githubUrl = "https://github.com/kevinchangjk";
-const twitterUrl = "https://twitter.com/kevinchangjk";
-const linkedinUrl = "https://linkedin.com/in/kevinchangjk";
+const { github, twitter, linkedIn } = profile.socialMedia;
 
 export const LinkStyles = defineStyleConfig({
   baseStyle: {
@@ -21,7 +20,7 @@ export const LinkStyles = defineStyleConfig({
     footer: {
       fontSize: "18px",
       color: "gray.3",
-    }
+    },
   },
   defaultProps: {},
 });
@@ -47,13 +46,13 @@ export default function Navbar() {
           Contact
         </Link>
         <HStack spacing="1rem">
-          <Link href={githubUrl} isExternal={true}>
+          <Link href={github} isExternal={true}>
             <Image src="/images/social-media/github-dark.svg" />
           </Link>
-          <Link href={twitterUrl} isExternal={true}>
+          <Link href={twitter} isExternal={true}>
             <Image src="/images/social-media/twitter-dark.svg" />
           </Link>
-          <Link href={linkedinUrl} isExternal={true}>
+          <Link href={linkedIn} isExternal={true}>
             <Image src="/images/social-media/linkedin-dark.svg" />
           </Link>
         </HStack>
