@@ -56,6 +56,24 @@ const Text = defineStyleConfig({
   defaultProps: {},
 });
 
+const Divider = defineStyleConfig({
+  variants: {
+    primary: {
+      borderColor: "#a7a7a7",
+      borderStyle: "solid",
+      borderWidth: "thin",
+    },
+    secondary: {
+      borderColor: "#CCCCCC",
+      borderStyle: "solid",
+      borderWidth: "thin",
+    },
+  },
+  defaultProps: {
+    variant: "primary",
+  },
+});
+
 const extensions = {
   colors: {
     transparent: "transparent",
@@ -80,6 +98,7 @@ const extensions = {
     Link,
     Heading,
     Text,
+    Divider,
   },
 };
 

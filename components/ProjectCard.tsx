@@ -6,6 +6,7 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
+  Divider,
   HStack,
   Heading,
   Image,
@@ -51,6 +52,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
             <Text variant="techStack">Tech Stack: </Text>
             <Text variant="tech">{techStack}</Text>
           </HStack>
+          <Divider variant="secondary"/>
           <HStack width="full">
             <Box width="50%">
               <Link href={previewUrl}>
