@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <VStack marginTop="12rem" spacing="3rem">
+    <VStack marginTop="12rem" spacing="2rem">
       <Divider width="6xl" bg="gray.2" />
       <HStack width="6xl" justifyContent="space-between">
         <HStack spacing="3rem" alignSelf="center" justifyContent="start">
@@ -25,7 +25,7 @@ export default function Footer() {
           </Link>
         </HStack>
         <HStack>
-          <Text color="gray.3" fontSize="lg">
+          <Text variant="subtle" fontSize="lg">
             Developed by
           </Text>
           <Logo />

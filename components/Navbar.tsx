@@ -1,29 +1,9 @@
-import { HStack, Image, Link, defineStyleConfig } from "@chakra-ui/react";
+import { HStack, Image, Link } from "@chakra-ui/react";
 import Logo from "./Logo";
 import NextLink from "next/link";
 import profile from "@/data/profile.json";
 
 const { github, twitter, linkedIn } = profile.socialMedia;
-
-export const LinkStyles = defineStyleConfig({
-  baseStyle: {
-    textDecoration: "none",
-    fontWeight: "500",
-    fontStyle: "normal",
-  },
-  sizes: {},
-  variants: {
-    header: {
-      fontSize: "20px",
-      color: "gray.3",
-    },
-    footer: {
-      fontSize: "18px",
-      color: "gray.3",
-    },
-  },
-  defaultProps: {},
-});
 
 export default function Navbar() {
   return (

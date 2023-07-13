@@ -7,7 +7,7 @@ function displayAcrostic(acrostic: string[]) {
   const result = [];
   for (const line of acrostic) {
     const newLine = (
-      <Heading key={`acrostic${line}`} fontSize="48px" color="gray.4">
+      <Heading key={`acrostic${line}`} variant="primary">
         {line}
       </Heading>
     );
