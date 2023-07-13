@@ -2,11 +2,45 @@
   "projects": [
     {
       "title": "CraiyoNFT",
-      "description": "AI-based generative NFT platform. Lorem ipsum don't know what something here I guess.",
-      "imageUrl": "/images/profile.jpg",
-      "techStack": "React.js, Flask, SmartPy",
-      "sourceUrl": "https://github.com/VMP-SG/CraiyoNFT",
-      "previewUrl": "https://craiyonft.vmpsg.xyz/"
+      "description": "Generative NFT platform, using AI to design and create a 3D art gallery for viewing.",
+      "imageUrl": "/images/projects/craiyonft.png",
+      "techStack": "Express.js, IPFS, SmartPy",
+      "sourceUrl": "https://github.com/VMP-SG/CraiyoNFT"
+    },
+    {
+      "title": "Chirple",
+      "description": "Twitter-scraping application that provides trend and market analytics for provided keywords.",
+      "imageUrl": "/images/projects/chirple.png",
+      "techStack": "React.js, Node.js",
+      "sourceUrl": "https://github.com/Onlyfriendz/chirple",
+      "previewUrl": "https://chirple.netlify.app/"
+    },
+    {
+      "title": "Coydir",
+      "description": "HR desktop application with a CLI flavour, meant for blazingly fast operations.",
+      "imageUrl": "/images/projects/coydir.png",
+      "techStack": "Java, JavaFX",
+      "sourceUrl": "https://github.com/AY2223S1-CS2103T-T15-1/tp"
+    },
+    {
+      "title": "BubbleTeaSort",
+      "description": "Social media app on mobile, specifically designed just for bubble tea!",
+      "imageUrl": "/images/projects/bubbleteasort.jpg",
+      "techStack": "React Native, Firebase",
+      "sourceUrl": "https://github.com/VMP-SG/BubbleTeaSort"
+    },
+    {
+      "title": "NiftyZone",
+      "description": "NFT marketplace for curated art, built on Binance Chain.",
+      "imageUrl": "/images/projects/niftyzone.png",
+      "techStack": "Next.js, Solidity, MongoDB",
+      "previewUrl": "https://www.niftyzone.com/"
+    },
+    {
+      "title": "NFT @ Artzone",
+      "description": "Application for creating and claiming NFTs of curated AI art, from Artzone.",
+      "imageUrl": "/images/projects/artzone.png",
+      "techStack": "Next.js, Solidity, MongoDB"
     }
   ]
 }

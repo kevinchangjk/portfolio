@@ -23,7 +23,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
       <Image
         src={imageUrl}
         width="full"
-        height="14rem"
+        height="13rem"
         fit="cover"
         borderTopRadius="0.5rem"
         marginBottom="1rem"
@@ -46,7 +46,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
       >
         <Text variant="paragraph" fontSize="lg">{description}</Text>
       </CardBody>
-      <CardFooter margin="0rem" paddingX="1rem">
+      <CardFooter margin="0rem" padding="1rem">
         <VStack width="full" margin="0rem" padding="0rem">
           <HStack width="full" alignItems="end">
             <Text variant="detail">Tech Stack: </Text>

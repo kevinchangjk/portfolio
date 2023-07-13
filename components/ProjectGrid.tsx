@@ -4,7 +4,7 @@ import data from "../data/projects.json" assert { type: "json" };
 import ProjectCard from "./ProjectCard";
 
 function buildCard(projectData: Project) {
-  return <ProjectCard projectData={projectData} />;
+  return <ProjectCard projectData={projectData} key={projectData.title}/>;
 }
 
 function buildGrid(allProjects: Project[]) {

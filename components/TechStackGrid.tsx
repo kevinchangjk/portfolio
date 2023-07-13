@@ -4,7 +4,7 @@ import { Tech } from "@/utils/types";
 import data from "../data/tech-stack.json" assert { type: "json" };
 
 function buildCell(techData: Tech) {
-  return <TechStackCell techData={techData} />;
+  return <TechStackCell techData={techData} key={techData.name}/>;
 }
 
 function buildGrid(allUrls: Tech[]) {
