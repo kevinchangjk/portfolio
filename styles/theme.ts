@@ -60,7 +60,7 @@ const Text = defineStyleConfig({
     paragraph: {
       color: "gray.4",
       fontWeight: "normal",
-      textAlign: "paragraph",
+      textAlign: "justify",
     },
     descriptor: {
       color: "gray.4",

@@ -1,3 +1,4 @@
+import ExperienceCard from "@/components/ExperienceCard";
 import TechStackGrid from "@/components/TechStackGrid";
 import { Heading, Text, VStack } from "@chakra-ui/react";
 
@@ -15,7 +16,7 @@ export default function About() {
           </Text>
           <Heading variant="subPrimary">Work Experience</Heading>
           <Text variant="paragraph" fontSize="lg">
-            {}
+            <ExperienceCard />
           </Text>
           <Heading variant="subPrimary">Education</Heading>
           <Text variant="paragraph" fontSize="lg">
