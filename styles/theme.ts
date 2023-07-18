@@ -5,7 +5,7 @@ export const Link = defineStyleConfig({
     textDecoration: "none",
     fontWeight: "500",
     fontStyle: "normal",
-    letterSpacing: "wider"
+    letterSpacing: "wider",
   },
   sizes: {},
   variants: {
@@ -21,7 +21,6 @@ export const Link = defineStyleConfig({
   defaultProps: {},
 });
 
-
 const Heading = defineStyleConfig({
   baseStyle: {
     fontWeight: "bold",
@@ -30,19 +29,24 @@ const Heading = defineStyleConfig({
     primary: {
       fontSize: "48px",
       color: "gray.4",
-      letterSpacing: "wider"
+      letterSpacing: "wider",
     },
     secondary: {
       fontSize: "32px",
       fontWeight: "normal",
       color: "gray.3",
-      letterSpacing: "wide"
+      letterSpacing: "wide",
     },
     card: {
       fontSize: "28px",
       fontWeight: "semibold",
       color: "gray.4",
-      letterSpacing: "wide"
+      letterSpacing: "wide",
+    },
+    subPrimary: {
+      fontSize: "42px",
+      color: "gray.4",
+      letterSpacing: "wider",
     },
   },
 });
@@ -56,7 +60,7 @@ const Text = defineStyleConfig({
     paragraph: {
       color: "gray.4",
       fontWeight: "normal",
-      textAlign: "paragraph"
+      textAlign: "paragraph",
     },
     descriptor: {
       color: "gray.4",
@@ -68,8 +72,8 @@ const Text = defineStyleConfig({
     },
     subtle: {
       color: "gray.3",
-      fontWeight: "light"
-    }
+      fontWeight: "light",
+    },
   },
   defaultProps: {
     variant: "base",
