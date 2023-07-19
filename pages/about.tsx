@@ -21,7 +21,7 @@ export default function About() {
     <main>
       <VStack marginTop="8rem" spacing="6rem" alignItems="left">
         <VStack spacing="2rem" width="3xl" alignItems="left">
-          <Heading paddingY="1rem" variant="subPrimary">
+          <Heading paddingBottom="1rem" variant="subPrimary">
             About Me
           </Heading>
           <Text variant="paragraph" fontSize="lg">
