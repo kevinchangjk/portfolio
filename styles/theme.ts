@@ -7,7 +7,6 @@ export const Link = defineStyleConfig({
     fontStyle: "normal",
     letterSpacing: "wider",
   },
-  sizes: {},
   variants: {
     header: {
       fontSize: "20px",
@@ -18,7 +17,6 @@ export const Link = defineStyleConfig({
       color: "gray.3",
     },
   },
-  defaultProps: {},
 });
 
 const Heading = defineStyleConfig({
@@ -65,6 +63,7 @@ const Text = defineStyleConfig({
     descriptor: {
       color: "gray.4",
       fontWeight: "medium",
+      letterSpacing: "wide",
     },
     detail: {
       color: "gray.4",
@@ -73,6 +72,11 @@ const Text = defineStyleConfig({
     subtle: {
       color: "gray.3",
       fontWeight: "light",
+    },
+    tag: {
+      fontSize: "12px",
+      textAlign: "center",
+      fontWeight: "medium",
     },
   },
   defaultProps: {

@@ -1,0 +1,42 @@
+{
+  "work": [
+    {
+      "title": "Full Stack Developer Intern",
+      "type": "Internship",
+      "location": "Niftyzone",
+      "period": "May – Jul 2023"
+    },
+    {
+      "title": "Student Developer",
+      "type": "Part Time",
+      "location": "Tezos APAC",
+      "period": "Aug 2022 – Present"
+    },
+    {
+      "title": "Backend Engineer Intern",
+      "type": "Internship",
+      "location": "Switcheo",
+      "period": "May – Jul 2022"
+    },
+    {
+      "title": "Research Assistant",
+      "type": "Internship",
+      "location": "Nanyang Technological University",
+      "period": "Jan – Mar 2019"
+    }
+  ],
+  "education": [
+    {
+      "title": "Bachelor of Computing in Computer Science",
+      "type": "Bachelor's Degree",
+      "location": "National University of Singapore",
+      "period": "Aug 2021 – May 2025"
+    },
+    {
+      "title": "GCE 'A' Levels",
+      "type": "Tertiary",
+      "location": "Hwa Chong Institution",
+      "period": "Jan 2017 – Oct 2018"
+    }
+  ]
+}

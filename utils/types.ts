@@ -12,3 +12,10 @@ export interface Project {
   sourceUrl: string;
   previewUrl: string;
 }
+
+export interface Experience {
+  title: string;
+  type: string;
+  location: string;
+  period: string;
+}
