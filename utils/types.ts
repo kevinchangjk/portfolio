@@ -9,8 +9,8 @@ export interface Project {
   description: string;
   techStack: string;
   imageUrl: string;
-  sourceUrl: string;
-  previewUrl: string;
+  sourceUrl?: string;
+  previewUrl?: string;
 }
 
 export interface Experience {
