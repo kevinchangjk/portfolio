@@ -1,6 +1,5 @@
+import Introduction from "@/components/Introduction";
 import Profile from "@/components/Profile";
-import ProjectSummary from "@/components/ProjectSummary";
-import TechStackSummary from "@/components/TechStackSummary";
 import { VStack } from "@chakra-ui/react";
 
 export default function Home() {
@@ -8,8 +7,7 @@ export default function Home() {
     <main>
       <VStack marginTop="16rem">
         <Profile />
-        <TechStackSummary />
-        <ProjectSummary />
+        <Introduction />
       </VStack>
     </main>
   );

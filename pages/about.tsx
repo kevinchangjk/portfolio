@@ -1,8 +1,8 @@
 import ExperienceCard from "@/components/ExperienceCard";
-import TechStackGrid from "@/components/TechStackGrid";
 import { Heading, Text, VStack } from "@chakra-ui/react";
 import experiences from "../data/experiences.json";
 import { Experience } from "@/utils/types";
+import TechStackSummary from "@/components/TechStackSummary";
 
 export default function About() {
   function displayExperiences(experiences: Experience[]) {
@@ -19,9 +19,9 @@ export default function About() {
 
   return (
     <main>
-      <VStack marginTop="8rem" spacing="6rem" alignItems="left">
+      <VStack marginTop="8rem" spacing="4rem" alignItems="center">
         <VStack spacing="2rem" width="3xl" alignItems="left">
-          <Heading paddingBottom="1rem" variant="subPrimary">
+          <Heading paddingBottom="1rem" variant="primary" textAlign="center">
             About Me
           </Heading>
           <Text variant="paragraph" fontSize="lg">
@@ -29,22 +29,16 @@ export default function About() {
             University of Singapore's School of Computing, and I'm looking to
             graduate in summer 2025.
           </Text>
-          <Heading paddingY="1rem" variant="subPrimary">
+          <Heading paddingY="1rem" variant="subPrimary" textAlign="center">
             Work Experience
           </Heading>
           {displayExperiences(work)}
-          <Heading paddingY="1rem" variant="subPrimary">
+          <Heading paddingY="1rem" variant="subPrimary" textAlign="center">
             Education
           </Heading>
           {displayExperiences(education)}
-          <Heading paddingTop="1rem" variant="subPrimary">
-            My Tech Stack
-          </Heading>
-          <Text variant="descriptor" fontSize="xl">
-            Some of the technologies I've been working with
-          </Text>
         </VStack>
-        <TechStackGrid />
+        <TechStackSummary />
       </VStack>
     </main>
   );
