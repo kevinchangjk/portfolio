@@ -78,6 +78,12 @@ const Text = defineStyleConfig({
       textAlign: "center",
       fontWeight: "medium",
     },
+    powerful: {
+      textAlign: "center",
+      fontWeight: "bold",
+      letterSpacing: "wide",
+      textTransform: "uppercase"
+    }
   },
   defaultProps: {
     variant: "base",

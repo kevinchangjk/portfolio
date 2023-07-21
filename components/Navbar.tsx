@@ -19,9 +19,6 @@ export default function Navbar() {
         <Link as={NextLink} variant="header" href="/projects">
           Projects
         </Link>
-        <Link as={NextLink} variant="header" href="/interests">
-          Interests
-        </Link>
         <Link as={NextLink} variant="header" href="/contact-me">
           Contact
         </Link>

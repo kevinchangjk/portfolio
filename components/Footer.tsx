@@ -4,9 +4,9 @@ import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <VStack marginTop="12rem" spacing="2rem">
-      <Divider width="6xl" bg="gray.2" />
-      <HStack width="6xl" justifyContent="space-between">
+    <VStack width="full" marginTop="12rem" spacing="2rem">
+      <Divider  bg="gray.2" />
+      <HStack width="full" justifyContent="space-between">
         <HStack spacing="3rem" alignSelf="center" justifyContent="start">
           <Link as={NextLink} variant="footer" href="/">
             Home
