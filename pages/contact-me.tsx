@@ -1,6 +1,6 @@
 import InterestedPositions from "@/components/InterestedPositions";
 import { useAppContext } from "@/context/state";
-import { getGradient } from "@/utils/misc";
+import { getGradient } from "@/utils/gradient";
 import { Heading, Text, VStack } from "@chakra-ui/react";
 
 export default function ContactMe() {

@@ -1,7 +1,7 @@
 import { HStack, Heading, Image, VStack } from "@chakra-ui/react";
 import profile from "@/data/profile.json";
 import MainFrame from "./MainFrame";
-import { getGradient } from "@/utils/misc";
+import { getGradient } from "@/utils/gradient";
 
 const { name, tagline } = profile;
 

@@ -1,4 +1,4 @@
-import { colors } from "@/utils/misc";
+import { colors } from "@/utils/gradient";
 import {
   Dispatch,
   SetStateAction,

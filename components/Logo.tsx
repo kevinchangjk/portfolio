@@ -1,5 +1,5 @@
 import { useAppContext } from "@/context/state";
-import { getGradient, randomGradient } from "@/utils/misc";
+import { getGradient, randomGradient } from "@/utils/gradient";
 import { Button, Heading } from "@chakra-ui/react";
 
 export default function Logo() {
