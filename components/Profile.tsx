@@ -30,6 +30,7 @@ export default function Profile() {
       <HStack width="4xl" justify="space-between" zIndex="9">
         <VStack align="start" spacing="0">
           <Heading
+            width="full"
             fontSize="64px"
             backgroundImage="linear-gradient(to right, #13B0F5, #E70FAA)"
             backgroundClip="text"
@@ -45,7 +46,7 @@ export default function Profile() {
           boxSize="22rem"
           objectFit="cover"
           borderRadius="full"
-          bgGradient="linear-gradient(to-t, #13B0F5, #E70FAA)"
+          bgGradient="linear-gradient(to right, #13B0F5, #E70FAA)"
         />
       </HStack>
     </HStack>

@@ -2,11 +2,7 @@ import { Box } from "@chakra-ui/react";
 
 export default function MainFrame() {
   return (
-    <Box
-    position="absolute"
-    width="full"
-    height="2xl"
-    >
+    <Box position="absolute" width="full" height="2xl">
       <Box
         position="absolute"
         top="0rem"
@@ -14,13 +10,20 @@ export default function MainFrame() {
         width="xs"
         height="xs"
         zIndex="0"
-        borderStyle="solid none none solid"
-        borderWidth="2rem"
-        style={{
-          borderImage: "linear-gradient(to right, #13B0F5, #E70FAA) 1",
-        }}
+        roundedTopLeft="xl"
+        bgImage="linear-gradient(to right, #13B0F5, #E70FAA) 1"
       />
-      <Box 
+      <Box
+        position="absolute"
+        top="2rem"
+        left="2rem"
+        width="xs"
+        height="xs"
+        zIndex="1"
+        bgColor="gray.0"
+        roundedTopLeft="xl"
+      />
+      <Box
         position="absolute"
         top="0rem"
         left="0rem"
@@ -38,13 +41,20 @@ export default function MainFrame() {
         width="xs"
         height="xs"
         zIndex="0"
-        borderStyle="none solid solid none"
-        borderWidth="2rem"
-        style={{
-          borderImage: "linear-gradient(to right, #13B0F5, #E70FAA) 1",
-        }}
+        roundedBottomRight="xl"
+        bgImage="linear-gradient(to right, #13B0F5, #E70FAA) 1"
       />
-      <Box 
+      <Box
+        position="absolute"
+        right="2rem"
+        bottom="2rem"
+        width="xs"
+        height="xs"
+        zIndex="1"
+        bgColor="gray.0"
+        roundedBottomRight="xl"
+      />
+      <Box
         position="absolute"
         right="0rem"
         bottom="0rem"
