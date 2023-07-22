@@ -6,7 +6,7 @@ export default function ProjectSummary() {
     <VStack width="full" marginTop="8rem">
       <VStack spacing="3rem" marginBottom="6rem">
         <Heading variant="primary">Projects</Heading>
-        <Heading variant="card" color="gray.3">
+        <Heading variant="secondary">
           Put some sweat and tears (no blood) into these
         </Heading>
       </VStack>

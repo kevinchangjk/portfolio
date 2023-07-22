@@ -8,17 +8,25 @@ export default function Footer() {
       <Divider bg="gray.2" />
       <HStack width="full" justifyContent="space-between">
         <HStack spacing="3rem" alignSelf="center" justifyContent="start">
-          <Link as={NextLink} variant="footer" href="/">
+          <Link as={NextLink} href="/">
+            <Text variant="footer" fontSize="lg">
             Home
+            </Text>
           </Link>
-          <Link as={NextLink} variant="footer" href="/about">
+          <Link as={NextLink} href="/about">
+            <Text variant="footer" fontSize="lg">
             About
+            </Text>
           </Link>
-          <Link as={NextLink} variant="footer" href="/projects">
+          <Link as={NextLink} href="/projects">
+            <Text variant="footer" fontSize="lg">
             Projects
+            </Text>
           </Link>
-          <Link as={NextLink} variant="footer" href="/contact-me">
+          <Link as={NextLink} href="/contact-me">
+            <Text variant="footer" fontSize="lg">
             Contact
+            </Text>
           </Link>
         </HStack>
         <HStack spacing="0.7rem">

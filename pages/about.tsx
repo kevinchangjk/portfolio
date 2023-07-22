@@ -22,7 +22,7 @@ export default function About() {
           <Heading paddingBottom="1rem" variant="primary" textAlign="left">
             About Me
           </Heading>
-          <Text variant="paragraph" fontSize="lg">
+          <Text variant="paragraph" fontSize="xl">
             I am currently in my third year as an undergraduate at the National
             University of Singapore's School of Computing, and I'm looking to
             graduate in summer 2025.

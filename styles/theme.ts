@@ -1,23 +1,9 @@
-import { defineStyleConfig, extendTheme } from "@chakra-ui/react";
+import { ThemeConfig, defineStyleConfig, extendTheme } from "@chakra-ui/react";
 
-export const Link = defineStyleConfig({
-  baseStyle: {
-    textDecoration: "none",
-    fontWeight: "500",
-    fontStyle: "normal",
-    letterSpacing: "wider",
-  },
-  variants: {
-    header: {
-      fontSize: "20px",
-      color: "gray.3",
-    },
-    footer: {
-      fontSize: "18px",
-      color: "gray.3",
-    },
-  },
-});
+const colorConfig: ThemeConfig = {
+  initialColorMode: "system",
+  useSystemColorMode: true,
+};
 
 const Heading = defineStyleConfig({
   baseStyle: {
@@ -26,25 +12,45 @@ const Heading = defineStyleConfig({
   variants: {
     primary: {
       fontSize: "48px",
-      color: "gray.4",
       letterSpacing: "wider",
+      _light: {
+        color: "gray.2",
+      },
+      _dark: {
+        color: "gray.5",
+      },
     },
     secondary: {
       fontSize: "32px",
       fontWeight: "normal",
-      color: "gray.3",
       letterSpacing: "wide",
+      _light: {
+        color: "gray.3",
+      },
+      _dark: {
+        color: "gray.4",
+      },
     },
     card: {
       fontSize: "28px",
       fontWeight: "semibold",
-      color: "gray.4",
       letterSpacing: "wide",
+      _light: {
+        color: "gray.2",
+      },
+      _dark: {
+        color: "gray.5",
+      },
     },
     subPrimary: {
       fontSize: "42px",
-      color: "gray.4",
       letterSpacing: "wider",
+      _light: {
+        color: "gray.2",
+      },
+      _dark: {
+        color: "gray.5",
+      },
     },
   },
 });
@@ -52,38 +58,89 @@ const Heading = defineStyleConfig({
 const Text = defineStyleConfig({
   variants: {
     base: {
-      color: "gray.4",
       fontWeight: "normal",
     },
     paragraph: {
-      color: "gray.4",
       fontWeight: "normal",
       textAlign: "justify",
+      _light: {
+        color: "gray.3",
+      },
+      _dark: {
+        color: "gray.5",
+      },
     },
     descriptor: {
-      color: "gray.4",
       fontWeight: "medium",
       letterSpacing: "wide",
+      _light: {
+        color: "gray.3",
+      },
+      _dark: {
+        color: "gray.4",
+      },
     },
     detail: {
-      color: "gray.4",
       fontWeight: "light",
+      _light: {
+        color: "gray.3",
+      },
+      _dark: {
+        color: "gray.5",
+      },
     },
     subtle: {
-      color: "gray.3",
       fontWeight: "light",
+      _light: {
+        color: "gray.4",
+      },
+      _dark: {
+        color: "gray.3",
+      },
     },
     tag: {
       fontSize: "12px",
       textAlign: "center",
       fontWeight: "medium",
+      _light: {
+        color: "gray.3",
+      },
+      _dark: {
+        color: "gray.5",
+      },
     },
     powerful: {
       textAlign: "center",
       fontWeight: "bold",
       letterSpacing: "wide",
-      textTransform: "uppercase"
-    }
+      textTransform: "uppercase",
+      _light: {
+        color: "gray.2",
+      },
+      _dark: {
+        color: "gray.5",
+      },
+    },
+    strong: {
+      fontWeight: "bold",
+      letterSpacing: "wide",
+      _light: {
+        color: "gray.3",
+      },
+      _dark: {
+        color: "gray.4",
+      },
+    },
+    footer: {
+      fontWeight: "normal",
+      letterSpacing: "wide",
+      _light: {
+        color: "gray.2",
+      },
+      _dark: {
+        color: "gray.4",
+      },
+    },
   },
   defaultProps: {
     variant: "base",
@@ -96,6 +153,12 @@ const Divider = defineStyleConfig({
       borderColor: "#A7A7A7",
       borderStyle: "solid",
       borderWidth: "thin",
+      _light: {
+        borderColor: "gray.2",
+      },
+      _dark: {
+        borderColor: "gray.4",
+      },
     },
     secondary: {
       borderColor: "#CCCCCC",
@@ -117,8 +180,11 @@ const extensions = {
       0: "#191919",
       1: "#363636",
       2: "#42446E",
-      3: "#A7A7A7",
-      4: "#CCCCCC",
+      3: "#666666",
+      4: "#A7A7A7",
+      5: "#CCCCCC",
+      6: "#D9D9D9",
+      7: "#EBEBEB",
     },
     blue: "#13B0F5",
     pink: "#E70FAA",
@@ -129,11 +195,11 @@ const extensions = {
     mono: "Menlo, monospace",
   },
   components: {
-    Link,
     Heading,
     Text,
     Divider,
   },
+  colorConfig,
 };
 
 export default extendTheme(extensions);

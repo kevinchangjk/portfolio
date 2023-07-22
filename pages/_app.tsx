@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import theme from "../styles/theme";
 import "@fontsource/dm-sans";
 import "@fontsource/poppins";
@@ -20,6 +20,7 @@ export default function Application({
   return (
     <ChakraProvider theme={theme}>
       <AppWrapper>
+        <ColorModeScript initialColorMode={theme.colorConfig.initialColorMode} />
         <Layout>
           <Component {...pageProps} />
         </Layout>

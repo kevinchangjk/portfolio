@@ -12,18 +12,19 @@ export default function ContactMe() {
       <VStack width="3xl" spacing="4rem" marginTop="8rem" alignItems="left">
         <VStack width="full" spacing="3rem" align="inherit">
           <Heading variant="primary">Contact Me</Heading>
-          <Text variant="descriptor" fontSize="2xl">
+          <Text variant="paragraph" fontSize="2xl">
             I am always on the look out for greater opportunities in these
             fields.
           </Text>
         </VStack>
         <InterestedPositions />
         <VStack width="full" spacing="1rem" alignItems="end">
-          <Text width="full" variant="descriptor" textAlign="left" fontSize="3xl">
+          <Text width="full" variant="paragraph" textAlign="left" fontSize="3xl">
             You can reach out to me at
           </Text>
           <Text
-            variant="descriptor"
+            fontWeight="medium"
+            letterSpacing="wide"
             width="min"
             bg={gradient}
             bgClip="text"

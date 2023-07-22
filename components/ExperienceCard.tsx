@@ -1,6 +1,6 @@
 import { Experience } from "@/utils/types";
 import { CalendarIcon } from "@chakra-ui/icons";
-import { Badge, Divider, HStack, Icon, Text, VStack } from "@chakra-ui/react";
+import { Badge, Divider, HStack, Icon, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 import { HiOfficeBuilding } from "react-icons/hi";
 
 export default function ExperienceCard({
@@ -17,7 +17,7 @@ export default function ExperienceCard({
         </Text>
         <Badge
           colorScheme="green"
-          variant="subtle"
+          variant={useColorModeValue("subtle", "solid")}
           rounded="full"
           paddingX="1rem"
         >
@@ -31,11 +31,11 @@ export default function ExperienceCard({
         justifyContent="space-between"
       >
         <HStack spacing="0.5rem">
-          <Icon as={HiOfficeBuilding} color="gray.3" boxSize="1.2rem" />
+          <Icon as={HiOfficeBuilding} color="gray.4" boxSize="1.2rem" />
           <Text variant="subtle">{location}</Text>
         </HStack>
         <HStack spacing="0.5rem">
-          <CalendarIcon color="gray.3" boxSize="1rem" />
+          <CalendarIcon color="gray.4" boxSize="1rem" />
           <Text variant="subtle">{period}</Text>
         </HStack>
       </HStack>

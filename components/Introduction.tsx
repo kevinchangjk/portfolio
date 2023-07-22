@@ -37,6 +37,7 @@ export default function Introduction() {
         fontSize="2xl"
         textAlign="justify"
         lineHeight="tall"
+        letterSpacing="normal"
       >
         I'm {buildLink("kevinchangjk", profile.socialMedia.github, true)}, a
         software developer based in Singapore. I don't want to prattle on too

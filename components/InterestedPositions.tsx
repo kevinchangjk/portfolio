@@ -17,7 +17,7 @@ export default function InterestedPositions() {
       const newPosition = (
         <WrapItem key={i}>
           <Tag padding="0.8rem">
-            <Text variant="powerful" fontSize="xl" color="gray.4">
+            <Text variant="powerful" fontSize="xl">
             {positions[i]}
             </Text>
           </Tag>
