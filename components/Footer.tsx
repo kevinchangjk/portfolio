@@ -21,9 +21,9 @@ export default function Footer() {
             Contact
           </Link>
         </HStack>
-        <HStack>
+        <HStack spacing="0.7rem">
           <Text variant="subtle" fontSize="lg">
-            Developed by
+            Designed and Built by
           </Text>
           <Logo />
         </HStack>

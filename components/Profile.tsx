@@ -52,7 +52,7 @@ export default function Profile({
         </VStack>
         <Image
           src="/images/profile.jpg"
-          padding="0.5rem"
+          padding="0.8rem"
           boxSize="22rem"
           objectFit="cover"
           borderRadius="full"
