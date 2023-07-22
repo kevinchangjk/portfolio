@@ -1,7 +1,12 @@
 import InterestedPositions from "@/components/InterestedPositions";
+import { useAppContext } from "@/context/state";
+import { getGradient } from "@/utils/misc";
 import { Heading, Text, VStack } from "@chakra-ui/react";
 
 export default function ContactMe() {
+  const { gradientTheme } = useAppContext();
+  const gradient = getGradient(gradientTheme, "to right");
+
   return (
     <main>
       <VStack width="3xl" spacing="4rem" marginTop="8rem" alignItems="left">
@@ -20,7 +25,7 @@ export default function ContactMe() {
           <Text
             variant="descriptor"
             width="min"
-            bgImage="linear-gradient(to right, #13B0F5, #E70FAA)"
+            bg={gradient}
             bgClip="text"
             textColor="transparent"
             fontSize="5xl"

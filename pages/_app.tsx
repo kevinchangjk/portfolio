@@ -3,6 +3,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../styles/theme";
 import "@fontsource/dm-sans";
 import "@fontsource/poppins";
+import { AppWrapper } from "@/context/state";
 
 export const metadata = {
   title: "Create Next App",
@@ -18,9 +19,11 @@ export default function Application({
 }) {
   return (
     <ChakraProvider theme={theme}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <AppWrapper>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </AppWrapper>
     </ChakraProvider>
   );
 }

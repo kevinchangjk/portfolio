@@ -4,7 +4,12 @@ import profile from "@/data/profile.json";
 
 function buildLink(text: string, route: string, external: boolean) {
   return (
-    <Button padding="0rem" marginTop="-0.3rem" bgColor="transparent">
+    <Button
+      padding="0rem"
+      marginTop="-0.3rem"
+      bgColor="transparent"
+      variant="link"
+    >
       <Link as={NextLink} href={route} isExternal={external}>
         <Text variant="powerful" fontSize="2xl">
           {text}

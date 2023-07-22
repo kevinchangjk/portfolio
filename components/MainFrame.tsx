@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 
-export default function MainFrame() {
+export default function MainFrame({ gradient }: { gradient: string }) {
   return (
     <Box position="absolute" width="full" height="2xl">
       <Box
@@ -11,12 +11,12 @@ export default function MainFrame() {
         height="xs"
         zIndex="0"
         roundedTopLeft="xl"
-        bgImage="linear-gradient(to right, #13B0F5, #E70FAA) 1"
+        bgImage={gradient}
       />
       <Box
         position="absolute"
-        top="2rem"
-        left="2rem"
+        top="1.5rem"
+        left="1.5rem"
         width="xs"
         height="xs"
         zIndex="1"
@@ -31,7 +31,7 @@ export default function MainFrame() {
         height="xs"
         zIndex="1"
         borderStyle="solid"
-        borderWidth="2rem"
+        borderWidth="1.5rem"
         borderColor="transparent #191919 #191919 transparent"
       />
       <Box
@@ -42,12 +42,12 @@ export default function MainFrame() {
         height="xs"
         zIndex="0"
         roundedBottomRight="xl"
-        bgImage="linear-gradient(to right, #13B0F5, #E70FAA) 1"
+        bgImage={gradient}
       />
       <Box
         position="absolute"
-        right="2rem"
-        bottom="2rem"
+        right="1.5rem"
+        bottom="1.5rem"
         width="xs"
         height="xs"
         zIndex="1"
@@ -62,7 +62,7 @@ export default function MainFrame() {
         height="xs"
         zIndex="1"
         borderStyle="solid"
-        borderWidth="2rem"
+        borderWidth="1.5rem"
         borderColor="#191919 transparent transparent #191919"
       />
     </Box>

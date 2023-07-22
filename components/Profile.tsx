@@ -1,6 +1,7 @@
-import { Box, HStack, Heading, Image, VStack } from "@chakra-ui/react";
+import { HStack, Heading, Image, VStack } from "@chakra-ui/react";
 import profile from "@/data/profile.json";
 import MainFrame from "./MainFrame";
+import { getGradient } from "@/utils/misc";
 
 const { name, tagline } = profile;
 
@@ -18,7 +19,13 @@ function displayAcrostic(acrostic: string[]) {
   return result;
 }
 
-export default function Profile() {
+export default function Profile({
+  gradientTheme,
+}: {
+  gradientTheme: string[];
+}) {
+  const gradient = getGradient(gradientTheme, "to right");
+
   return (
     <HStack
       position="relative"
@@ -26,15 +33,18 @@ export default function Profile() {
       height="2xl"
       justifyContent="center"
     >
-      <MainFrame />
+      <MainFrame gradient={gradient} />
       <HStack width="4xl" justify="space-between" zIndex="9">
         <VStack align="start" spacing="0">
           <Heading
             width="full"
             fontSize="64px"
-            backgroundImage="linear-gradient(to right, #13B0F5, #E70FAA)"
+            background={gradient}
             backgroundClip="text"
             textColor="transparent"
+            style={{
+              transition: "background 3s ease",
+            }}
           >
             {name}
           </Heading>
@@ -46,7 +56,7 @@ export default function Profile() {
           boxSize="22rem"
           objectFit="cover"
           borderRadius="full"
-          bgGradient="linear-gradient(to right, #13B0F5, #E70FAA)"
+          bgGradient={gradient}
         />
       </HStack>
     </HStack>
