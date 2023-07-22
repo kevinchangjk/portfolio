@@ -5,7 +5,7 @@ import Logo from "./Logo";
 export default function Footer() {
   return (
     <VStack width="full" marginTop="12rem" spacing="2rem">
-      <Divider  bg="gray.2" />
+      <Divider bg="gray.2" />
       <HStack width="full" justifyContent="space-between">
         <HStack spacing="3rem" alignSelf="center" justifyContent="start">
           <Link as={NextLink} variant="footer" href="/">
@@ -16,9 +16,6 @@ export default function Footer() {
           </Link>
           <Link as={NextLink} variant="footer" href="/projects">
             Projects
-          </Link>
-          <Link as={NextLink} variant="footer" href="/interests">
-            Interests
           </Link>
           <Link as={NextLink} variant="footer" href="/contact-me">
             Contact
