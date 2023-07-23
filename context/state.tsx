@@ -1,4 +1,4 @@
-import { colors } from "@/utils/gradient";
+import { originalColors } from "@/utils/gradient";
 import {
   Dispatch,
   SetStateAction,
@@ -14,7 +14,7 @@ type Context = {
 
 // @Desc: Create Context for app-wide state handling:
 const AppContext = createContext<Context>({
-  gradientTheme: colors.slice(0, 2),
+  gradientTheme: originalColors,
   setGradientTheme: () => null,
 });
 
@@ -31,7 +31,7 @@ export function useAppContext(): Context {
 
 // @Desc: Overall Function to handle all states required for context and return it back to AppWrapper
 function provideAppState(): Context {
-  const [gradientTheme, setGradientTheme] = useState(colors.slice(0, 2));
+  const [gradientTheme, setGradientTheme] = useState(originalColors);
 
   return {
     gradientTheme,

@@ -1,10 +1,19 @@
 import Introduction from "@/components/Introduction";
 import Profile from "@/components/Profile";
 import { useAppContext } from "@/context/state";
-import { VStack } from "@chakra-ui/react";
+import { colors } from "@/utils/gradient";
+import { VStack, Wrap, WrapItem } from "@chakra-ui/react";
 
 export default function Home() {
-  const { gradientTheme, setGradientTheme } = useAppContext();
+  const { gradientTheme } = useAppContext();
+
+  function displayAllColors() {
+    const all = [];
+    for (const color of colors) {
+      all.push(<WrapItem height="6rem" width="6rem" bgColor={color} />);
+    }
+    return <Wrap>{all}</Wrap>;
+  }
 
   return (
     <main>
