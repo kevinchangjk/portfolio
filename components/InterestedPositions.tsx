@@ -1,13 +1,12 @@
 import { Tag, Text, Wrap, WrapItem } from "@chakra-ui/react";
 
-
 const positions = [
   "Software Engineering",
   "Cybersecurity",
   "Blockchain",
   "Data Analytics",
   "Web Development",
-  "DevOps Engineering"
+  "DevOps Engineering",
 ];
 
 export default function InterestedPositions() {
@@ -16,21 +15,17 @@ export default function InterestedPositions() {
     for (let i = 0; i < positions.length; i++) {
       const newPosition = (
         <WrapItem key={i}>
-          <Tag padding="0.8rem">
+          <Tag padding="0.8rem" variant="outline">
             <Text variant="powerful" fontSize="xl">
-            {positions[i]}
+              {positions[i]}
             </Text>
           </Tag>
         </WrapItem>
-        );
+      );
       allPositions.push(newPosition);
     }
     return allPositions;
   }
 
-  return (
-    <Wrap spacing="1rem">
-      {displayPositions(positions)}
-    </Wrap>
-  );
+  return <Wrap spacing="1rem">{displayPositions(positions)}</Wrap>;
 }

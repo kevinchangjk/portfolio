@@ -150,7 +150,6 @@ const Text = defineStyleConfig({
 const Divider = defineStyleConfig({
   variants: {
     primary: {
-      borderColor: "#A7A7A7",
       borderStyle: "solid",
       borderWidth: "thin",
       _light: {
@@ -161,9 +160,14 @@ const Divider = defineStyleConfig({
       },
     },
     secondary: {
-      borderColor: "#CCCCCC",
       borderStyle: "solid",
       borderWidth: "1px",
+      _light: {
+        borderColor: "gray.3",
+      },
+      _dark: {
+        borderColor: "gray.5",
+      },
     },
   },
   defaultProps: {
