@@ -1,6 +1,7 @@
 import { Divider, HStack, Link, Text, VStack } from "@chakra-ui/react";
 import NextLink from "next/link";
 import Logo from "./Logo";
+import PrimaryLink from "./PrimaryLink";
 
 export default function Footer() {
   return (
@@ -8,26 +9,26 @@ export default function Footer() {
       <Divider bg="gray.2" />
       <HStack width="full" justifyContent="space-between">
         <HStack spacing="3rem" alignSelf="center" justifyContent="start">
-          <Link as={NextLink} href="/">
+          <PrimaryLink route="/">
             <Text variant="footer" fontSize="lg">
-            Home
+              Home
             </Text>
-          </Link>
-          <Link as={NextLink} href="/about">
+          </PrimaryLink>
+          <PrimaryLink route="/about">
             <Text variant="footer" fontSize="lg">
-            About
+              About
             </Text>
-          </Link>
-          <Link as={NextLink} href="/projects">
+          </PrimaryLink>
+          <PrimaryLink route="/projects">
             <Text variant="footer" fontSize="lg">
-            Projects
+              Projects
             </Text>
-          </Link>
-          <Link as={NextLink} href="/contact-me">
+          </PrimaryLink>
+          <PrimaryLink route="/contact-me">
             <Text variant="footer" fontSize="lg">
-            Contact
+              Contact
             </Text>
-          </Link>
+          </PrimaryLink>
         </HStack>
         <HStack spacing="0.7rem">
           <Text variant="subtle" fontSize="lg">
