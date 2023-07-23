@@ -1,12 +1,9 @@
 import Introduction from "@/components/Introduction";
 import Profile from "@/components/Profile";
-import { useAppContext } from "@/context/state";
 import { colors } from "@/utils/gradient";
 import { VStack, Wrap, WrapItem } from "@chakra-ui/react";
 
 export default function Home() {
-  const { gradientTheme } = useAppContext();
-
   function displayAllColors() {
     const all = [];
     for (const color of colors) {
@@ -18,7 +15,7 @@ export default function Home() {
   return (
     <main>
       <VStack marginTop="4rem" spacing="12rem">
-        <Profile gradientTheme={gradientTheme} />
+        <Profile />
         <Introduction />
       </VStack>
     </main>

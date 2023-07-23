@@ -2,6 +2,7 @@ import { HStack, Heading, Image, VStack } from "@chakra-ui/react";
 import profile from "@/data/profile.json";
 import MainFrame from "./MainFrame";
 import { getGradient } from "@/utils/gradient";
+import { useAppContext } from "@/context/state";
 
 const { name, tagline } = profile;
 
@@ -19,11 +20,9 @@ function displayAcrostic(acrostic: string[]) {
   return result;
 }
 
-export default function Profile({
-  gradientTheme,
-}: {
-  gradientTheme: string[];
-}) {
+export default function Profile(
+) {
+  const { gradientTheme } = useAppContext();
   const gradient = getGradient(gradientTheme, "to right");
 
   return (

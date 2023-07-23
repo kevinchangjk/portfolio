@@ -15,8 +15,8 @@ export default function Logo() {
     <Button
       padding="0rem"
       variant="unstyled"
-      _hover={{ transform: "scale(1.1)" }}
-      _active={{ transform: "scale(0.9)" }}
+      _hover={{ transform: "scale(1.05)" }}
+      _active={{ transform: "scale(0.95)" }}
       onClick={newGradient}
     >
       <Heading

@@ -3,6 +3,7 @@ import { ThemeConfig, defineStyleConfig, extendTheme } from "@chakra-ui/react";
 const colorConfig: ThemeConfig = {
   initialColorMode: "system",
   useSystemColorMode: true,
+  disableTransitionOnChange: false,
 };
 
 const Heading = defineStyleConfig({
@@ -202,6 +203,14 @@ const extensions = {
     Heading,
     Text,
     Divider,
+  },
+  styles: {
+    global: {
+      body: {
+        transitionProperty: "all",
+        transitionDuration: "normal",
+      },
+    },
   },
   colorConfig,
 };

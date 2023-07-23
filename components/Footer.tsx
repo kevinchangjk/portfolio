@@ -1,36 +1,39 @@
-import { Divider, HStack, Link, Text, VStack } from "@chakra-ui/react";
-import NextLink from "next/link";
+import {
+  Divider,
+  HStack,
+  Text,
+  VStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Logo from "./Logo";
 import PrimaryLink from "./PrimaryLink";
 
 export default function Footer() {
+  function displayLink(route: string, text: string) {
+    return (
+      <PrimaryLink
+        route={route}
+        color={useColorModeValue("gray.2", "gray.4")}
+        external={false}
+      >
+        <Text variant="footer" fontSize="lg">
+          {text}
+        </Text>
+      </PrimaryLink>
+    );
+  }
+
   return (
     <VStack width="full" marginTop="12rem" spacing="2rem">
       <Divider bg="gray.2" />
       <HStack width="full" justifyContent="space-between">
         <HStack spacing="3rem" alignSelf="center" justifyContent="start">
-          <PrimaryLink route="/">
-            <Text variant="footer" fontSize="lg">
-              Home
-            </Text>
-          </PrimaryLink>
-          <PrimaryLink route="/about">
-            <Text variant="footer" fontSize="lg">
-              About
-            </Text>
-          </PrimaryLink>
-          <PrimaryLink route="/projects">
-            <Text variant="footer" fontSize="lg">
-              Projects
-            </Text>
-          </PrimaryLink>
-          <PrimaryLink route="/contact-me">
-            <Text variant="footer" fontSize="lg">
-              Contact
-            </Text>
-          </PrimaryLink>
+          {displayLink("/", "Home")}
+          {displayLink("/about", "About")}
+          {displayLink("/projects", "Projects")}
+          {displayLink("/contact-me", "Contact")}
         </HStack>
-        <HStack spacing="0.7rem">
+        <HStack spacing="0.5rem">
           <Text variant="subtle" fontSize="lg">
             Designed and Built by
           </Text>

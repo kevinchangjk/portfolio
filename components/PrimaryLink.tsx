@@ -1,11 +1,15 @@
-import { Link, useColorModeValue } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 
 export default function PrimaryLink({
   route,
+  color,
+  external,
   children,
 }: {
   route: string;
+  color: string;
+  external: boolean;
   children: React.ReactNode;
 }) {
   return (
@@ -14,6 +18,7 @@ export default function PrimaryLink({
       as={NextLink}
       href={route}
       key={route}
+      isExternal={external}
       display="inline-block"
       position="relative"
       _after={{
@@ -24,7 +29,7 @@ export default function PrimaryLink({
         height: "2px",
         bottom: 0,
         left: 0,
-        backgroundColor: useColorModeValue("gray.3", "gray.4"),
+        backgroundColor: color,
         transition: "transform 0.2s ease",
       }}
       _hover={{
