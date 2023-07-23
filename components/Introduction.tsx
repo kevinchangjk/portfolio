@@ -1,6 +1,8 @@
 import { Button, Heading, Link, Text, VStack } from "@chakra-ui/react";
 import NextLink from "next/link";
 import profile from "@/data/profile.json";
+import { useAppContext } from "@/context/state";
+import { getGradient } from "@/utils/gradient";
 
 function buildLink(text: string, route: string, external: boolean) {
   return (
@@ -20,6 +22,8 @@ function buildLink(text: string, route: string, external: boolean) {
 }
 
 export default function Introduction() {
+  const { gradientTheme } = useAppContext();
+  const gradient = getGradient(gradientTheme, "to right");
   return (
     <VStack
       position="relative"
@@ -28,7 +32,14 @@ export default function Introduction() {
       justifyContent="center"
       alignItems="start"
     >
-      <Heading width="full" variant="primary" textAlign="justify">
+      <Heading
+        textAlign="justify"
+        bg={gradient}
+        bgClip="text"
+        textColor="transparent"
+        fontSize="5xl"
+        letterSpacing="wide"
+      >
         Welcome.
       </Heading>
       <Text
