@@ -1,6 +1,6 @@
 export const originalColors = [
   "#13B0F5", // original blue
-  "#E70FAA", // dark pink
+  "#E70FAA", // original pink
 ];
 
 export const colors = [
@@ -29,7 +29,7 @@ export const colors = [
   "#EFC7C2", // Tea rose
   "#EFBCD5", // Fairy tale
   "#E574BC", // Sky Magenta
-  "#E70FAA", // dark pink
+  "#E70FAA", // original pink
   "#8F3985", // Plum
   "#8332AC", // Grape
   "#C792DF", // Wisteria
