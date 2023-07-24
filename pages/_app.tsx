@@ -1,9 +1,10 @@
 import Layout from "@/components/Layout";
-import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript, SlideFade } from "@chakra-ui/react";
 import theme from "../styles/theme";
 import "@fontsource/dm-sans";
 import "@fontsource/poppins";
 import { AppWrapper } from "@/context/state";
+import { NextRouter } from "next/router";
 
 export const metadata = {
   title: "Create Next App",
@@ -13,16 +14,29 @@ export const metadata = {
 export default function Application({
   Component,
   pageProps,
+  router,
 }: {
   Component: React.FC;
   pageProps: {};
+  router: NextRouter;
 }) {
   return (
     <ChakraProvider theme={theme}>
       <AppWrapper>
-        <ColorModeScript initialColorMode={theme.colorConfig.initialColorMode} />
+        <ColorModeScript
+          initialColorMode={theme.colorConfig.initialColorMode}
+        />
         <Layout>
-          <Component {...pageProps} />
+          <SlideFade
+            key={router.route}
+            in={true}
+            transition={{
+              enter: { duration: 1.2, type: "spring", bounce: 0.4 },
+            }}
+            offsetX="100%"
+          >
+            <Component {...pageProps} />
+          </SlideFade>
         </Layout>
       </AppWrapper>
     </ChakraProvider>
