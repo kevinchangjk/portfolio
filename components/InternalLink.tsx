@@ -1,5 +1,4 @@
 import { useAppContext } from "@/context/state";
-import { PAGE_TRANSITION_DURATION } from "@/utils/constants";
 import { Button } from "@chakra-ui/react";
 
 export default function InternalLink({
@@ -13,7 +12,7 @@ export default function InternalLink({
   children: React.ReactNode;
   thickness: string;
 }) {
-  const { router, setIsMounted } = useAppContext();
+  const { router, } = useAppContext();
 
   function onClickHandler() {
     // check if a transition is even necessary
@@ -22,14 +21,7 @@ export default function InternalLink({
       return;
     }
 
-    // begin exit animation
-    setIsMounted(false);
-
-    // redirect after 3000ms
-    setTimeout(async () => {
-      await router?.push(href, href, { scroll: false });
-      setIsMounted(true);
-    }, PAGE_TRANSITION_DURATION);
+    router?.push(href, href, { scroll: false });
   }
 
   return (

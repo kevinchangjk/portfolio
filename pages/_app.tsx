@@ -1,10 +1,11 @@
 import Layout from "@/components/Layout";
-import { ChakraProvider, ColorModeScript, SlideFade } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import theme from "../styles/theme";
 import "@fontsource/dm-sans";
 import "@fontsource/poppins";
 import { AppWrapper } from "@/context/state";
 import { NextRouter } from "next/router";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const metadata = {
   title: "Create Next App",
@@ -20,6 +21,21 @@ export default function Application({
   pageProps: {};
   router: NextRouter;
 }) {
+  const pageVariants = {
+    pageInitial: {
+      opacity: 0,
+      x: "100%",
+    },
+    pageAnimate: {
+      opacity: 1,
+      x: 0,
+    },
+    pageExit: {
+      opacity: 0,
+      x: "-100%",
+    },
+  };
+
   return (
     <ChakraProvider theme={theme}>
       <AppWrapper>
@@ -27,17 +43,22 @@ export default function Application({
           initialColorMode={theme.colorConfig.initialColorMode}
         />
         <Layout>
-          <SlideFade
-            key={router.route}
-            in={true}
-            reverse
-            transition={{
-              enter: { duration: 1.2, type: "spring", bounce: 0.4 },
-            }}
-            offsetX="100%"
-          >
-            <Component {...pageProps} />
-          </SlideFade>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={router.route}
+              initial="pageInitial"
+              animate="pageAnimate"
+              exit="pageExit"
+              variants={pageVariants}
+              transition={{
+                type: "spring",
+                duration: 0.7,
+                bounce: 0.4
+              }}
+            >
+              <Component {...pageProps} />
+            </motion.div>
+          </AnimatePresence>
         </Layout>
       </AppWrapper>
     </ChakraProvider>

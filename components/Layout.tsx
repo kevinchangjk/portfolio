@@ -1,10 +1,8 @@
 import Navbar from "@/components/Navbar";
 import { Box, useColorModeValue } from "@chakra-ui/react";
 import Footer from "./Footer";
-import { useAppContext } from "@/context/state";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const { isMounted } = useAppContext();
 
   return (
     <Box
@@ -13,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       alignItems="center"
     >
       <Navbar />
-      {isMounted && children}
+      {children}
       <Footer />
     </Box>
   );
