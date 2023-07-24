@@ -30,6 +30,7 @@ export default function Application({
           <SlideFade
             key={router.route}
             in={true}
+            reverse
             transition={{
               enter: { duration: 1.2, type: "spring", bounce: 0.4 },
             }}

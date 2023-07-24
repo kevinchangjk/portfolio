@@ -4,13 +4,11 @@ import NextLink from "next/link";
 export default function PrimaryLink({
   href,
   color,
-  external,
   children,
   thickness,
 }: {
   href: string;
   color: string;
-  external: boolean;
   children: React.ReactNode;
   thickness: string;
 }) {
@@ -20,7 +18,7 @@ export default function PrimaryLink({
       as={NextLink}
       href={href}
       key={href}
-      isExternal={external}
+      isExternal
       display="inline-block"
       position="relative"
       _after={{

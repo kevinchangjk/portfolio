@@ -6,21 +6,20 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Logo from "./Logo";
-import PrimaryLink from "./PrimaryLink";
+import InternalLink from "./InternalLink";
 
 export default function Footer() {
   function displayLink(route: string, text: string) {
     return (
-      <PrimaryLink
+      <InternalLink
         href={route}
         color={useColorModeValue("gray.2", "gray.4")}
-        external={false}
         thickness="px"
       >
         <Text variant="footer" fontSize="lg">
           {text}
         </Text>
-      </PrimaryLink>
+      </InternalLink>
     );
   }
 

@@ -71,7 +71,6 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
                 <PrimaryLink
                   href={previewUrl}
                   color={useColorModeValue("gray.3", "gray.5")}
-                  external
                   thickness="px"
                 >
                   <HStack>
@@ -89,7 +88,6 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
                 <PrimaryLink
                   href={sourceUrl}
                   color={useColorModeValue("gray.3", "gray.5")}
-                  external
                   thickness="px"
                 >
                   <HStack>

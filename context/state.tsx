@@ -1,4 +1,5 @@
 import { originalColors } from "@/utils/gradient";
+import { NextRouter, useRouter } from "next/router";
 import {
   Dispatch,
   SetStateAction,
@@ -10,12 +11,18 @@ import {
 type Context = {
   gradientTheme: string[];
   setGradientTheme: Dispatch<SetStateAction<string[]>>;
+  router: NextRouter | null;
+  isMounted: boolean;
+  setIsMounted: Dispatch<SetStateAction<boolean>>;
 };
 
 // @Desc: Create Context for app-wide state handling:
 const AppContext = createContext<Context>({
   gradientTheme: originalColors,
   setGradientTheme: () => null,
+  router: null,
+  isMounted: true,
+  setIsMounted: () => null
 });
 
 // @Desc: For _app.js to wrap around all child components to enable access to React Context states:
@@ -32,9 +39,14 @@ export function useAppContext(): Context {
 // @Desc: Overall Function to handle all states required for context and return it back to AppWrapper
 function provideAppState(): Context {
   const [gradientTheme, setGradientTheme] = useState(originalColors);
+  const [isMounted, setIsMounted] = useState(true);
+  const router = useRouter();
 
   return {
     gradientTheme,
     setGradientTheme,
+    router,
+    isMounted,
+    setIsMounted
   };
 }

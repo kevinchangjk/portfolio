@@ -9,23 +9,22 @@ import {
 import Logo from "./Logo";
 import profile from "@/data/profile.json";
 import ColorModeButton from "./ColorModeButton";
-import PrimaryLink from "./PrimaryLink";
+import InternalLink from "./InternalLink";
 
 const { github, twitter, linkedIn } = profile.socialMedia;
 
 export default function Navbar() {
   function headerLink(route: string, text: string) {
     return (
-      <PrimaryLink
+      <InternalLink
         href={route}
         color={useColorModeValue("gray.3", "gray.4")}
-        external={false}
         thickness="2px"
       >
         <Text variant="strong" fontSize="xl">
           {text}
         </Text>
-      </PrimaryLink>
+      </InternalLink>
     );
   }
 
