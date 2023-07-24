@@ -15,6 +15,7 @@ import {
   VStack,
   useColorModeValue,
 } from "@chakra-ui/react";
+import PrimaryLink from "./PrimaryLink";
 
 export default function ProjectCard({ projectData }: { projectData: Project }) {
   const { title, description, imageUrl, techStack, sourceUrl, previewUrl } =
@@ -66,23 +67,43 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           <Divider variant="secondary" />
           <HStack width="full">
             <Box width="50%">
-              <Link href={previewUrl}>
-                <HStack>
-                  <LinkIcon boxSize="20px" color={useColorModeValue("gray.3", "gray.5")} />
-                  <Text variant="detail">Live Preview</Text>
-                </HStack>
-              </Link>
+              {previewUrl && (
+                <PrimaryLink
+                  href={previewUrl}
+                  color={useColorModeValue("gray.3", "gray.5")}
+                  external
+                  thickness="px"
+                >
+                  <HStack>
+                    <LinkIcon
+                      boxSize="20px"
+                      color={useColorModeValue("gray.3", "gray.5")}
+                    />
+                    <Text variant="detail">Live Preview</Text>
+                  </HStack>
+                </PrimaryLink>
+              )}
             </Box>
             <Box width="50%">
-              <Link href={sourceUrl}>
-                <HStack>
-                  <Image
-                    src={useColorModeValue("/images/social-media/github-light.svg", "/images/social-media/github-dark.svg")}
-                    boxSize="20px"
-                  />
-                  <Text variant="detail">Source Code</Text>
-                </HStack>
-              </Link>
+              {sourceUrl && (
+                <PrimaryLink
+                  href={sourceUrl}
+                  color={useColorModeValue("gray.3", "gray.5")}
+                  external
+                  thickness="px"
+                >
+                  <HStack>
+                    <Image
+                      src={useColorModeValue(
+                        "/images/social-media/github-light.svg",
+                        "/images/social-media/github-dark.svg"
+                      )}
+                      boxSize="20px"
+                    />
+                    <Text variant="detail">Source Code</Text>
+                  </HStack>
+                </PrimaryLink>
+              )}
             </Box>
           </HStack>
         </VStack>

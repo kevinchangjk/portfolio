@@ -16,7 +16,12 @@ const { github, twitter, linkedIn } = profile.socialMedia;
 export default function Navbar() {
   function headerLink(route: string, text: string) {
     return (
-      <PrimaryLink route={route} color={useColorModeValue("gray.3", "gray.4")} external={false}>
+      <PrimaryLink
+        href={route}
+        color={useColorModeValue("gray.3", "gray.4")}
+        external={false}
+        thickness="2px"
+      >
         <Text variant="strong" fontSize="xl">
           {text}
         </Text>

@@ -1,4 +1,10 @@
-import { Button, Heading, Text, VStack, useColorModeValue } from "@chakra-ui/react";
+import {
+  Button,
+  Heading,
+  Text,
+  VStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import profile from "@/data/profile.json";
 import { useAppContext } from "@/context/state";
 import { getGradient } from "@/utils/gradient";
@@ -12,7 +18,12 @@ function buildLink(text: string, route: string, external: boolean) {
       bgColor="transparent"
       variant="unstyled"
     >
-      <PrimaryLink route={route} color={useColorModeValue("gray.2", "gray.5")} external={external}>
+      <PrimaryLink
+        href={route}
+        color={useColorModeValue("gray.2", "gray.5")}
+        external={external}
+        thickness="2px"
+      >
         <Text variant="powerful" fontSize="2xl">
           {text}
         </Text>
