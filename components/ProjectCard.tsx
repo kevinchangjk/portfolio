@@ -10,7 +10,6 @@ import {
   HStack,
   Heading,
   Image,
-  Link,
   Text,
   VStack,
   useColorModeValue,
@@ -36,6 +35,9 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
         height="13rem"
         fit="cover"
         borderTopRadius="0.5rem"
+        borderBottomWidth="0.5px"
+        borderBottomStyle="solid"
+        borderBottomColor={useColorModeValue("gray.3", "gray.5")}
         marginBottom="1rem"
       />
       <CardHeader

@@ -1,8 +1,7 @@
 import InterestedPositions from "@/components/InterestedPositions";
 import { useAppContext } from "@/context/state";
 import { getGradient } from "@/utils/gradient";
-import { HStack, Heading, Text, VStack, keyframes } from "@chakra-ui/react";
-import Link from "next/link";
+import { HStack, Heading, LinkBox, LinkOverlay, Text, VStack, keyframes } from "@chakra-ui/react";
 
 export default function ContactMe() {
   const { gradientTheme } = useAppContext();
@@ -40,7 +39,7 @@ export default function ContactMe() {
             You can reach out to me at
           </Text>
           <HStack width="full">
-            <Link href="mailto:kevinchangjk@gmail.com">
+            <LinkBox>
               <Text
                 fontWeight="medium"
                 letterSpacing="wide"
@@ -54,9 +53,11 @@ export default function ContactMe() {
                   animation: animation,
                 }}
               >
+              <LinkOverlay href="mailto:kevinchangjk@gmail.com">
                 kevinchangjk@gmail.com
+                </LinkOverlay>
               </Text>
-            </Link>
+            </LinkBox>
           </HStack>
         </VStack>
       </VStack>

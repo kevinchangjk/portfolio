@@ -20,7 +20,7 @@ export default function MainFrame({ gradient }: { gradient: string }) {
         width="xs"
         height="xs"
         zIndex="1"
-        bgColor={useColorModeValue("white", "gray.0")}
+        bgColor={useColorModeValue("gray.9", "gray.0")}
         roundedTopLeft="xl"
       />
       <Box
@@ -32,7 +32,7 @@ export default function MainFrame({ gradient }: { gradient: string }) {
         zIndex="1"
         borderStyle="solid"
         borderWidth="1.5rem"
-        borderColor={useColorModeValue("transparent white white transparent", "transparent #191919 #191919 transparent")}
+        borderColor={useColorModeValue("transparent #FAFAFA #FAFAFA transparent", "transparent #191919 #191919 transparent")}
       />
       <Box
         position="absolute"
@@ -51,7 +51,7 @@ export default function MainFrame({ gradient }: { gradient: string }) {
         width="xs"
         height="xs"
         zIndex="1"
-        bgColor={useColorModeValue("white", "gray.0")}
+        bgColor={useColorModeValue("gray.9", "gray.0")}
         roundedBottomRight="xl"
       />
       <Box
@@ -63,7 +63,7 @@ export default function MainFrame({ gradient }: { gradient: string }) {
         zIndex="1"
         borderStyle="solid"
         borderWidth="1.5rem"
-        borderColor={useColorModeValue("white transparent transparent white", "#191919 transparent transparent #191919")}
+        borderColor={useColorModeValue("#FAFAFA transparent transparent #FAFAFA", "#191919 transparent transparent #191919")}
       />
     </Box>
   );

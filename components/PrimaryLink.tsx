@@ -1,5 +1,4 @@
-import { Link } from "@chakra-ui/react";
-import NextLink from "next/link";
+import { LinkBox, LinkOverlay } from "@chakra-ui/react";
 
 export default function PrimaryLink({
   href,
@@ -13,12 +12,8 @@ export default function PrimaryLink({
   thickness: string;
 }) {
   return (
-    <Link
-      variant="unstyled"
-      as={NextLink}
-      href={href}
+    <LinkBox
       key={href}
-      isExternal
       display="inline-block"
       position="relative"
       _after={{
@@ -39,7 +34,9 @@ export default function PrimaryLink({
         },
       }}
     >
+      <LinkOverlay href={href} isExternal>
       {children}
-    </Link>
+      </LinkOverlay>
+    </LinkBox>
   );
 }

@@ -27,6 +27,7 @@ export default function InternalLink({
   return (
     <Button
       variant="unstyled"
+      padding="0rem"
       height="min"
       key={href}
       onClick={onClickHandler}

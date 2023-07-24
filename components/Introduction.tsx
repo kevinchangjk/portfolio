@@ -1,5 +1,5 @@
 import {
-  Button,
+  Box,
   Heading,
   Text,
   VStack,
@@ -11,41 +11,34 @@ import { getGradient } from "@/utils/gradient";
 import InternalLink from "./InternalLink";
 import PrimaryLink from "./PrimaryLink";
 
-function buildLink(text: string, route: string, external: boolean) {
+function buildLink(text: string, route: string) {
   return (
-    <Button
-      padding="0rem"
-      marginTop="-0.3rem"
-      bgColor="transparent"
-      variant="unstyled"
-    >
       <InternalLink
         href={route}
         color={useColorModeValue("gray.2", "gray.5")}
         thickness="2px"
       >
-        <Text variant="powerful" fontSize="2xl">
+        <Text variant="powerful" fontSize="2xl" padding="0rem" marginTop="-0.25rem">
           {text}
         </Text>
       </InternalLink>
-    </Button>
   );
 }
 
 function buildGithubLink() {
-const text = "kevinchangjk";
-const route = profile.socialMedia.github;
-return (
-      <PrimaryLink
-        href={route}
-        color={useColorModeValue("gray.2", "gray.5")}
-        thickness="2px"
-      >
-        <Text variant="powerful" fontSize="2xl">
-          {text}
-        </Text>
-      </PrimaryLink>
-    );
+  const text = "kevinchangjk";
+  const route = profile.socialMedia.github;
+  return (
+    <PrimaryLink
+      href={route}
+      color={useColorModeValue("gray.2", "gray.5")}
+      thickness="2px"
+    >
+      <Text variant="powerful" fontSize="2xl">
+        {text}
+      </Text>
+    </PrimaryLink>
+  );
 }
 
 export default function Introduction() {
@@ -69,22 +62,24 @@ export default function Introduction() {
       >
         Welcome.
       </Heading>
-      <Text
+      <Box
         width="full"
-        variant="descriptor"
         fontSize="2xl"
+        fontWeight="medium"
+        letterSpacing="normal"
         textAlign="justify"
         lineHeight="tall"
-        letterSpacing="normal"
+        _light={{ color: "gray.3" }}
+        _dark={{ color: "gray.4" }}
       >
-        I'm {buildGithubLink()}, a
-        software developer based in Singapore. I don't want to prattle on too
-        much {buildLink("about me", "/about", false)}, but programming is my
-        passion, and I enjoy working on all kinds of{" "}
-        {buildLink("projects", "/projects", false)}, from web to blockchain
+        I'm {buildGithubLink()}, a software developer based in Singapore. I
+        don't want to prattle on too much{" "}
+        {buildLink("about me", "/about")}, but programming is my passion,
+        and I enjoy working on all kinds of{" "}
+        {buildLink("projects", "/projects")}, from web to blockchain
         development. Feel free to{" "}
-        {buildLink("contact me", "/contact-me", false)} any time for a chat.
-      </Text>
+        {buildLink("contact me", "/contact-me")} any time for a chat.
+      </Box>
     </VStack>
   );
 }

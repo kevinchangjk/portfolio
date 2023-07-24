@@ -190,6 +190,8 @@ const extensions = {
       5: "#CCCCCC",
       6: "#D9D9D9",
       7: "#EBEBEB",
+      8: "#F0F0F0",
+      9: "#FAFAFA"
     },
     blue: "#13B0F5",
     pink: "#E70FAA",

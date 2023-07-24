@@ -4,15 +4,15 @@ import {
   HStack,
   Heading,
   Icon,
+  LinkBox,
+  LinkOverlay,
   Text,
   VStack,
-  useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
 import experiences from "../data/experiences.json";
 import { Experience } from "@/utils/types";
 import { FaRegFilePdf } from "react-icons/fa";
-import Link from "next/link";
 
 export default function About() {
   function displayExperiences(experiences: Experience[]) {
@@ -39,7 +39,7 @@ export default function About() {
           graduate in summer 2025.
         </Text>
         <VStack width="full" alignItems="start">
-          <Link href="/Notes.pdf" target="_blank">
+          <LinkBox>
             <Button
               variant="outline"
               width="13rem"
@@ -50,10 +50,14 @@ export default function About() {
                   as={FaRegFilePdf}
                   color={useColorModeValue("gray.2", "gray.5")}
                 />
-                <Text variant="powerful">View My Resume</Text>
+                <Text variant="powerful">
+                  <LinkOverlay href="/Notes.pdf" isExternal>
+                  View My Resume
+                  </LinkOverlay>
+                </Text>
               </HStack>
             </Button>
-          </Link>
+          </LinkBox>
         </VStack>
         <Heading paddingY="1rem" variant="subPrimary" textAlign="left">
           Work Experience

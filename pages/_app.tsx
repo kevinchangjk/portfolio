@@ -24,7 +24,7 @@ export default function Application({
   const pageVariants = {
     pageInitial: {
       opacity: 0,
-      x: "100%",
+      x: "80%",
     },
     pageAnimate: {
       opacity: 1,
@@ -32,7 +32,7 @@ export default function Application({
     },
     pageExit: {
       opacity: 0,
-      x: "-100%",
+      x: "-80%",
     },
   };
 
@@ -52,8 +52,8 @@ export default function Application({
               variants={pageVariants}
               transition={{
                 type: "spring",
-                duration: 0.7,
-                bounce: 0.4
+                duration: 0.5,
+                bounce: 0.25
               }}
             >
               <Component {...pageProps} />
