@@ -1,11 +1,23 @@
 import InterestedPositions from "@/components/InterestedPositions";
 import { useAppContext } from "@/context/state";
 import { getGradient } from "@/utils/gradient";
-import { Heading, Text, VStack } from "@chakra-ui/react";
+import { HStack, Heading, Text, VStack, keyframes } from "@chakra-ui/react";
+import Link from "next/link";
 
 export default function ContactMe() {
   const { gradientTheme } = useAppContext();
   const gradient = getGradient(gradientTheme, "to right");
+
+  const shift = keyframes`
+    from, to{
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  `;
+
+  const animation = `${shift} 5s ease-in-out infinite`;
 
   return (
     <main>
@@ -19,21 +31,33 @@ export default function ContactMe() {
         </VStack>
         <InterestedPositions />
         <VStack width="full" spacing="1rem" alignItems="end">
-          <Text width="full" variant="paragraph" textAlign="left" fontSize="3xl">
+          <Text
+            width="full"
+            variant="paragraph"
+            textAlign="left"
+            fontSize="3xl"
+          >
             You can reach out to me at
           </Text>
-          <Text
-            fontWeight="medium"
-            letterSpacing="wide"
-            width="min"
-            bg={gradient}
-            bgClip="text"
-            textColor="transparent"
-            fontSize="5xl"
-            textAlign="right"
-          >
-            kevinchangjk@gmail.com
-          </Text>
+          <HStack width="full">
+            <Link href="mailto:kevinchangjk@gmail.com">
+              <Text
+                fontWeight="medium"
+                letterSpacing="wide"
+                width="min"
+                bg={gradient}
+                bgClip="text"
+                bgSize="150% 100%"
+                textColor="transparent"
+                fontSize="5xl"
+                _hover={{
+                  animation: animation,
+                }}
+              >
+                kevinchangjk@gmail.com
+              </Text>
+            </Link>
+          </HStack>
         </VStack>
       </VStack>
     </main>
