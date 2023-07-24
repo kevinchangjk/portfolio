@@ -1,7 +1,15 @@
 import InterestedPositions from "@/components/InterestedPositions";
 import { useAppContext } from "@/context/state";
 import { getGradient } from "@/utils/gradient";
-import { HStack, Heading, LinkBox, LinkOverlay, Text, VStack, keyframes } from "@chakra-ui/react";
+import {
+  HStack,
+  Heading,
+  LinkBox,
+  LinkOverlay,
+  Text,
+  VStack,
+  keyframes,
+} from "@chakra-ui/react";
 
 export default function ContactMe() {
   const { gradientTheme } = useAppContext();
@@ -23,12 +31,11 @@ export default function ContactMe() {
       <VStack width="3xl" spacing="4rem" marginTop="8rem" alignItems="left">
         <VStack width="full" spacing="3rem" align="inherit">
           <Heading variant="primary">Contact Me</Heading>
-          <Text variant="paragraph" fontSize="2xl">
-            I am always on the look out for greater opportunities in these
-            fields.
+          <Text variant="paragraph" fontSize="xl">
+            I am always on the look out for greater opportunities in fields like these.
           </Text>
         </VStack>
-        <InterestedPositions />
+        <InterestedPositions gradient={gradient}/>
         <VStack width="full" spacing="1rem" alignItems="end">
           <Text
             width="full"
@@ -53,8 +60,8 @@ export default function ContactMe() {
                   animation: animation,
                 }}
               >
-              <LinkOverlay href="mailto:kevinchangjk@gmail.com">
-                kevinchangjk@gmail.com
+                <LinkOverlay href="mailto:kevinchangjk@gmail.com">
+                  kevinchangjk@gmail.com
                 </LinkOverlay>
               </Text>
             </LinkBox>
