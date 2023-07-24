@@ -50,7 +50,7 @@ export default function Profile(
           {displayAcrostic(tagline)}
         </VStack>
         <Image
-          src="/images/profile.jpg"
+          src="/images/profile.png"
           padding="0.8rem"
           boxSize="22rem"
           objectFit="cover"
