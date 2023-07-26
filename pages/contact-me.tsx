@@ -32,10 +32,11 @@ export default function ContactMe() {
         <VStack width="full" spacing="3rem" align="inherit">
           <Heading variant="primary">Contact Me</Heading>
           <Text variant="paragraph" fontSize="xl">
-            I am always on the look out for greater opportunities in fields like these.
+            I am always on the look out for greater opportunities in fields like
+            these.
           </Text>
         </VStack>
-        <InterestedPositions gradient={gradient}/>
+        <InterestedPositions />
         <VStack width="full" spacing="1rem" alignItems="end">
           <Text
             width="full"
