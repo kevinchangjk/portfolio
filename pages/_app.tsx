@@ -23,21 +23,6 @@ export default function Application({
   pageProps: {};
   router: NextRouter;
 }) {
-  const pageVariants = {
-    pageInitial: {
-      opacity: 0,
-      x: "80%",
-    },
-    pageAnimate: {
-      opacity: 1,
-      x: 0,
-    },
-    pageExit: {
-      opacity: 0,
-      x: "-80%",
-    },
-  };
-
   return (
     <ChakraProvider theme={theme}>
       <Head>
@@ -57,24 +42,11 @@ export default function Application({
         <ColorModeScript
           initialColorMode={theme.colorConfig.initialColorMode}
         />
-        <Layout>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={router.route}
-              initial="pageInitial"
-              animate="pageAnimate"
-              exit="pageExit"
-              variants={pageVariants}
-              transition={{
-                type: "spring",
-                duration: 0.5,
-                bounce: 0.25,
-              }}
-            >
-              <Component {...pageProps} />
-            </motion.div>
-          </AnimatePresence>
-        </Layout>
+        <AnimatePresence mode="wait">
+          <Layout router={router}>
+            <Component {...pageProps} />
+          </Layout>
+        </AnimatePresence>
       </AppWrapper>
     </ChakraProvider>
   );
