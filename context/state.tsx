@@ -9,16 +9,20 @@ import {
 } from "react";
 
 type Context = {
+  router: NextRouter | null;
   gradientTheme: string[];
   setGradientTheme: Dispatch<SetStateAction<string[]>>;
-  router: NextRouter | null;
+  isEntryComplete: boolean;
+  completeEntry: () => void;
 };
 
 // @Desc: Create Context for app-wide state handling:
 const AppContext = createContext<Context>({
+  router: null,
   gradientTheme: originalColors,
   setGradientTheme: () => null,
-  router: null,
+  isEntryComplete: false,
+  completeEntry: () => null,
 });
 
 // @Desc: For _app.js to wrap around all child components to enable access to React Context states:
@@ -34,12 +38,19 @@ export function useAppContext(): Context {
 
 // @Desc: Overall Function to handle all states required for context and return it back to AppWrapper
 function provideAppState(): Context {
-  const [gradientTheme, setGradientTheme] = useState(originalColors);
   const router = useRouter();
+  const [gradientTheme, setGradientTheme] = useState(originalColors);
+  const [isEntryComplete, setIsEntryComplete] = useState(false);
+
+  const completeEntry: () => void = () => {
+    setIsEntryComplete(true);
+  };
 
   return {
+    router,
     gradientTheme,
     setGradientTheme,
-    router,
+    isEntryComplete,
+    completeEntry,
   };
 }

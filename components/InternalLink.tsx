@@ -12,7 +12,7 @@ export default function InternalLink({
   children: React.ReactNode;
   thickness: string;
 }) {
-  const { router, } = useAppContext();
+  const { router } = useAppContext();
 
   function onClickHandler() {
     // check if a transition is even necessary
@@ -21,7 +21,7 @@ export default function InternalLink({
       return;
     }
 
-    router?.push(href, href, { scroll: false });
+    router?.push(href, href, { scroll: true });
   }
 
   return (

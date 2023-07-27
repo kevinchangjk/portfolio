@@ -5,7 +5,6 @@ import "@fontsource/dm-sans";
 import "@fontsource/poppins";
 import { AppWrapper } from "@/context/state";
 import { NextRouter } from "next/router";
-import { motion, AnimatePresence } from "framer-motion";
 import { Metadata } from "next";
 import Head from "next/head";
 
@@ -42,11 +41,9 @@ export default function Application({
         <ColorModeScript
           initialColorMode={theme.colorConfig.initialColorMode}
         />
-        <AnimatePresence mode="wait">
-          <Layout router={router}>
-            <Component {...pageProps} />
-          </Layout>
-        </AnimatePresence>
+        <Layout router={router}>
+          <Component {...pageProps} />
+        </Layout>
       </AppWrapper>
     </ChakraProvider>
   );
