@@ -2,7 +2,8 @@ import {
   Button,
   HStack,
   Image,
-  Link,
+  LinkBox,
+  LinkOverlay,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -14,13 +15,19 @@ import InternalLink from "./InternalLink";
 const { github, linkedIn } = profile.socialMedia;
 
 export default function Navbar() {
+  const primaryColor = useColorModeValue("gray.3", "gray.4");
+  const githubImage = useColorModeValue(
+    "/images/social-media/github-light.svg",
+    "/images/social-media/github-dark.svg"
+  );
+  const linkedInImage = useColorModeValue(
+    "/images/social-media/linkedin-light.svg",
+    "/images/social-media/linkedin-dark.svg"
+  );
+
   function headerLink(route: string, text: string) {
     return (
-      <InternalLink
-        href={route}
-        color={useColorModeValue("gray.3", "gray.4")}
-        thickness="2px"
-      >
+      <InternalLink href={route} color={primaryColor} thickness="2px">
         <Text variant="strong" fontSize="xl">
           {text}
         </Text>
@@ -28,13 +35,15 @@ export default function Navbar() {
     );
   }
 
-  function socialMedia(route: string, lightImg: string, darkImg: string) {
+  function socialMedia(route: string, image: string) {
     return (
-      <Button padding="0" bgColor="transparent">
-        <Link href={route} isExternal={true}>
-          <Image src={useColorModeValue(lightImg, darkImg)} />
-        </Link>
-      </Button>
+      <LinkBox>
+        <Button padding="0" bgColor="transparent">
+          <LinkOverlay href={route} isExternal={true}>
+            <Image src={image} alt="Social Media" />
+          </LinkOverlay>
+        </Button>
+      </LinkBox>
     );
   }
 
@@ -47,16 +56,8 @@ export default function Navbar() {
         {headerLink("/projects", "Projects")}
         {headerLink("/contact-me", "Contact")}
         <HStack spacing="1rem">
-          {socialMedia(
-            github,
-            "/images/social-media/github-light.svg",
-            "/images/social-media/github-dark.svg"
-          )}
-          {socialMedia(
-            linkedIn,
-            "/images/social-media/linkedin-light.svg",
-            "/images/social-media/linkedin-dark.svg"
-          )}
+          {socialMedia(github, githubImage)}
+          {socialMedia(linkedIn, linkedInImage)}
           <ColorModeButton />
         </HStack>
       </HStack>

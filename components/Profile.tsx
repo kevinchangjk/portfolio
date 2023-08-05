@@ -20,8 +20,7 @@ function displayAcrostic(acrostic: string[]) {
   return result;
 }
 
-export default function Profile(
-) {
+export default function Profile() {
   const { gradientTheme } = useAppContext();
   const gradient = getGradient(gradientTheme, "to right");
 
@@ -51,6 +50,7 @@ export default function Profile(
         </VStack>
         <Image
           src="/images/profile.png"
+          alt="Kevin's Profile"
           padding="0.8rem"
           boxSize="22rem"
           objectFit="cover"

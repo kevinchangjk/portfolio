@@ -9,13 +9,11 @@ import Logo from "./Logo";
 import InternalLink from "./InternalLink";
 
 export default function Footer() {
+  const primaryColor = useColorModeValue("gray.2", "gray.4");
+
   function displayLink(route: string, text: string) {
     return (
-      <InternalLink
-        href={route}
-        color={useColorModeValue("gray.2", "gray.4")}
-        thickness="px"
-      >
+      <InternalLink href={route} color={primaryColor} thickness="px">
         <Text variant="footer" fontSize="lg">
           {text}
         </Text>

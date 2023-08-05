@@ -12,32 +12,34 @@ import {
   Image,
   Text,
   VStack,
-  useColorModeValue,
+  useColorMode,
 } from "@chakra-ui/react";
 import PrimaryLink from "./PrimaryLink";
 
 export default function ProjectCard({ projectData }: { projectData: Project }) {
   const { title, description, imageUrl, techStack, sourceUrl, previewUrl } =
     projectData;
+  const { colorMode } = useColorMode();
   return (
     <Card
       width="20rem"
       height="30rem"
-      bgColor={useColorModeValue("white", "gray.1")}
+      bgColor={colorMode === "light" ? "white" : "gray.1"}
       borderRadius="0.5rem"
-      borderColor={useColorModeValue("gray.200", "gray.700")}
+      borderColor={colorMode === "light" ? "gray.200" : "gray.700"}
       borderWidth="thin"
       boxShadow="2xl"
     >
       <Image
         src={imageUrl}
+        alt="Project Thumbnail"
         width="full"
         height="13rem"
         fit="cover"
         borderTopRadius="0.5rem"
         borderBottomWidth="0.5px"
         borderBottomStyle="solid"
-        borderBottomColor={useColorModeValue("gray.3", "gray.5")}
+        borderBottomColor={colorMode === "light" ? "gray.3" : "gray.5"}
         marginBottom="1rem"
       />
       <CardHeader
@@ -72,13 +74,13 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
               {previewUrl && (
                 <PrimaryLink
                   href={previewUrl}
-                  color={useColorModeValue("gray.3", "gray.5")}
+                  color={colorMode === "light" ? "gray.3" : "gray.5"}
                   thickness="px"
                 >
                   <HStack>
                     <LinkIcon
                       boxSize="20px"
-                      color={useColorModeValue("gray.3", "gray.5")}
+                      color={colorMode === "light" ? "gray.3" : "gray.5"}
                     />
                     <Text variant="detail">Live Preview</Text>
                   </HStack>
@@ -89,15 +91,17 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
               {sourceUrl && (
                 <PrimaryLink
                   href={sourceUrl}
-                  color={useColorModeValue("gray.3", "gray.5")}
+                  color={colorMode === "light" ? "gray.3" : "gray.5"}
                   thickness="px"
                 >
                   <HStack>
                     <Image
-                      src={useColorModeValue(
-                        "/images/social-media/github-light.svg",
-                        "/images/social-media/github-dark.svg"
-                      )}
+                      src={
+                        colorMode === "light"
+                          ? "/images/social-media/github-light.svg"
+                          : "/images/social-media/github-dark.svg"
+                      }
+                      alt="Github Icon"
                       boxSize="20px"
                     />
                     <Text variant="detail">Source Code</Text>

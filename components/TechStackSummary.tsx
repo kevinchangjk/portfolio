@@ -7,7 +7,7 @@ export default function TechStackSummary() {
       <VStack spacing="3rem" align="inherit">
         <Heading variant="primary">My Tech Stack</Heading>
         <Heading variant="secondary">
-          Some of the technologies I've been working with
+          Some of the technologies {"I've"} been working with
         </Heading>
       </VStack>
       <TechStackGrid />
