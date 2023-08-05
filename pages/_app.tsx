@@ -6,6 +6,7 @@ import "@fontsource/poppins";
 import { AppWrapper } from "@/context/state";
 import { NextRouter } from "next/router";
 import { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
 
 export const metadata: Metadata = {
@@ -44,6 +45,7 @@ export default function Application({
         <Layout router={router}>
           <Component {...pageProps} />
         </Layout>
+        <Analytics />
       </AppWrapper>
     </ChakraProvider>
   );
