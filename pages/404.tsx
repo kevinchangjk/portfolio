@@ -9,7 +9,7 @@ export default function Custom404() {
             404
           </Heading>
           <Heading variant="secondary">
-            Looks like you're at the wrong place...
+            Looks like {"you're"} at the wrong place...
           </Heading>
         </VStack>
       </Center>
