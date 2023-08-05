@@ -72,8 +72,8 @@ export default function Introduction() {
         _dark={{ color: "gray.4" }}
       >
         {"I'm"} {buildGithubLink()}, a software developer based in Singapore. I
-        {"don't"} want to prattle on too much {buildLink("about me", "/about")},
-        but programming is my passion, and I enjoy working on all kinds of{" "}
+        {" don't"} want to prattle on too much {buildLink("about me", "/about")}
+        , but programming is my passion, and I enjoy working on all kinds of{" "}
         {buildLink("projects", "/projects")}, from web to blockchain
         development. Feel free to {buildLink("contact me", "/contact-me")} any
         time for a chat.

@@ -51,7 +51,7 @@ export default function About() {
                   color={useColorModeValue("gray.2", "gray.5")}
                 />
                 <Text variant="powerful">
-                  <LinkOverlay href="/Notes.pdf" isExternal>
+                  <LinkOverlay href="/Resume_Portfolio.pdf" isExternal>
                     View My Resume
                   </LinkOverlay>
                 </Text>
