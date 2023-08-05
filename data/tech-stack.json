@@ -1,34 +1,14 @@
 {
   "techStack": [
     {
-      "name": "neovim",
-      "imageUrl": "/images/tech-stack/neovim.svg",
-      "sourceUrl": "https://neovim.io/"
-    },
-    {
       "name": "typescript",
       "imageUrl": "/images/tech-stack/typescript.svg",
       "sourceUrl": "https://www.typescriptlang.org/"
     },
     {
-      "name": "react",
-      "imageUrl": "/images/tech-stack/react.svg",
-      "sourceUrl": "https://react.dev/"
-    },
-    {
-      "name": "node",
-      "imageUrl": "/images/tech-stack/node.svg",
-      "sourceUrl": "https://nodejs.org/en/about"
-    },
-    {
       "name": "cpp",
       "imageUrl": "/images/tech-stack/cpp.svg",
       "sourceUrl": "https://cplusplus.com/"
-    },
-    {
-      "name": "git",
-      "imageUrl": "/images/tech-stack/git.svg",
-      "sourceUrl": "https://git-scm.com/"
     },
     {
       "name": "python",
@@ -41,6 +21,16 @@
       "sourceUrl": "https://dev.java/"
     },
     {
+      "name": "react",
+      "imageUrl": "/images/tech-stack/react.svg",
+      "sourceUrl": "https://react.dev/"
+    },
+    {
+      "name": "node",
+      "imageUrl": "/images/tech-stack/node.svg",
+      "sourceUrl": "https://nodejs.org/en/about"
+    },
+    {
       "name": "postgres",
       "imageUrl": "/images/tech-stack/postgres.svg",
       "sourceUrl": "https://www.postgresql.org/"
@@ -49,6 +39,16 @@
       "name": "mongodb",
       "imageUrl": "/images/tech-stack/mongodb.svg",
       "sourceUrl": "https://www.mongodb.com/"
+    },
+    {
+      "name": "git",
+      "imageUrl": "/images/tech-stack/git.svg",
+      "sourceUrl": "https://git-scm.com/"
+    },
+    {
+      "name": "neovim",
+      "imageUrl": "/images/tech-stack/neovim.svg",
+      "sourceUrl": "https://neovim.io/"
     }
   ]
 }

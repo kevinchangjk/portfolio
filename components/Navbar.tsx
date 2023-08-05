@@ -11,7 +11,7 @@ import profile from "@/data/profile.json";
 import ColorModeButton from "./ColorModeButton";
 import InternalLink from "./InternalLink";
 
-const { github, twitter, linkedIn } = profile.socialMedia;
+const { github, linkedIn } = profile.socialMedia;
 
 export default function Navbar() {
   function headerLink(route: string, text: string) {
@@ -51,11 +51,6 @@ export default function Navbar() {
             github,
             "/images/social-media/github-light.svg",
             "/images/social-media/github-dark.svg"
-          )}
-          {socialMedia(
-            twitter,
-            "/images/social-media/twitter-light.svg",
-            "/images/social-media/twitter-dark.svg"
           )}
           {socialMedia(
             linkedIn,

@@ -10,7 +10,7 @@ export default function WakatimeSummary() {
     <VStack spacing="3rem" align="inherit">
       <Heading variant="primary">Programming Languages</Heading>
       <Heading variant="secondary">
-        What languages I've been coding in for the past month
+        Some of the languages I've been using
       </Heading>
       <Image boxSize="2xl" src={useColorModeValue(lightSum, darkSum)} />
     </VStack>
