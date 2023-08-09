@@ -1,16 +1,19 @@
 import {
   Button,
+  Divider,
   HStack,
   Image,
   LinkBox,
   LinkOverlay,
   Text,
+  VStack,
   useColorModeValue,
 } from "@chakra-ui/react";
 import Logo from "./Logo";
 import profile from "@/data/profile.json";
 import ColorModeButton from "./ColorModeButton";
 import InternalLink from "./InternalLink";
+import { useEffect, useState } from "react";
 
 const { github, linkedIn } = profile.socialMedia;
 
@@ -24,15 +27,21 @@ export default function Navbar() {
     "/images/social-media/linkedin-light.svg",
     "/images/social-media/linkedin-dark.svg"
   );
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    // subscribe to window resize event "onComponentDidMount"
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      // unsubscribe "onComponentDestroy"
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
 
   function headerLink(route: string, text: string) {
     return (
-      <InternalLink
-        href={route}
-        color={primaryColor}
-        // eslint-disable-next-line no-use-before-define
-        thickness="2px"
-      >
+      <InternalLink href={route} color={primaryColor} thickness="2px">
         <Text
           variant="strong"
           fontSize={{
@@ -75,33 +84,71 @@ export default function Navbar() {
     );
   }
 
-  return (
-    <HStack width="full" justifyContent="space-between">
-      <Logo />
-      <HStack
-        spacing={{
-          base: "0.5rem",
-          md: "1.5rem",
-          xl: "3rem",
-        }}
-      >
-        {headerLink("/", "Home")}
-        {headerLink("/about", "About")}
-        {headerLink("/projects", "Projects")}
-        {headerLink("/contact-me", "Contact")}
-        <HStack
-          spacing={{
-            base: "0.5rem",
-            md: "0.75rem",
-            xl: "1rem",
-            "2xl": "1.25rem",
-          }}
-        >
-          {socialMedia(github, githubImage)}
-          {socialMedia(linkedIn, linkedInImage)}
-          <ColorModeButton />
+  function displayHeader(width: number) {
+    if (width < 624) {
+      return (
+        <VStack width="full">
+          <HStack width="full" justifyContent="space-between">
+            <Logo />
+            <HStack
+              spacing={{
+                base: "0.75rem",
+                sm: "1rem",
+              }}
+            >
+              {socialMedia(github, githubImage)}
+              {socialMedia(linkedIn, linkedInImage)}
+              <ColorModeButton />
+            </HStack>
+          </HStack>
+          <Divider />
+          <HStack
+            width={{
+              base: "full",
+              sm: "80vw",
+            }}
+            alignSelf="center"
+            justifyContent="space-between"
+          >
+            {headerLink("/", "Home")}
+            {headerLink("/about", "About")}
+            {headerLink("/projects", "Projects")}
+            {headerLink("/contact-me", "Contact")}
+          </HStack>
+        </VStack>
+      );
+    } else {
+      return (
+        <HStack width="full" justifyContent="space-between">
+          <Logo />
+          <HStack
+            spacing={{
+              base: "0.5rem",
+              md: "1.5rem",
+              xl: "3rem",
+            }}
+          >
+            {headerLink("/", "Home")}
+            {headerLink("/about", "About")}
+            {headerLink("/projects", "Projects")}
+            {headerLink("/contact-me", "Contact")}
+            <HStack
+              spacing={{
+                base: "0.5rem",
+                md: "0.75rem",
+                xl: "1rem",
+                "2xl": "1.25rem",
+              }}
+            >
+              {socialMedia(github, githubImage)}
+              {socialMedia(linkedIn, linkedInImage)}
+              <ColorModeButton />
+            </HStack>
+          </HStack>
         </HStack>
-      </HStack>
-    </HStack>
-  );
+      );
+    }
+  }
+
+  return displayHeader(width);
 }

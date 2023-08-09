@@ -41,7 +41,7 @@ export default function Footer() {
     );
   }
 
-  function displayFooter() {
+  function displayFooter(width: number) {
     if (width < 624) {
       return (
         <VStack
@@ -72,7 +72,7 @@ export default function Footer() {
             {displayLink("/projects", "Projects")}
             {displayLink("/contact-me", "Contact")}
           </HStack>
-          <Divider bg="gray.2" />
+          <Divider />
           <HStack spacing="0.5rem">
             <Text
               variant="subtle"
@@ -142,5 +142,5 @@ export default function Footer() {
     }
   }
 
-  return displayFooter();
+  return displayFooter(width);
 }
