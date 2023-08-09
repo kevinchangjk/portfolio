@@ -39,7 +39,7 @@ export default function Layout({
           base: "90vw",
           md: "85vw",
           xl: "80vw",
-          "2xl": "75vw",
+          "2xl": "7xl",
         }}
         paddingY={{
           base: "1rem",

@@ -31,7 +31,7 @@ export default function About() {
     <main>
       <VStack
         marginTop={{
-          base: "8vh",
+          base: "6vh",
           md: "12vh",
           xl: "16vh",
           "2xl": "20vh",
@@ -42,7 +42,12 @@ export default function About() {
           xl: "2rem",
           "2xl": "2.5rem",
         }}
-        width={{ base: "full", md: "2xl", xl: "3xl", "2xl": "4xl" }}
+        width={{
+          base: "full",
+          md: "2xl",
+          xl: "3xl",
+          "2xl": "4xl",
+        }}
         alignItems="left"
       >
         <Heading
