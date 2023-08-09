@@ -4,6 +4,7 @@ import {
   Text,
   VStack,
   useColorModeValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import Logo from "./Logo";
 import InternalLink from "./InternalLink";
@@ -11,17 +12,7 @@ import { useEffect, useState } from "react";
 
 export default function Footer() {
   const primaryColor = useColorModeValue("gray.2", "gray.4");
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const handleResizeWindow = () => setWidth(window.innerWidth);
-    // subscribe to window resize event "onComponentDidMount"
-    window.addEventListener("resize", handleResizeWindow);
-    return () => {
-      // unsubscribe "onComponentDestroy"
-      window.removeEventListener("resize", handleResizeWindow);
-    };
-  }, []);
+  const [isMobile] = useMediaQuery("(max-width: 624px)");
 
   function displayLink(route: string, text: string) {
     return (
@@ -41,8 +32,8 @@ export default function Footer() {
     );
   }
 
-  function displayFooter(width: number) {
-    if (width < 624) {
+  function displayFooter() {
+    if (isMobile) {
       return (
         <VStack
           width="full"
@@ -59,6 +50,7 @@ export default function Footer() {
             "2xl": "2.5rem",
           }}
         >
+          <Divider />
           <HStack
             width={{
               base: "full",
@@ -142,5 +134,5 @@ export default function Footer() {
     }
   }
 
-  return displayFooter(width);
+  return displayFooter();
 }

@@ -8,12 +8,12 @@ import {
   Text,
   VStack,
   useColorModeValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import Logo from "./Logo";
 import profile from "@/data/profile.json";
 import ColorModeButton from "./ColorModeButton";
 import InternalLink from "./InternalLink";
-import { useEffect, useState } from "react";
 
 const { github, linkedIn } = profile.socialMedia;
 
@@ -27,17 +27,7 @@ export default function Navbar() {
     "/images/social-media/linkedin-light.svg",
     "/images/social-media/linkedin-dark.svg"
   );
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const handleResizeWindow = () => setWidth(window.innerWidth);
-    // subscribe to window resize event "onComponentDidMount"
-    window.addEventListener("resize", handleResizeWindow);
-    return () => {
-      // unsubscribe "onComponentDestroy"
-      window.removeEventListener("resize", handleResizeWindow);
-    };
-  }, []);
+  const [isMobile] = useMediaQuery("(max-width: 624px)");
 
   function headerLink(route: string, text: string) {
     return (
@@ -84,8 +74,8 @@ export default function Navbar() {
     );
   }
 
-  function displayHeader(width: number) {
-    if (width < 624) {
+  function displayHeader() {
+    if (isMobile) {
       return (
         <VStack width="full">
           <HStack width="full" justifyContent="space-between">
@@ -115,6 +105,7 @@ export default function Navbar() {
             {headerLink("/projects", "Projects")}
             {headerLink("/contact-me", "Contact")}
           </HStack>
+          <Divider />
         </VStack>
       );
     } else {
@@ -150,5 +141,5 @@ export default function Navbar() {
     }
   }
 
-  return displayHeader(width);
+  return displayHeader();
 }
