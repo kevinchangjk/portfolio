@@ -4,7 +4,7 @@ import data from "../data/projects.json" assert { type: "json" };
 import ProjectCard from "./ProjectCard";
 
 function buildCard(projectData: Project) {
-  return <ProjectCard projectData={projectData} key={projectData.title}/>;
+  return <ProjectCard projectData={projectData} key={projectData.title} />;
 }
 
 function buildGrid(allProjects: Project[]) {
@@ -20,10 +20,25 @@ function buildGrid(allProjects: Project[]) {
 export default function ProjectGrid() {
   return (
     <SimpleGrid
-      minChildWidth="20rem"
+      minChildWidth={{
+        base: "16rem",
+        md: "18rem",
+        xl: "20rem",
+        "2xl": "22rem",
+      }}
       width="full"
-      spacingX="3rem"
-      spacingY="4rem"
+      spacingX={{
+        base: "2rem",
+        md: "2.5rem",
+        xl: "3rem",
+        "2xl": "3.5rem",
+      }}
+      spacingY={{
+        base: "3rem",
+        md: "3.5rem",
+        xl: "4rem",
+        "2xl": "4.5rem",
+      }}
       justifyItems="center"
     >
       {buildGrid(data.projects)}

@@ -4,7 +4,7 @@ import { Tech } from "@/utils/types";
 import data from "../data/tech-stack.json" assert { type: "json" };
 
 function buildCell(techData: Tech) {
-  return <TechStackCell techData={techData} key={techData.name}/>;
+  return <TechStackCell techData={techData} key={techData.name} />;
 }
 
 function buildGrid(allUrls: Tech[]) {
@@ -20,10 +20,25 @@ function buildGrid(allUrls: Tech[]) {
 export default function TechStackGrid() {
   return (
     <SimpleGrid
-      minChildWidth="8rem"
+      minChildWidth={{
+        base: "4rem",
+        md: "6rem",
+        xl: "8rem",
+        "2xl": "10rem",
+      }}
       width="full"
-      spacingX="7rem"
-      spacingY="5rem"
+      spacingX={{
+        base: "2rem",
+        md: "4rem",
+        xl: "6rem",
+        "2xl": "8rem",
+      }}
+      spacingY={{
+        base: "2rem",
+        md: "3.5rem",
+        xl: "5rem",
+        "2xl": "6.5rem",
+      }}
       justifyItems="center"
     >
       {buildGrid(data.techStack)}

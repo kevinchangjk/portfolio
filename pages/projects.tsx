@@ -6,7 +6,20 @@ import { VStack } from "@chakra-ui/react";
 export default function Projects() {
   return (
     <main>
-      <VStack spacing="8rem">
+      <VStack
+        marginTop={{
+          base: "6vh",
+          md: "12vh",
+          xl: "16vh",
+          "2xl": "20vh",
+        }}
+        spacing={{
+          base: "4rem",
+          md: "6rem",
+          xl: "8rem",
+          "2xl": "10rem",
+        }}
+      >
         <ProjectSummary />
         <TechStackSummary />
         <WakatimeSummary />

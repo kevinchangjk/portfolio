@@ -7,6 +7,7 @@ export const Heading = defineStyleConfig({
   variants: {
     primary: {
       fontSize: ["24px", null, "32px", null, "48px", "56px"],
+      textAlign: "justify",
       letterSpacing: "wider",
       _light: {
         color: "gray.2",
@@ -18,6 +19,7 @@ export const Heading = defineStyleConfig({
     secondary: {
       fontSize: ["16px", null, "24px", null, "32px", "48px"],
       fontWeight: "normal",
+      textAlign: "justify",
       letterSpacing: "wide",
       _light: {
         color: "gray.3",
