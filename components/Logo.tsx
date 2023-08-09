@@ -20,7 +20,12 @@ export default function Logo() {
       onClick={newGradient}
     >
       <Heading
-        fontSize="20px"
+        fontSize={{
+          base: "md",
+          md: "lg",
+          xl: "xl",
+          "2xl": "2xl",
+        }}
         background={gradient}
         backgroundClip="text"
         textColor="transparent"

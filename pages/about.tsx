@@ -30,12 +30,31 @@ export default function About() {
   return (
     <main>
       <VStack
-        marginTop="8rem"
-        spacing="2rem"
+        marginTop={{
+          base: "8vh",
+          md: "12vh",
+          xl: "16vh",
+          "2xl": "20vh",
+        }}
+        spacing={{
+          base: "1rem",
+          md: "1.5rem",
+          xl: "2rem",
+          "2xl": "2.5rem",
+        }}
         width={{ base: "full", md: "2xl", xl: "3xl", "2xl": "4xl" }}
         alignItems="left"
       >
-        <Heading paddingBottom="1rem" variant="primary" textAlign="left">
+        <Heading
+          paddingBottom={{
+            base: "0.6rem",
+            md: "0.8rem",
+            xl: "1rem",
+            "2xl": "1.2rem",
+          }}
+          variant="primary"
+          textAlign="left"
+        >
           About Me
         </Heading>
         <Text
@@ -71,11 +90,29 @@ export default function About() {
             </Button>
           </LinkBox>
         </VStack>
-        <Heading paddingY="1rem" variant="subPrimary" textAlign="left">
+        <Heading
+          paddingY={{
+            base: "0.6rem",
+            md: "0.8rem",
+            xl: "1rem",
+            "2xl": "1.2rem",
+          }}
+          variant="subPrimary"
+          textAlign="left"
+        >
           Work Experience
         </Heading>
         {displayExperiences(work)}
-        <Heading paddingY="1rem" variant="subPrimary" textAlign="left">
+        <Heading
+          paddingY={{
+            base: "0.6rem",
+            md: "0.8rem",
+            xl: "1rem",
+            "2xl": "1.2rem",
+          }}
+          variant="subPrimary"
+          textAlign="left"
+        >
           Education
         </Heading>
         {displayExperiences(education)}

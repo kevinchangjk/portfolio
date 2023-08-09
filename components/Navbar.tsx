@@ -27,8 +27,21 @@ export default function Navbar() {
 
   function headerLink(route: string, text: string) {
     return (
-      <InternalLink href={route} color={primaryColor} thickness="2px">
-        <Text variant="strong" fontSize="xl">
+      <InternalLink
+        href={route}
+        color={primaryColor}
+        // eslint-disable-next-line no-use-before-define
+        thickness="2px"
+      >
+        <Text
+          variant="strong"
+          fontSize={{
+            base: "md",
+            md: "lg",
+            xl: "xl",
+            "2xl": "2xl",
+          }}
+        >
           {text}
         </Text>
       </InternalLink>
@@ -38,9 +51,24 @@ export default function Navbar() {
   function socialMedia(route: string, image: string) {
     return (
       <LinkBox>
-        <Button padding="0" bgColor="transparent">
+        <Button
+          padding="0"
+          minW="1.5rem"
+          minH="1.5rem"
+          height="min"
+          bgColor="transparent"
+        >
           <LinkOverlay href={route} isExternal={true}>
-            <Image src={image} alt="Social Media" />
+            <Image
+              src={image}
+              alt="Social Media"
+              boxSize={{
+                base: "1.5rem",
+                md: "1.75rem",
+                xl: "2rem",
+                "2xl": "2.25rem",
+              }}
+            />
           </LinkOverlay>
         </Button>
       </LinkBox>
@@ -63,10 +91,10 @@ export default function Navbar() {
         {headerLink("/contact-me", "Contact")}
         <HStack
           spacing={{
-            base: "0.3rem",
-            md: "0.6rem",
+            base: "0.5rem",
+            md: "0.75rem",
             xl: "1rem",
-            "2xl": "1.5rem",
+            "2xl": "1.25rem",
           }}
         >
           {socialMedia(github, githubImage)}
