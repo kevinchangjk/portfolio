@@ -22,8 +22,18 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
   const { colorMode } = useColorMode();
   return (
     <Card
-      width="20rem"
-      height="30rem"
+      width={{
+        base: "16rem",
+        md: "18rem",
+        xl: "20rem",
+        "2xl": "22rem",
+      }}
+      height={{
+        base: "24rem",
+        md: "27rem",
+        xl: "30rem",
+        "2xl": "33rem",
+      }}
       bgColor={colorMode === "light" ? "white" : "gray.1"}
       borderRadius="0.5rem"
       borderColor={colorMode === "light" ? "gray.200" : "gray.700"}
@@ -34,39 +44,105 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
         src={imageUrl}
         alt="Project Thumbnail"
         width="full"
-        height="13rem"
+        height={{
+          base: "11rem",
+          md: "12rem",
+          xl: "13rem",
+          "2xl": "14rem",
+        }}
         fit="cover"
         borderTopRadius="0.5rem"
         borderBottomWidth="0.5px"
         borderBottomStyle="solid"
         borderBottomColor={colorMode === "light" ? "gray.3" : "gray.5"}
-        marginBottom="1rem"
+        marginBottom={{
+          base: "0.5rem",
+          md: "0.75rem",
+          xl: "1rem",
+          "2xl": "1.25rem",
+        }}
       />
       <CardHeader
         marginTop="0rem"
-        marginBottom="1rem"
+        marginBottom={{
+          base: "0.5rem",
+          md: "0.75rem",
+          xl: "1rem",
+          "2xl": "1.25rem",
+        }}
         marginX="0rem"
         paddingY="0rem"
-        paddingX="1rem"
+        paddingX={{
+          base: "0.5rem",
+          md: "0.75rem",
+          xl: "1rem",
+          "2xl": "1.25rem",
+        }}
       >
         <Heading variant="card">{title}</Heading>
       </CardHeader>
       <CardBody
         marginTop="0rem"
-        marginBottom="1rem"
+        marginBottom={{
+          base: "0.5rem",
+          md: "0.75rem",
+          xl: "1rem",
+          "2xl": "1.25rem",
+        }}
         marginX="0rem"
         paddingY="0rem"
-        paddingX="1rem"
+        paddingX={{
+          base: "0.5rem",
+          md: "0.75rem",
+          xl: "1rem",
+          "2xl": "1.25rem",
+        }}
       >
-        <Text variant="paragraph" fontSize="lg">
+        <Text
+          variant="paragraph"
+          fontSize={{
+            base: "sm",
+            md: "md",
+            xl: "lg",
+            "2xl": "xl",
+          }}
+        >
           {description}
         </Text>
       </CardBody>
-      <CardFooter margin="0rem" padding="1rem">
+      <CardFooter
+        margin="0rem"
+        padding={{
+          base: "0.5rem",
+          md: "0.75rem",
+          xl: "1rem",
+          "2xl": "1.25rem",
+        }}
+      >
         <VStack width="full" margin="0rem" padding="0rem">
           <HStack width="full" alignItems="end">
-            <Text variant="detail">Tech Stack: </Text>
-            <Text variant="detail">{techStack}</Text>
+            <Text
+              variant="detail"
+              fontSize={{
+                base: "xs",
+                md: "sm",
+                xl: "md",
+                "2xl": "lg",
+              }}
+            >
+              Tech Stack:{" "}
+            </Text>
+            <Text
+              variant="detail"
+              fontSize={{
+                base: "xs",
+                md: "sm",
+                xl: "md",
+                "2xl": "lg",
+              }}
+            >
+              {techStack}
+            </Text>
           </HStack>
           <Divider variant="secondary" />
           <HStack width="full">
@@ -79,10 +155,25 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
                 >
                   <HStack>
                     <LinkIcon
-                      boxSize="20px"
+                      boxSize={{
+                        base: "12px",
+                        md: "16px",
+                        xl: "20px",
+                        "2xl": "24px",
+                      }}
                       color={colorMode === "light" ? "gray.3" : "gray.5"}
                     />
-                    <Text variant="detail">Live Preview</Text>
+                    <Text
+                      variant="detail"
+                      fontSize={{
+                        base: "xs",
+                        md: "sm",
+                        xl: "md",
+                        "2xl": "lg",
+                      }}
+                    >
+                      Live Preview
+                    </Text>
                   </HStack>
                 </PrimaryLink>
               )}
@@ -102,9 +193,24 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
                           : "/images/social-media/github-dark.svg"
                       }
                       alt="Github Icon"
-                      boxSize="20px"
+                      boxSize={{
+                        base: "12px",
+                        md: "16px",
+                        xl: "20px",
+                        "2xl": "24px",
+                      }}
                     />
-                    <Text variant="detail">Source Code</Text>
+                    <Text
+                      variant="detail"
+                      fontSize={{
+                        base: "xs",
+                        md: "sm",
+                        xl: "md",
+                        "2xl": "lg",
+                      }}
+                    >
+                      Source Code
+                    </Text>
                   </HStack>
                 </PrimaryLink>
               )}

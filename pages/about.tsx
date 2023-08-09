@@ -29,11 +29,43 @@ export default function About() {
 
   return (
     <main>
-      <VStack marginTop="8rem" spacing="2rem" width="3xl" alignItems="left">
-        <Heading paddingBottom="1rem" variant="primary" textAlign="left">
+      <VStack
+        marginTop={{
+          base: "6vh",
+          md: "12vh",
+          xl: "16vh",
+          "2xl": "20vh",
+        }}
+        spacing={{
+          base: "1rem",
+          md: "1.5rem",
+          xl: "2rem",
+          "2xl": "2.5rem",
+        }}
+        width={{
+          base: "full",
+          md: "2xl",
+          xl: "3xl",
+          "2xl": "4xl",
+        }}
+        alignItems="left"
+      >
+        <Heading
+          paddingBottom={{
+            base: "0.6rem",
+            md: "0.8rem",
+            xl: "1rem",
+            "2xl": "1.2rem",
+          }}
+          variant="primary"
+          textAlign="left"
+        >
           About Me
         </Heading>
-        <Text variant="paragraph" fontSize="xl">
+        <Text
+          variant="paragraph"
+          fontSize={{ base: "md", md: "lg", xl: "xl", "2xl": "2xl" }}
+        >
           {
             "I am currently in my third year as an undergraduate at the National University of Singapore's School of Computing, and I'm looking to graduate in summer 2025."
           }
@@ -42,15 +74,19 @@ export default function About() {
           <LinkBox>
             <Button
               variant="outline"
-              width="13rem"
+              width={{ base: "12rem", xl: "16rem" }}
               borderColor={useColorModeValue("gray.2", "gray.5")}
             >
               <HStack>
                 <Icon
                   as={FaRegFilePdf}
                   color={useColorModeValue("gray.2", "gray.5")}
+                  boxSize={{
+                    base: "1rem",
+                    xl: "1.5rem",
+                  }}
                 />
-                <Text variant="powerful">
+                <Text variant="powerful" fontSize={{ base: "md", xl: "lg" }}>
                   <LinkOverlay href="/Resume_Portfolio.pdf" isExternal>
                     View My Resume
                   </LinkOverlay>
@@ -59,11 +95,29 @@ export default function About() {
             </Button>
           </LinkBox>
         </VStack>
-        <Heading paddingY="1rem" variant="subPrimary" textAlign="left">
+        <Heading
+          paddingY={{
+            base: "0.6rem",
+            md: "0.8rem",
+            xl: "1rem",
+            "2xl": "1.2rem",
+          }}
+          variant="subPrimary"
+          textAlign="left"
+        >
           Work Experience
         </Heading>
         {displayExperiences(work)}
-        <Heading paddingY="1rem" variant="subPrimary" textAlign="left">
+        <Heading
+          paddingY={{
+            base: "0.6rem",
+            md: "0.8rem",
+            xl: "1rem",
+            "2xl": "1.2rem",
+          }}
+          variant="subPrimary"
+          textAlign="left"
+        >
           Education
         </Heading>
         {displayExperiences(education)}

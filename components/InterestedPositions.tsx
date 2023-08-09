@@ -15,8 +15,24 @@ export default function InterestedPositions() {
     for (let i = 0; i < positions.length; i++) {
       const newPosition = (
         <WrapItem key={i}>
-          <Tag padding="0.8rem" variant="outline">
-            <Text variant="powerful" fontSize="xl">
+          <Tag
+            padding={{
+              base: "0.3rem",
+              md: "0.5rem",
+              xl: "0.8rem",
+              "2xl": "1rem",
+            }}
+            variant="outline"
+          >
+            <Text
+              variant="powerful"
+              fontSize={{
+                base: "sm",
+                md: "md",
+                xl: "xl",
+                "2xl": "2xl",
+              }}
+            >
               {positions[i]}
             </Text>
           </Tag>
@@ -27,5 +43,16 @@ export default function InterestedPositions() {
     return allPositions;
   }
 
-  return <Wrap spacing="1rem">{displayPositions(positions)}</Wrap>;
+  return (
+    <Wrap
+      spacing={{
+        base: "0.5rem",
+        md: "0.75rem",
+        xl: "1rem",
+        "2xl": "1.25rem",
+      }}
+    >
+      {displayPositions(positions)}
+    </Wrap>
+  );
 }

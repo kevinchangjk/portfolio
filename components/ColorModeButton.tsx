@@ -23,10 +23,22 @@ export default function ColorModeButton() {
   }
 
   return (
-    <Button padding="0rem" bgColor="transparent" onClick={handleClick}>
+    <Button
+      padding="0rem"
+      minWidth="1.5rem"
+      minHeight="1.5rem"
+      height="min"
+      bgColor="transparent"
+      onClick={handleClick}
+    >
       <Icon
         as={useColorModeValue(RiMoonFill, CgSun)}
-        boxSize="2rem"
+        boxSize={{
+          base: "1.7rem",
+          md: "2rem",
+          xl: "2.2rem",
+          "2xl": "2.4rem",
+        }}
         color={useColorModeValue("gray.3", "gray.4")}
       />
     </Button>

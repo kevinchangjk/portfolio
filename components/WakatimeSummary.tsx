@@ -8,12 +8,31 @@ export default function WakatimeSummary() {
   const summary = useColorModeValue(lightSum, darkSum);
 
   return (
-    <VStack spacing="3rem" align="inherit">
-      <Heading variant="primary">Programming Languages</Heading>
+    <VStack
+      spacing={{
+        base: "2rem",
+        md: "2.5rem",
+        xl: "3rem",
+        "2xl": "3.5rem",
+      }}
+      align="inherit"
+    >
+      <Heading variant="primary">Coding</Heading>
       <Heading variant="secondary">
         Some of the languages {"I've"} been using
       </Heading>
-      <Image alt="Wakatime Summary" boxSize="2xl" src={summary} />
+      <Image
+        alt="Wakatime Summary"
+        boxSize={{
+          base: "lg",
+          md: "xl",
+          xl: "2xl",
+          "2xl": "3xl",
+        }}
+        rounded="xl"
+        src={summary}
+        boxShadow="2xl"
+      />
     </VStack>
   );
 }

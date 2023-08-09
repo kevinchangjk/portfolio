@@ -16,7 +16,17 @@ export default function TechStackCell({ techData }: { techData: Tech }) {
         transform: "scale(0.9)",
       }}
     >
-      <Image src={imageUrl} alt="Tech Logo" boxSize="8rem" fit="contain" />
+      <Image
+        src={imageUrl}
+        alt="Tech Logo"
+        boxSize={{
+          base: "4rem",
+          md: "6rem",
+          xl: "8rem",
+          "2xl": "10rem",
+        }}
+        fit="contain"
+      />
     </Link>
   );
 }
