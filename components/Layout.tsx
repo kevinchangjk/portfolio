@@ -77,7 +77,7 @@ export default function Layout({
             }}
             style={{ width: "inherit" }}
           >
-            {children}
+            <Box minHeight="60vh">{children}</Box>
           </motion.div>
         </AnimatePresence>
         <motion.div

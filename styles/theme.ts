@@ -22,6 +22,12 @@ const extensions = {
       body: {
         transitionProperty: "all",
         transitionDuration: "normal",
+        _light: {
+          bg: "gray.9",
+        },
+        _dark: {
+          bg: "gray.0",
+        },
       },
     },
   },
