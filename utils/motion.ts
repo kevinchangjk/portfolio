@@ -1,8 +1,8 @@
 // Page Animations
 export const pageVariants = {
   pageInitial: {
-    opacity: 0,
-    x: "80%",
+    opacity: 1,
+    x: "120%",
   },
   pageOriginal: {
     opacity: 0,
@@ -12,8 +12,8 @@ export const pageVariants = {
     x: 0,
   },
   pageExit: {
-    opacity: 0,
-    x: "-80%",
+    opacity: 1,
+    x: "-120%",
   },
 };
 
@@ -55,4 +55,4 @@ export const introVariants = {
 };
 
 export const ENTRY_DELAY = 2;
-export const PAGE_TRANSITION_DURATION = 0.25;
+export const PAGE_TRANSITION_DURATION = 0.35;

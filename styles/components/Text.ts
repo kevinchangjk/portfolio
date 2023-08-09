@@ -17,7 +17,7 @@ export const Text = defineStyleConfig({
     },
     descriptor: {
       fontWeight: "medium",
-      letterSpacing: "wide",
+      letterSpacing: ["normal", null, "wide"],
       _light: {
         color: "gray.3",
       },
@@ -57,7 +57,7 @@ export const Text = defineStyleConfig({
     powerful: {
       textAlign: "center",
       fontWeight: "bold",
-      letterSpacing: "wide",
+      letterSpacing: ["normal", null, "wide"],
       textTransform: "uppercase",
       _light: {
         color: "gray.2",
@@ -68,7 +68,7 @@ export const Text = defineStyleConfig({
     },
     strong: {
       fontWeight: "bold",
-      letterSpacing: "wide",
+      letterSpacing: ["normal", null, "wide"],
       _light: {
         color: "gray.3",
       },
@@ -78,7 +78,7 @@ export const Text = defineStyleConfig({
     },
     footer: {
       fontWeight: "normal",
-      letterSpacing: "wide",
+      letterSpacing: ["normal", null, "wide"],
       _light: {
         color: "gray.2",
       },

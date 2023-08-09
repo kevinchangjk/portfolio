@@ -74,6 +74,10 @@ export default function Profile() {
                 md: "48px",
                 lg: "56px",
               }}
+              letterSpacing={{
+                base: "normal",
+                md: "wide",
+              }}
               lineHeight="full"
               background={gradient}
               backgroundClip="text"
@@ -107,6 +111,7 @@ export default function Profile() {
                 xl: "64px",
                 "2xl": "72px",
               }}
+              letterSpacing="wide"
               lineHeight="full"
               background={gradient}
               backgroundClip="text"

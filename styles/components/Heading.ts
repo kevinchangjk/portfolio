@@ -8,7 +8,7 @@ export const Heading = defineStyleConfig({
     primary: {
       fontSize: ["24px", null, "32px", null, "48px", "56px"],
       textAlign: "justify",
-      letterSpacing: "wider",
+      letterSpacing: ["normal", null, "wide"],
       _light: {
         color: "gray.2",
       },
@@ -20,7 +20,7 @@ export const Heading = defineStyleConfig({
       fontSize: ["16px", null, "24px", null, "32px", "48px"],
       fontWeight: "normal",
       textAlign: "justify",
-      letterSpacing: "wide",
+      letterSpacing: ["normal", null, null, "wide"],
       _light: {
         color: "gray.3",
       },
@@ -31,7 +31,7 @@ export const Heading = defineStyleConfig({
     card: {
       fontSize: ["14px", null, "20px", null, "28px", "36px"],
       fontWeight: "semibold",
-      letterSpacing: "wide",
+      letterSpacing: ["normal", null, null, "wide"],
       _light: {
         color: "gray.2",
       },
@@ -41,7 +41,7 @@ export const Heading = defineStyleConfig({
     },
     subPrimary: {
       fontSize: ["20px", null, "28px", null, "42px", "48px"],
-      letterSpacing: "wider",
+      letterSpacing: ["normal", null, "wide"],
       _light: {
         color: "gray.2",
       },

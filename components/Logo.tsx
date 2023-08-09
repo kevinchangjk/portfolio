@@ -26,6 +26,7 @@ export default function Logo() {
           xl: "xl",
           "2xl": "2xl",
         }}
+        lineHeight="full"
         background={gradient}
         backgroundClip="text"
         textColor="transparent"
