@@ -2,7 +2,7 @@
 export const pageVariants = {
   pageInitial: {
     opacity: 1,
-    x: "120%",
+    x: "100vw",
   },
   pageOriginal: {
     opacity: 0,
@@ -13,7 +13,7 @@ export const pageVariants = {
   },
   pageExit: {
     opacity: 1,
-    x: "-120%",
+    x: "-100vw",
   },
 };
 

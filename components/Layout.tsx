@@ -25,7 +25,7 @@ export default function Layout({
     <HStack
       width="full"
       backgroundColor={useColorModeValue("gray.9", "gray.0")}
-      overflowX="hidden"
+      overflow="hidden"
       justifyContent="center"
     >
       <VStack
@@ -74,7 +74,7 @@ export default function Layout({
             }}
             style={{ width: "inherit" }}
           >
-            <Box minHeight="60vh">{children}</Box>
+            <Box minHeight="55vh">{children}</Box>
           </motion.div>
         </AnimatePresence>
         <motion.div
