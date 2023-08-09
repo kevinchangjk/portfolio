@@ -21,7 +21,13 @@ export default function Introduction() {
       <InternalLink href={route} color={primaryColor} thickness="2px">
         <Text
           variant="powerful"
-          fontSize="2xl"
+          fontSize={{
+            base: "md",
+            md: "lg",
+            lg: "xl",
+            xl: "2xl",
+            "2xl": "3xl",
+          }}
           padding="0rem"
           marginTop="-0.25rem"
         >
@@ -36,7 +42,16 @@ export default function Introduction() {
     const route = profile.socialMedia.github;
     return (
       <PrimaryLink href={route} color={primaryColor} thickness="2px">
-        <Text variant="powerful" fontSize="2xl">
+        <Text
+          variant="powerful"
+          fontSize={{
+            base: "md",
+            md: "lg",
+            lg: "xl",
+            xl: "2xl",
+            "2xl": "3xl",
+          }}
+        >
           {text}
         </Text>
       </PrimaryLink>
@@ -46,8 +61,13 @@ export default function Introduction() {
   return (
     <VStack
       position="relative"
-      width="4xl"
-      spacing="2rem"
+      width="full"
+      spacing={{
+        base: "1rem",
+        md: "1.5rem",
+        xl: "2rem",
+        "2xl": "2.5rem",
+      }}
       justifyContent="center"
       alignItems="start"
     >
@@ -56,14 +76,25 @@ export default function Introduction() {
         bg={gradient}
         bgClip="text"
         textColor="transparent"
-        fontSize="5xl"
+        fontSize={{
+          base: "3xl",
+          md: "4xl",
+          xl: "5xl",
+          "2xl": "6xl",
+        }}
         letterSpacing="wide"
       >
         Welcome.
       </Heading>
       <Box
         width="full"
-        fontSize="2xl"
+        fontSize={{
+          base: "md",
+          md: "lg",
+          lg: "xl",
+          xl: "2xl",
+          "2xl": "3xl",
+        }}
         fontWeight="medium"
         letterSpacing="normal"
         textAlign="justify"
