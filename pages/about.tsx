@@ -29,11 +29,19 @@ export default function About() {
 
   return (
     <main>
-      <VStack marginTop="8rem" spacing="2rem" width="3xl" alignItems="left">
+      <VStack
+        marginTop="8rem"
+        spacing="2rem"
+        width={{ base: "full", md: "2xl", xl: "3xl", "2xl": "4xl" }}
+        alignItems="left"
+      >
         <Heading paddingBottom="1rem" variant="primary" textAlign="left">
           About Me
         </Heading>
-        <Text variant="paragraph" fontSize="xl">
+        <Text
+          variant="paragraph"
+          fontSize={{ base: "md", md: "lg", xl: "xl", "2xl": "2xl" }}
+        >
           {
             "I am currently in my third year as an undergraduate at the National University of Singapore's School of Computing, and I'm looking to graduate in summer 2025."
           }
@@ -42,15 +50,19 @@ export default function About() {
           <LinkBox>
             <Button
               variant="outline"
-              width="13rem"
+              width={{ base: "12rem", xl: "16rem" }}
               borderColor={useColorModeValue("gray.2", "gray.5")}
             >
               <HStack>
                 <Icon
                   as={FaRegFilePdf}
                   color={useColorModeValue("gray.2", "gray.5")}
+                  boxSize={{
+                    base: "1rem",
+                    xl: "1.5rem",
+                  }}
                 />
-                <Text variant="powerful">
+                <Text variant="powerful" fontSize={{ base: "md", xl: "lg" }}>
                   <LinkOverlay href="/Resume_Portfolio.pdf" isExternal>
                     View My Resume
                   </LinkOverlay>

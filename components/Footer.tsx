@@ -25,7 +25,15 @@ export default function Footer() {
     <VStack width="full" marginTop="12rem" spacing="2rem">
       <Divider bg="gray.2" />
       <HStack width="full" justifyContent="space-between">
-        <HStack spacing="3rem" alignSelf="center" justifyContent="start">
+        <HStack
+          spacing={{
+            base: "0.5rem",
+            md: "1.5rem",
+            xl: "3rem",
+          }}
+          alignSelf="center"
+          justifyContent="start"
+        >
           {displayLink("/", "Home")}
           {displayLink("/about", "About")}
           {displayLink("/projects", "Projects")}

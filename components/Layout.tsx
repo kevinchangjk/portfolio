@@ -1,5 +1,11 @@
 import Navbar from "@/components/Navbar";
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  HStack,
+  VStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Footer from "./Footer";
 import { AnimatePresence, motion } from "framer-motion";
 import { NextRouter } from "next/router";
@@ -21,55 +27,74 @@ export default function Layout({
   const { isEntryComplete, completeEntry } = useAppContext();
 
   return (
-    <Box
-      padding="2rem 8rem 2rem 8rem"
+    <HStack
+      width="full"
       backgroundColor={useColorModeValue("gray.9", "gray.0")}
-      alignItems="center"
       overflowX="hidden"
+      justifyContent="center"
     >
-      <motion.div
-        initial="barInitial"
-        animate="barAnimate"
-        variants={navBarVariants}
-        transition={{
-          type: "spring",
-          duration: 1,
-          bounce: 0.2,
-          delay: ENTRY_DELAY,
+      <VStack
+        alignItems="center"
+        width={{
+          base: "90vw",
+          md: "85vw",
+          xl: "80vw",
+          "2xl": "75vw",
         }}
-        onAnimationComplete={completeEntry}
+        paddingY={{
+          base: "1rem",
+          md: "1.5rem",
+          xl: "2rem",
+          "2xl": "3rem",
+        }}
       >
-        <Navbar />
-      </motion.div>
-      <AnimatePresence mode="wait">
         <motion.div
-          key={router.route}
-          initial={isEntryComplete ? "pageInitial" : "pageOriginal"}
-          animate="pageAnimate"
-          exit="pageExit"
-          variants={pageVariants}
+          initial="barInitial"
+          animate="barAnimate"
+          variants={navBarVariants}
           transition={{
             type: "spring",
-            duration: isEntryComplete ? 0.3 : ENTRY_DELAY,
-            bounce: 0.25,
+            duration: 1,
+            bounce: 0.2,
+            delay: ENTRY_DELAY,
           }}
+          onAnimationComplete={completeEntry}
+          style={{ width: "inherit" }}
         >
-          {children}
+          <Navbar />
         </motion.div>
-      </AnimatePresence>
-      <motion.div
-        initial="footerInitial"
-        animate="footerAnimate"
-        variants={footerVariants}
-        transition={{
-          type: "spring",
-          duration: 1,
-          bounce: 0.2,
-          delay: ENTRY_DELAY,
-        }}
-      >
-        <Footer />
-      </motion.div>
-    </Box>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={router.route}
+            initial={isEntryComplete ? "pageInitial" : "pageOriginal"}
+            animate="pageAnimate"
+            exit="pageExit"
+            variants={pageVariants}
+            transition={{
+              type: "spring",
+              duration: isEntryComplete ? 0.3 : ENTRY_DELAY,
+              bounce: 0.25,
+            }}
+            style={{ width: "inherit" }}
+          >
+            {children}
+          </motion.div>
+        </AnimatePresence>
+        <motion.div
+          initial="footerInitial"
+          animate="footerAnimate"
+          variants={footerVariants}
+          transition={{
+            type: "spring",
+            duration: 1,
+            bounce: 0.2,
+            delay: ENTRY_DELAY,
+          }}
+          style={{ width: "inherit" }}
+        >
+          <Footer />
+        </motion.div>
+      </VStack>
+    </HStack>
   );
 }

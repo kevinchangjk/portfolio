@@ -2,7 +2,7 @@ import { Box, useColorModeValue } from "@chakra-ui/react";
 
 export default function MainFrame({ gradient }: { gradient: string }) {
   return (
-    <Box position="absolute" width="full" height="2xl">
+    <Box position="absolute" width="full" height="75vh">
       <Box
         position="absolute"
         top="0rem"
@@ -32,7 +32,10 @@ export default function MainFrame({ gradient }: { gradient: string }) {
         zIndex="1"
         borderStyle="solid"
         borderWidth="1.5rem"
-        borderColor={useColorModeValue("transparent #FAFAFA #FAFAFA transparent", "transparent #191919 #191919 transparent")}
+        borderColor={useColorModeValue(
+          "transparent #FAFAFA #FAFAFA transparent",
+          "transparent #191919 #191919 transparent"
+        )}
       />
       <Box
         position="absolute"
@@ -63,7 +66,10 @@ export default function MainFrame({ gradient }: { gradient: string }) {
         zIndex="1"
         borderStyle="solid"
         borderWidth="1.5rem"
-        borderColor={useColorModeValue("#FAFAFA transparent transparent #FAFAFA", "#191919 transparent transparent #191919")}
+        borderColor={useColorModeValue(
+          "#FAFAFA transparent transparent #FAFAFA",
+          "#191919 transparent transparent #191919"
+        )}
       />
     </Box>
   );

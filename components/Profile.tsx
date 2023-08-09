@@ -28,7 +28,7 @@ export default function Profile() {
     <HStack
       position="relative"
       width="full"
-      height="2xl"
+      height="75vh"
       justifyContent="center"
     >
       <MainFrame gradient={gradient} />

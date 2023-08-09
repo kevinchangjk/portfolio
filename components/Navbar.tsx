@@ -48,14 +48,27 @@ export default function Navbar() {
   }
 
   return (
-    <HStack justifyContent="space-between">
+    <HStack width="full" justifyContent="space-between">
       <Logo />
-      <HStack spacing="3rem">
+      <HStack
+        spacing={{
+          base: "0.5rem",
+          md: "1.5rem",
+          xl: "3rem",
+        }}
+      >
         {headerLink("/", "Home")}
         {headerLink("/about", "About")}
         {headerLink("/projects", "Projects")}
         {headerLink("/contact-me", "Contact")}
-        <HStack spacing="1rem">
+        <HStack
+          spacing={{
+            base: "0.3rem",
+            md: "0.6rem",
+            xl: "1rem",
+            "2xl": "1.5rem",
+          }}
+        >
           {socialMedia(github, githubImage)}
           {socialMedia(linkedIn, linkedInImage)}
           <ColorModeButton />
