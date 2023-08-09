@@ -1,7 +1,6 @@
 import {
   Box,
   Heading,
-  SlideFade,
   Text,
   VStack,
   useColorModeValue,
@@ -11,22 +10,13 @@ import { useAppContext } from "@/context/state";
 import { getGradient } from "@/utils/gradient";
 import InternalLink from "./InternalLink";
 import PrimaryLink from "./PrimaryLink";
-import { useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { ENTRY_DELAY, introVariants } from "@/utils/motion";
 
 export default function Introduction() {
-  const { gradientTheme } = useAppContext();
+  const { gradientTheme, isEntryComplete } = useAppContext();
   const gradient = getGradient(gradientTheme, "to right");
   const primaryColor = useColorModeValue("gray.2", "gray.5");
-
-  const introRef = useRef(null);
-  const isInView = useInView(introRef, { amount: 0.5 });
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const { router } = useAppContext();
-
-  useEffect(() => {
-    setHasAnimated(false);
-  }, [router?.route]);
 
   function buildLink(text: string, route: string) {
     return (
@@ -70,12 +60,8 @@ export default function Introduction() {
     );
   }
 
-  return (
-    <SlideFade
-      ref={introRef}
-      in={hasAnimated || isInView}
-      onAnimationComplete={() => setHasAnimated(true)}
-    >
+  function displayIntroduction() {
+    return (
       <VStack
         position="relative"
         width="full"
@@ -127,6 +113,22 @@ export default function Introduction() {
           {buildLink("contact me", "/contact-me")} any time for a chat.
         </Box>
       </VStack>
-    </SlideFade>
+    );
+  }
+
+  return (
+    <motion.div
+      initial={isEntryComplete ? "introOriginal" : "introInitial"}
+      animate="introAnimate"
+      variants={introVariants}
+      transition={{
+        type: "spring",
+        duration: isEntryComplete ? 0.3 : 1,
+        bounce: 0.2,
+        delay: isEntryComplete ? 0 : ENTRY_DELAY,
+      }}
+    >
+      {displayIntroduction()}
+    </motion.div>
   );
 }

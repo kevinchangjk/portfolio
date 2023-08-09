@@ -1,16 +1,11 @@
 import Navbar from "@/components/Navbar";
-import {
-  Box,
-  Center,
-  HStack,
-  VStack,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, HStack, VStack, useColorModeValue } from "@chakra-ui/react";
 import Footer from "./Footer";
 import { AnimatePresence, motion } from "framer-motion";
 import { NextRouter } from "next/router";
 import {
   ENTRY_DELAY,
+  PAGE_TRANSITION_DURATION,
   footerVariants,
   navBarVariants,
   pageVariants,
@@ -72,7 +67,9 @@ export default function Layout({
             variants={pageVariants}
             transition={{
               type: "spring",
-              duration: isEntryComplete ? 0.3 : ENTRY_DELAY,
+              duration: isEntryComplete
+                ? PAGE_TRANSITION_DURATION
+                : ENTRY_DELAY,
               bounce: 0.25,
             }}
             style={{ width: "inherit" }}
