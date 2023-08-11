@@ -55,4 +55,4 @@ export const introVariants = {
 };
 
 export const ENTRY_DELAY = 2;
-export const PAGE_TRANSITION_DURATION = 0.35;
+export const PAGE_TRANSITION_DURATION = 0.5;

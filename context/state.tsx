@@ -56,7 +56,7 @@ function provideAppState(): Context {
       router.push(path, path, options);
       setTimeout(() => {
         setIsRouting(false);
-      }, PAGE_TRANSITION_DURATION * 2 * 1000);
+      }, PAGE_TRANSITION_DURATION * 1000);
     }
   }
 

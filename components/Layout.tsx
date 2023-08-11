@@ -58,7 +58,7 @@ export default function Layout({
         >
           <Navbar />
         </motion.div>
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="popLayout">
           <motion.div
             key={router.route}
             initial={isEntryComplete ? "pageInitial" : "pageOriginal"}
