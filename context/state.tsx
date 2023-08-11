@@ -1,4 +1,5 @@
 import { originalColors } from "@/utils/gradient";
+import { PAGE_TRANSITION_DURATION } from "@/utils/motion";
 import { NextRouter, useRouter } from "next/router";
 import {
   Dispatch,
@@ -10,6 +11,7 @@ import {
 
 type Context = {
   router: NextRouter | null;
+  enroute: (path: string, options: {}) => void;
   gradientTheme: string[];
   setGradientTheme: Dispatch<SetStateAction<string[]>>;
   isEntryComplete: boolean;
@@ -19,6 +21,7 @@ type Context = {
 // @Desc: Create Context for app-wide state handling:
 const AppContext = createContext<Context>({
   router: null,
+  enroute: (path: string, options: {}) => null,
   gradientTheme: originalColors,
   setGradientTheme: () => null,
   isEntryComplete: false,
@@ -39,6 +42,7 @@ export function useAppContext(): Context {
 // @Desc: Overall Function to handle all states required for context and return it back to AppWrapper
 function provideAppState(): Context {
   const router = useRouter();
+  const [isRouting, setIsRouting] = useState(false);
   const [gradientTheme, setGradientTheme] = useState(originalColors);
   const [isEntryComplete, setIsEntryComplete] = useState(false);
 
@@ -46,8 +50,19 @@ function provideAppState(): Context {
     setIsEntryComplete(true);
   };
 
+  function enroute(path: string, options: {}) {
+    if (!isRouting) {
+      setIsRouting(true);
+      router.push(path, path, options);
+      setTimeout(() => {
+        setIsRouting(false);
+      }, PAGE_TRANSITION_DURATION * 2 * 1000);
+    }
+  }
+
   return {
     router,
+    enroute,
     gradientTheme,
     setGradientTheme,
     isEntryComplete,

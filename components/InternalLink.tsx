@@ -12,16 +12,15 @@ export default function InternalLink({
   children: React.ReactNode;
   thickness: string;
 }) {
-  const { router } = useAppContext();
+  const { router, enroute } = useAppContext();
 
   function onClickHandler() {
     // check if a transition is even necessary
     if (router?.pathname === href) {
-      console.log("here");
       return;
     }
 
-    router?.push(href, href, { scroll: true });
+    enroute(href, { scroll: true });
   }
 
   return (
