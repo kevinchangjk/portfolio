@@ -29,7 +29,7 @@ export default function Application({
         <link rel="icon" href="/images/favicon.ico" sizes="any" />
         <meta
           name="description"
-          content="Digital Portfolio of Software Developer, Kevin Chang."
+          content="Digital Portfolio of Kevin Chang, a Software Developer"
           key="desc"
         />
         <meta content="en_US" property="og:locale" />

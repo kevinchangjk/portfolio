@@ -8,7 +8,6 @@ import {
 } from "@chakra-ui/react";
 import Logo from "./Logo";
 import InternalLink from "./InternalLink";
-import { useEffect, useState } from "react";
 
 export default function Footer() {
   const primaryColor = useColorModeValue("gray.2", "gray.4");
