@@ -26,13 +26,13 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
         base: "16rem",
         md: "18rem",
         xl: "20rem",
-        "2xl": "22rem",
+        "2xl": "24rem",
       }}
       height={{
         base: "24rem",
         md: "27rem",
         xl: "30rem",
-        "2xl": "33rem",
+        "2xl": "35rem",
       }}
       bgColor={colorMode === "light" ? "white" : "gray.1"}
       borderRadius="0.5rem"
@@ -48,7 +48,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           base: "11rem",
           md: "12rem",
           xl: "13rem",
-          "2xl": "14rem",
+          "2xl": "15rem",
         }}
         fit="cover"
         borderTopRadius="0.5rem"
@@ -59,7 +59,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           base: "0.5rem",
           md: "0.75rem",
           xl: "1rem",
-          "2xl": "1.25rem",
+          "2xl": "1.5rem",
         }}
       />
       <CardHeader
@@ -68,7 +68,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           base: "0.5rem",
           md: "0.75rem",
           xl: "1rem",
-          "2xl": "1.25rem",
+          "2xl": "1.5rem",
         }}
         marginX="0rem"
         paddingY="0rem"
@@ -87,7 +87,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           base: "0.5rem",
           md: "0.75rem",
           xl: "1rem",
-          "2xl": "1.25rem",
+          "2xl": "1.5rem",
         }}
         marginX="0rem"
         paddingY="0rem"

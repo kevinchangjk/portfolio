@@ -24,20 +24,20 @@ export default function ProjectGrid() {
         base: "16rem",
         md: "18rem",
         xl: "20rem",
-        "2xl": "22rem",
+        "2xl": "24rem",
       }}
       width="full"
       spacingX={{
         base: "2rem",
         md: "2.5rem",
         xl: "3rem",
-        "2xl": "3.5rem",
+        "2xl": "4rem",
       }}
       spacingY={{
         base: "3rem",
         md: "3.5rem",
         xl: "4rem",
-        "2xl": "4.5rem",
+        "2xl": "5rem",
       }}
       justifyItems="center"
     >
