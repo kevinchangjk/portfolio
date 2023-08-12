@@ -48,6 +48,9 @@ export default function ExperienceCard({
             xl: "1rem",
             "2xl": "1.2rem",
           }}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
         >
           <Text variant="tag">{type}</Text>
         </Badge>
