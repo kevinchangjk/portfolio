@@ -18,7 +18,13 @@ export default function WakatimeSummary() {
       align="inherit"
     >
       <Heading variant="primary">Coding</Heading>
-      <Heading variant="secondary">
+      <Heading
+        variant="secondary"
+        marginX={{
+          base: "2rem",
+          sm: "0rem",
+        }}
+      >
         Some of the languages {"I've"} been using
       </Heading>
       <Image

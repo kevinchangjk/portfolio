@@ -56,7 +56,7 @@ export default function Footer() {
               sm: "80vw",
             }}
             alignSelf="center"
-            justifyContent="space-between"
+            justifyContent="space-around"
           >
             {displayLink("/", "Home")}
             {displayLink("/about", "About")}
