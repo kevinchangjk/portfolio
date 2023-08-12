@@ -21,8 +21,6 @@ export default function Projects() {
         }}
       >
         <ProjectSummary />
-        <TechStackSummary />
-        <WakatimeSummary />
       </VStack>
     </main>
   );
