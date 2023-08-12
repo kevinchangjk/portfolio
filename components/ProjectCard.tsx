@@ -10,32 +10,79 @@ import {
   HStack,
   Heading,
   Image,
+  Tag,
   Text,
   VStack,
+  Wrap,
+  WrapItem,
   useColorMode,
 } from "@chakra-ui/react";
 import PrimaryLink from "./PrimaryLink";
+import { motion } from "framer-motion";
+
+const projectVariants = {
+  projectInitial: {
+    opacity: 0,
+    y: "2rem",
+  },
+  projectAnimate: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 export default function ProjectCard({ projectData }: { projectData: Project }) {
   const { title, description, imageUrl, techStack, sourceUrl, previewUrl } =
     projectData;
   const { colorMode } = useColorMode();
+
+  function displayTechStack(techStack: string[]) {
+    const allTech = [];
+    for (let i = 0; i < techStack.length; i++) {
+      const key = `${title}-tech-${i}`;
+      const newTech = (
+        <WrapItem key={key}>
+          <Tag
+            padding={{
+              base: "0.3rem",
+              md: "0.5rem",
+              xl: "0.8rem",
+              "2xl": "1rem",
+            }}
+            variant="solid"
+            colorScheme="whiteAlpha"
+            opacity={0.8}
+          >
+            <Text
+              textAlign="center"
+              fontWeight="bold"
+              letterSpacing={{
+                base: "normal",
+                md: "wide",
+              }}
+              fontSize={{
+                base: "sm",
+                md: "md",
+                xl: "lg",
+                "2xl": "xl",
+              }}
+            >
+              {techStack[i]}
+            </Text>
+          </Tag>
+        </WrapItem>
+      );
+      allTech.push(newTech);
+    }
+
+    return allTech;
+  }
+
   return (
     <Card
-      width={{
-        base: "16rem",
-        md: "18rem",
-        xl: "20rem",
-        "2xl": "24rem",
-      }}
-      height={{
-        base: "24rem",
-        md: "27rem",
-        xl: "30rem",
-        "2xl": "35rem",
-      }}
-      bgColor={colorMode === "light" ? "white" : "gray.1"}
-      borderRadius="0.5rem"
+      position="relative"
+      width="max"
+      rounded="lg"
       borderColor={colorMode === "light" ? "gray.200" : "gray.700"}
       borderWidth="thin"
       boxShadow="2xl"
@@ -43,181 +90,76 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
       <Image
         src={imageUrl}
         alt="Project Thumbnail"
-        width="full"
-        height={{
-          base: "11rem",
-          md: "12rem",
-          xl: "13rem",
-          "2xl": "15rem",
-        }}
+        height="md"
         fit="cover"
-        borderTopRadius="0.5rem"
-        borderBottomWidth="0.5px"
-        borderBottomStyle="solid"
-        borderBottomColor={colorMode === "light" ? "gray.3" : "gray.5"}
-        marginBottom={{
-          base: "0.5rem",
-          md: "0.75rem",
-          xl: "1rem",
-          "2xl": "1.5rem",
-        }}
+        rounded="inherit"
       />
-      <CardHeader
-        marginTop="0rem"
-        marginBottom={{
-          base: "0.5rem",
-          md: "0.75rem",
-          xl: "1rem",
-          "2xl": "1.5rem",
-        }}
-        marginX="0rem"
-        paddingY="0rem"
-        paddingX={{
-          base: "0.5rem",
-          md: "0.75rem",
-          xl: "1rem",
-          "2xl": "1.25rem",
-        }}
-      >
-        <Heading variant="card">{title}</Heading>
-      </CardHeader>
       <CardBody
-        marginTop="0rem"
-        marginBottom={{
-          base: "0.5rem",
-          md: "0.75rem",
-          xl: "1rem",
-          "2xl": "1.5rem",
+        position="absolute"
+        top={0}
+        left={0}
+        width="full"
+        height="full"
+        rounded="inherit"
+        bgGradient="linear(to-b, blackAlpha.100, blackAlpha.700)"
+        opacity={0}
+        _hover={{
+          opacity: 1,
         }}
-        marginX="0rem"
-        paddingY="0rem"
-        paddingX={{
-          base: "0.5rem",
-          md: "0.75rem",
-          xl: "1rem",
-          "2xl": "1.25rem",
-        }}
+        transition="opacity 0.3s ease-in-out"
       >
-        <Text
-          variant="paragraph"
-          fontSize={{
-            base: "sm",
-            md: "md",
-            xl: "lg",
-            "2xl": "xl",
+        <VStack
+          width="full"
+          height="full"
+          paddingY="2rem"
+          spacing={{
+            base: "0.5rem",
+            md: "1rem",
+            xl: "1.5rem",
+            "2xl": "2rem",
           }}
+          justifyContent="end"
         >
-          {description}
-        </Text>
-      </CardBody>
-      <CardFooter
-        margin="0rem"
-        padding={{
-          base: "0.5rem",
-          md: "0.75rem",
-          xl: "1rem",
-          "2xl": "1.25rem",
-        }}
-      >
-        <VStack width="full" margin="0rem" padding="0rem">
-          <HStack width="full" alignItems="end">
-            <Text
-              variant="detail"
-              fontSize={{
-                base: "xs",
-                md: "sm",
-                xl: "md",
-                "2xl": "lg",
-              }}
-            >
-              Tech Stack:{" "}
-            </Text>
-            <Text
-              variant="detail"
-              fontSize={{
-                base: "xs",
-                md: "sm",
-                xl: "md",
-                "2xl": "lg",
-              }}
-            >
-              {techStack}
-            </Text>
-          </HStack>
-          <Divider variant="secondary" />
-          <HStack width="full">
-            <Box width="50%">
-              {previewUrl && (
-                <PrimaryLink
-                  href={previewUrl}
-                  color={colorMode === "light" ? "gray.3" : "gray.5"}
-                  thickness="px"
-                >
-                  <HStack>
-                    <LinkIcon
-                      boxSize={{
-                        base: "12px",
-                        md: "16px",
-                        xl: "20px",
-                        "2xl": "24px",
-                      }}
-                      color={colorMode === "light" ? "gray.3" : "gray.5"}
-                    />
-                    <Text
-                      variant="detail"
-                      fontSize={{
-                        base: "xs",
-                        md: "sm",
-                        xl: "md",
-                        "2xl": "lg",
-                      }}
-                    >
-                      Live Preview
-                    </Text>
-                  </HStack>
-                </PrimaryLink>
-              )}
-            </Box>
-            <Box width="50%">
-              {sourceUrl && (
-                <PrimaryLink
-                  href={sourceUrl}
-                  color={colorMode === "light" ? "gray.3" : "gray.5"}
-                  thickness="px"
-                >
-                  <HStack>
-                    <Image
-                      src={
-                        colorMode === "light"
-                          ? "/images/social-media/github-light.svg"
-                          : "/images/social-media/github-dark.svg"
-                      }
-                      alt="Github Icon"
-                      boxSize={{
-                        base: "12px",
-                        md: "16px",
-                        xl: "20px",
-                        "2xl": "24px",
-                      }}
-                    />
-                    <Text
-                      variant="detail"
-                      fontSize={{
-                        base: "xs",
-                        md: "sm",
-                        xl: "md",
-                        "2xl": "lg",
-                      }}
-                    >
-                      Source Code
-                    </Text>
-                  </HStack>
-                </PrimaryLink>
-              )}
-            </Box>
-          </HStack>
+          <Heading
+            fontSize={{
+              base: "24px",
+              md: "32px",
+              xl: "40px",
+              "2xl": "48px",
+            }}
+            fontWeight="semibold"
+            textAlign="center"
+            letterSpacing="normal"
+            textColor="gray.8"
+          >
+            {title}
+          </Heading>
+          <Text
+            fontSize={{
+              base: "md",
+              md: "lg",
+              xl: "xl",
+              "2xl": "2xl",
+            }}
+            letterSpacing="normal"
+            textAlign="justify"
+            fontWeight="medium"
+            textColor="gray.7"
+          >
+            {description}
+          </Text>
+          <Wrap
+            spacing={{
+              base: "0.5rem",
+              md: "0.75rem",
+              xl: "1rem",
+              "2xl": "1.25rem",
+            }}
+          >
+            {displayTechStack(techStack)}
+          </Wrap>
         </VStack>
-      </CardFooter>
+      </CardBody>
     </Card>
   );
 }
