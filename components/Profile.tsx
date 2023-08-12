@@ -19,7 +19,7 @@ export default function Profile() {
     const result = [];
     for (const line of acrostic) {
       const newLine = (
-        <Heading key={`acrostic${line}`} variant="primary">
+        <Heading key={`acrostic-${line}`} variant="primary">
           {line}
         </Heading>
       );

@@ -33,7 +33,7 @@ export default function ProjectPage({ project }: { project: Project }) {
     } else {
       setIsLoading(false);
     }
-  }, [project]);
+  }, [project, enroute]);
 
   // hooked values
   const tagTextColor = useColorModeValue("gray.2", "gray.5");
@@ -344,6 +344,7 @@ export default function ProjectPage({ project }: { project: Project }) {
           </VStack>
           <Image
             src={project.imageUrl}
+            alt="Project Thumbnail"
             rounded="lg"
             maxWidth="full"
             fit="cover"

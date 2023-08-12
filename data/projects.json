@@ -1,50 +1,75 @@
-   [
-    {
-      "title": "NiftyZone",
-      "name": "niftyzone",
-      "description": "NFT marketplace for curated art on Binance Chain",
-      "overview": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      ],
-      "imageUrl": "/images/projects/niftyzone.png",
-      "techStack": ["Next.js", "Solidity", "MongoDB"],
-      "previewUrl": "https://www.niftyzone.com/"
-    },
-    {
-      "title": "NFT @ ArtZone",
-      "description": "Create and claim NFTs of curated AI art",
-      "imageUrl": "/images/projects/nft-artzone.png",
-      "techStack": ["Next.js", "Express.js", "IPFS"],
-      "previewUrl": "https://nft.artzone.ai/"
-    },
-    {
-      "title": "CraiyoNFT",
-      "description": "AI-powered generative NFT platform and gallery",
-      "imageUrl": "/images/projects/craiyonft.png",
-      "techStack": ["Express.js", "Flask", "SmartPy", "IPFS"],
-      "sourceUrl": "https://github.com/VMP-SG/CraiyoNFT"
-    },
-    {
-      "title": "BubbleTeaSort",
-      "description": "Social media mobile app just for bubble tea!",
-      "imageUrl": "/images/projects/bubbleteasort.jpg",
-      "techStack": ["React Native", "Firebase"],
-      "sourceUrl": "https://github.com/VMP-SG/BubbleTeaSort"
-    },
-    {
-      "title": "Chirple",
-      "description": "Twitter-scraping application with market analytics",
-      "imageUrl": "/images/projects/chirple.png",
-      "techStack": ["React.js", "Node.js"],
-      "sourceUrl": "https://github.com/Onlyfriendz/chirple",
-      "previewUrl": "https://chirple.netlify.app/"
-    },
-    {
-      "title": "Coydir",
-      "description": "HR desktop application with a CLI flavour",
-      "imageUrl": "/images/projects/coydir.png",
-      "techStack": ["Java", "JavaFX"],
-      "sourceUrl": "https://github.com/AY2223S1-CS2103T-T15-1/tp"
-    }
-  ]
+[
+  {
+    "title": "NiftyZone",
+    "name": "niftyzone",
+    "description": "NFT marketplace for curated art on Binance Chain",
+    "overview": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    ],
+    "imageUrl": "/images/projects/niftyzone.png",
+    "techStack": ["Next.js", "Solidity", "MongoDB"],
+    "previewUrl": "https://www.niftyzone.com/"
+  },
+  {
+    "title": "NFT @ ArtZone",
+    "name": "nft-artzone",
+    "description": "Create and claim NFTs of curated AI art",
+    "overview": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    ],
+    "imageUrl": "/images/projects/nft-artzone.png",
+    "techStack": ["Next.js", "Express.js", "IPFS"],
+    "previewUrl": "https://nft.artzone.ai/"
+  },
+  {
+    "title": "CraiyoNFT",
+    "name": "craiyonft",
+    "description": "AI-powered generative NFT platform and gallery",
+    "overview": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    ],
+    "imageUrl": "/images/projects/craiyonft.png",
+    "techStack": ["Express.js", "Flask", "SmartPy", "IPFS"],
+    "sourceUrl": "https://github.com/VMP-SG/CraiyoNFT"
+  },
+  {
+    "title": "BubbleTeaSort",
+    "name": "bubbleteasort",
+    "description": "Social media mobile app just for bubble tea!",
+    "overview": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    ],
+    "imageUrl": "/images/projects/bubbleteasort.jpg",
+    "techStack": ["React Native", "Firebase"],
+    "sourceUrl": "https://github.com/VMP-SG/BubbleTeaSort"
+  },
+  {
+    "title": "Chirple",
+    "name": "chirple",
+    "description": "Twitter-scraping application with market analytics",
+    "overview": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    ],
+    "imageUrl": "/images/projects/chirple.png",
+    "techStack": ["React.js", "Node.js"],
+    "sourceUrl": "https://github.com/Onlyfriendz/chirple",
+    "previewUrl": "https://chirple.netlify.app/"
+  },
+  {
+    "title": "Coydir",
+    "name": "coydir",
+    "description": "HR desktop application with a CLI flavour",
+    "overview": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    ],
+    "imageUrl": "/images/projects/coydir.png",
+    "techStack": ["Java", "JavaFX"],
+    "sourceUrl": "https://github.com/AY2223S1-CS2103T-T15-1/tp"
+  }
+]
