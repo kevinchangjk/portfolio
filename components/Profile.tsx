@@ -29,6 +29,64 @@ export default function Profile() {
     return result;
   }
 
+  function displayFullAcrostic() {
+    return (
+      <VStack align="start" spacing="0">
+        <Heading
+          width="full"
+          fontSize={{
+            base: "32px",
+            sm: "40px",
+            md: "48px",
+            lg: "56px",
+            xl: "64px",
+            "2xl": "72px",
+          }}
+          fontWeight="semibold"
+          letterSpacing="normal"
+          lineHeight="full"
+          background={gradient}
+          backgroundClip="text"
+          textColor="transparent"
+          style={{
+            transition: "background 3s ease",
+          }}
+        >
+          {name}
+        </Heading>
+        {displayAcrostic(tagline)}
+      </VStack>
+    );
+  }
+
+  function displayAvatar() {
+    return (
+      <Image
+        src="/images/profile.png"
+        alt="Kevin's Profile"
+        padding={{
+          base: "0.4rem",
+          sm: "0.5rem",
+          md: "0.6rem",
+          lg: "0.7rem",
+          xl: "0.8rem",
+          "2xl": "1rem",
+        }}
+        boxSize={{
+          base: "14rem",
+          sm: "16rem",
+          md: "18rem",
+          lg: "20rem",
+          xl: "22rem",
+          "2xl": "24rem",
+        }}
+        objectFit="cover"
+        borderRadius="full"
+        bgGradient={gradient}
+      />
+    );
+  }
+
   function displayProfile() {
     if (isMobile) {
       return (
@@ -46,50 +104,8 @@ export default function Profile() {
           justifyContent="space-evenly"
           zIndex="sticky"
         >
-          <Image
-            src="/images/profile.png"
-            alt="Kevin's Profile"
-            padding={{
-              base: "0.4rem",
-              sm: "0.5rem",
-              md: "0.6rem",
-              lg: "0.7rem",
-            }}
-            boxSize={{
-              base: "14rem",
-              sm: "16rem",
-              md: "18rem",
-              lg: "20rem",
-            }}
-            objectFit="cover"
-            borderRadius="full"
-            bgGradient={gradient}
-          />
-          <VStack align="start" spacing="0">
-            <Heading
-              width="full"
-              fontSize={{
-                base: "32px",
-                sm: "40px",
-                md: "48px",
-                lg: "56px",
-              }}
-              letterSpacing={{
-                base: "normal",
-                md: "wide",
-              }}
-              lineHeight="full"
-              background={gradient}
-              backgroundClip="text"
-              textColor="transparent"
-              style={{
-                transition: "background 3s ease",
-              }}
-            >
-              {name}
-            </Heading>
-            {displayAcrostic(tagline)}
-          </VStack>
+          {displayAvatar()}
+          {displayFullAcrostic()}
         </VStack>
       );
     } else {
@@ -103,44 +119,8 @@ export default function Profile() {
           justify="space-between"
           zIndex="9"
         >
-          <VStack align="start" spacing="0">
-            <Heading
-              width="full"
-              fontSize={{
-                lg: "56px",
-                xl: "64px",
-                "2xl": "72px",
-              }}
-              letterSpacing="wide"
-              lineHeight="full"
-              background={gradient}
-              backgroundClip="text"
-              textColor="transparent"
-              style={{
-                transition: "background 3s ease",
-              }}
-            >
-              {name}
-            </Heading>
-            {displayAcrostic(tagline)}
-          </VStack>
-          <Image
-            src="/images/profile.png"
-            alt="Kevin's Profile"
-            padding={{
-              lg: "0.7rem",
-              xl: "0.8rem",
-              "2xl": "1rem",
-            }}
-            boxSize={{
-              lg: "20rem",
-              xl: "22rem",
-              "2xl": "24rem",
-            }}
-            objectFit="cover"
-            borderRadius="full"
-            bgGradient={gradient}
-          />
+          {displayFullAcrostic()}
+          {displayAvatar()}
         </HStack>
       );
     }

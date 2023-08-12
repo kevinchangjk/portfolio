@@ -14,7 +14,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/dm-sans": "^5.0.4",
-    "@fontsource/poppins": "^5.0.4",
+    "@fontsource/montserrat": "^5.0.8",
     "@types/node": "20.3.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",

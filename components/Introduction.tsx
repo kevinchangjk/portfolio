@@ -85,10 +85,8 @@ export default function Introduction() {
             xl: "5xl",
             "2xl": "6xl",
           }}
-          letterSpacing={{
-            base: "normal",
-            md: "wide",
-          }}
+          fontWeight="semibold"
+          letterSpacing="wide"
         >
           Welcome.
         </Heading>

@@ -43,22 +43,22 @@ export default function Layout({
           "2xl": "3rem",
         }}
       >
-        <motion.div
-          initial="barInitial"
-          animate="barAnimate"
-          variants={navBarVariants}
-          transition={{
-            type: "spring",
-            duration: 1,
-            bounce: 0.2,
-            delay: ENTRY_DELAY,
-          }}
-          onAnimationComplete={completeEntry}
-          style={{ width: "inherit" }}
-        >
-          <Navbar />
-        </motion.div>
         <AnimatePresence mode="popLayout">
+          <motion.div
+            initial="barInitial"
+            animate="barAnimate"
+            variants={navBarVariants}
+            transition={{
+              type: "spring",
+              duration: 1,
+              bounce: 0.2,
+              delay: ENTRY_DELAY,
+            }}
+            onAnimationComplete={completeEntry}
+            style={{ width: "inherit" }}
+          >
+            <Navbar />
+          </motion.div>
           <motion.div
             key={router.route}
             initial={isEntryComplete ? "pageInitial" : "pageOriginal"}
@@ -76,21 +76,21 @@ export default function Layout({
           >
             <Box minHeight="55vh">{children}</Box>
           </motion.div>
+          <motion.div
+            initial="footerInitial"
+            animate="footerAnimate"
+            variants={footerVariants}
+            transition={{
+              type: "spring",
+              duration: 1,
+              bounce: 0.2,
+              delay: ENTRY_DELAY,
+            }}
+            style={{ width: "inherit" }}
+          >
+            <Footer />
+          </motion.div>
         </AnimatePresence>
-        <motion.div
-          initial="footerInitial"
-          animate="footerAnimate"
-          variants={footerVariants}
-          transition={{
-            type: "spring",
-            duration: 1,
-            bounce: 0.2,
-            delay: ENTRY_DELAY,
-          }}
-          style={{ width: "inherit" }}
-        >
-          <Footer />
-        </motion.div>
       </VStack>
     </HStack>
   );

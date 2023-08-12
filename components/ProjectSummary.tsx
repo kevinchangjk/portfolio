@@ -19,7 +19,13 @@ export default function ProjectSummary() {
         }}
       >
         <Heading variant="primary">Projects</Heading>
-        <Heading variant="secondary">
+        <Heading
+          variant="secondary"
+          marginX={{
+            base: "2rem",
+            sm: "0rem",
+          }}
+        >
           Put some sweat and tears (no blood) into these
         </Heading>
       </VStack>

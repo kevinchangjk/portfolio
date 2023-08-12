@@ -98,7 +98,7 @@ export default function Navbar() {
               sm: "80vw",
             }}
             alignSelf="center"
-            justifyContent="space-between"
+            justifyContent="space-around"
           >
             {headerLink("/", "Home")}
             {headerLink("/about", "About")}

@@ -9,25 +9,44 @@ export default function WakatimeSummary() {
 
   return (
     <VStack
-      spacing={{
-        base: "2rem",
-        md: "2.5rem",
-        xl: "3rem",
-        "2xl": "3.5rem",
-      }}
+      width="full"
       align="inherit"
+      spacing={{
+        base: "3rem",
+        md: "4.5rem",
+        xl: "6rem",
+        "2xl": "7.5rem",
+      }}
     >
-      <Heading variant="primary">Coding</Heading>
-      <Heading variant="secondary">
-        Some of the languages {"I've"} been using
-      </Heading>
+      <VStack
+        spacing={{
+          base: "1rem",
+          md: "2rem",
+          xl: "3rem",
+          "2xl": "4rem",
+        }}
+        align="inherit"
+        width="full"
+      >
+        <Heading variant="primary">Coding</Heading>
+        <Heading
+          variant="secondary"
+          marginX={{
+            base: "2rem",
+            sm: "0rem",
+          }}
+        >
+          Some of the languages {"I've"} been using
+        </Heading>
+      </VStack>
       <Image
         alt="Wakatime Summary"
-        boxSize={{
+        maxHeight={{
           base: "lg",
           md: "xl",
-          xl: "2xl",
-          "2xl": "3xl",
+          lg: "2xl",
+          xl: "3xl",
+          "2xl": "4xl",
         }}
         rounded="xl"
         src={summary}

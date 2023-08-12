@@ -1020,10 +1020,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/dm-sans/-/dm-sans-5.0.4.tgz#e0ea8492647ed7d76fa20ff36410b3585912a0f2"
   integrity sha512-5ZmOv3P7TgldnkqYbBjny/H1fGdvl6LRqGCc7WgisrJeCoe4kikorUsbncrbZVQ8kwcp8+UJi3pBA2AZU25ApQ==
 
-"@fontsource/poppins@^5.0.4":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-5.0.4.tgz#15d81b0d63081b6a9be0a04adbb8c1e802a68e24"
-  integrity sha512-9D7qztWP7prwrBMCf7pTbKDAfRG6KT1P9kEGimMUfRfznvfBIZ9H+y9Sr2vrE1O1Ybn4F8rrFZaLjtTxJZcTng==
+"@fontsource/montserrat@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-5.0.8.tgz#04d162d8929d2911c126e6dafbd218e67c8bb63d"
+  integrity sha512-bNj6wfiWXXbsxb2ffatjpX+GBv30cWZ1lwNXW9qTeX2FnzPomsGRV4HdPrf3TqyTiVqX6fLo80zrQcMi7r8+fA==
 
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"

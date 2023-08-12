@@ -23,7 +23,13 @@ export default function TechStackSummary() {
         align="inherit"
       >
         <Heading variant="primary">My Tech Stack</Heading>
-        <Heading variant="secondary">
+        <Heading
+          variant="secondary"
+          marginX={{
+            base: "2rem",
+            sm: "0rem",
+          }}
+        >
           Some of the technologies {"I've"} been working with
         </Heading>
       </VStack>
