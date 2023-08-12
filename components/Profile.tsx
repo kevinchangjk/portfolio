@@ -111,8 +111,8 @@ export default function Profile() {
                 xl: "64px",
                 "2xl": "72px",
               }}
-              letterSpacing="wide"
-              lineHeight="full"
+              fontWeight="bold"
+              letterSpacing="normal"
               background={gradient}
               backgroundClip="text"
               textColor="transparent"

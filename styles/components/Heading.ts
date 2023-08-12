@@ -1,12 +1,10 @@
 import { defineStyleConfig } from "@chakra-ui/react";
 
 export const Heading = defineStyleConfig({
-  baseStyle: {
-    fontWeight: "bold",
-  },
   variants: {
     primary: {
       fontSize: ["24px", null, "32px", null, "48px", "56px"],
+      fontWeight: "bold",
       textAlign: "justify",
       letterSpacing: ["normal", null, "wide"],
       _light: {
@@ -18,9 +16,9 @@ export const Heading = defineStyleConfig({
     },
     secondary: {
       fontSize: ["16px", null, "24px", null, "32px", "48px"],
-      fontWeight: "normal",
+      fontWeight: "semibold",
       textAlign: "justify",
-      letterSpacing: ["normal", null, null, "wide"],
+      letterSpacing: "normal",
       _light: {
         color: "gray.3",
       },
@@ -41,6 +39,7 @@ export const Heading = defineStyleConfig({
     },
     subPrimary: {
       fontSize: ["20px", null, "28px", null, "42px", "48px"],
+      fontWeight: "semibold",
       letterSpacing: ["normal", null, "wide"],
       _light: {
         color: "gray.2",

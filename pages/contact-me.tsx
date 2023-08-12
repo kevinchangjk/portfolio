@@ -99,7 +99,7 @@ export default function ContactMe() {
           <HStack width="full">
             <LinkBox>
               <Text
-                fontWeight="bold"
+                fontWeight="semibold"
                 letterSpacing="wide"
                 width="min"
                 bg={gradient}

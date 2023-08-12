@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import theme from "../styles/theme";
 import "@fontsource/dm-sans";
-import "@fontsource/poppins";
+import "@fontsource/montserrat";
 import { AppWrapper } from "@/context/state";
 import { NextRouter } from "next/router";
 import { Metadata } from "next";

@@ -9,7 +9,7 @@ const extensions = {
   colorConfig,
   fonts: {
     body: `'DM Sans', sans-serif`,
-    heading: "Poppins, serif",
+    heading: "Montserrat, sans-serif",
     mono: "Menlo, monospace",
   },
   components: {
