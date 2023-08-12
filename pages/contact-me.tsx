@@ -1,6 +1,5 @@
 import InterestedPositions from "@/components/InterestedPositions";
 import { useAppContext } from "@/context/state";
-import { getGradient } from "@/utils/gradient";
 import {
   HStack,
   Heading,
@@ -13,18 +12,18 @@ import {
 
 export default function ContactMe() {
   const { gradientTheme } = useAppContext();
-  const gradient = getGradient(gradientTheme, "to right");
+  const gradient = `linear(to-r, ${gradientTheme[0]}, ${gradientTheme[1]}, ${gradientTheme[0]}, ${gradientTheme[1]})`;
 
   const shift = keyframes`
-    from, to{
-      background-position: 0% 50%;
-    }
-    50% {
+    from {
       background-position: 100% 50%;
+    }
+    to {
+      background-position: 0% 50%;
     }
   `;
 
-  const animation = `${shift} 5s ease-in-out infinite`;
+  const animation = `${shift} 3s linear infinite`;
 
   return (
     <main>
@@ -102,9 +101,10 @@ export default function ContactMe() {
                 fontWeight="semibold"
                 letterSpacing="normal"
                 width="min"
-                bg={gradient}
+                bgGradient={gradient}
                 bgClip="text"
-                bgSize="150% 100%"
+                bgSize="300% 100%"
+                bgPosition="right"
                 textColor="transparent"
                 fontSize={{
                   base: "2xl",
