@@ -86,7 +86,7 @@ export default function Introduction() {
             "2xl": "6xl",
           }}
           fontWeight="bold"
-          letterSpacing="normal"
+          letterSpacing="wide"
         >
           Welcome.
         </Heading>

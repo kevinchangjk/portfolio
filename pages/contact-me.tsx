@@ -98,9 +98,9 @@ export default function ContactMe() {
           </Text>
           <HStack width="full">
             <LinkBox>
-              <Text
+              <Heading
                 fontWeight="semibold"
-                letterSpacing="wide"
+                letterSpacing="normal"
                 width="min"
                 bg={gradient}
                 bgClip="text"
@@ -119,7 +119,7 @@ export default function ContactMe() {
                 <LinkOverlay href="mailto:kevinchangjk@gmail.com">
                   kevinchangjk@gmail.com
                 </LinkOverlay>
-              </Text>
+              </Heading>
             </LinkBox>
           </HStack>
         </VStack>

@@ -1,8 +1,14 @@
 import Layout from "@/components/Layout";
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import theme from "../styles/theme";
-import "@fontsource/dm-sans";
-import "@fontsource/montserrat";
+import "@fontsource/dm-sans/400.css";
+import "@fontsource/dm-sans/500.css";
+import "@fontsource/dm-sans/700.css";
+import "@fontsource/montserrat/300.css";
+import "@fontsource/montserrat/400.css";
+import "@fontsource/montserrat/500.css";
+import "@fontsource/montserrat/600.css";
+import "@fontsource/montserrat/700.css";
 import { AppWrapper } from "@/context/state";
 import { NextRouter } from "next/router";
 import { Metadata } from "next";
