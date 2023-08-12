@@ -2,6 +2,7 @@
   "projects": [
     {
       "title": "NiftyZone",
+      "name": "niftyzone",
       "description": "NFT marketplace for curated art on Binance Chain",
       "imageUrl": "/images/projects/niftyzone.png",
       "techStack": ["Next.js", "Solidity", "MongoDB"],

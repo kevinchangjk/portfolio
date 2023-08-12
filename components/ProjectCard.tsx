@@ -2,6 +2,7 @@ import { Project } from "@/utils/types";
 import { LinkIcon } from "@chakra-ui/icons";
 import {
   Box,
+  Button,
   Card,
   CardBody,
   CardFooter,
@@ -10,6 +11,9 @@ import {
   HStack,
   Heading,
   Image,
+  Link,
+  LinkBox,
+  LinkOverlay,
   Tag,
   Text,
   VStack,
@@ -19,6 +23,7 @@ import {
 } from "@chakra-ui/react";
 import PrimaryLink from "./PrimaryLink";
 import { motion } from "framer-motion";
+import { useAppContext } from "@/context/state";
 
 const projectVariants = {
   projectInitial: {
@@ -32,9 +37,15 @@ const projectVariants = {
 };
 
 export default function ProjectCard({ projectData }: { projectData: Project }) {
-  const { title, description, imageUrl, techStack, sourceUrl, previewUrl } =
+  const { title, name, description, imageUrl, techStack, sourceUrl, previewUrl } =
     projectData;
   const { colorMode } = useColorMode();
+  const { enroute } = useAppContext();
+
+  function onClickHandler(name: string) {
+    const path = `/projects/${name}`;
+    enroute(path, {scroll: true});
+  }
 
   function displayTechStack(techStack: string[]) {
     const allTech = [];
@@ -87,79 +98,86 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
       borderWidth="thin"
       boxShadow="2xl"
     >
-      <Image
-        src={imageUrl}
-        alt="Project Thumbnail"
-        height="md"
-        fit="cover"
-        rounded="inherit"
-      />
-      <CardBody
-        position="absolute"
-        top={0}
-        left={0}
+      <Button
+        variant="unstyled"
         width="full"
         height="full"
-        rounded="inherit"
-        bgGradient="linear(to-b, blackAlpha.100, blackAlpha.700)"
-        opacity={0}
-        _hover={{
-          opacity: 1,
-        }}
-        transition="opacity 0.3s ease-in-out"
+        onClick={() => onClickHandler(name)}
       >
-        <VStack
+        <Image
+          src={imageUrl}
+          alt="Project Thumbnail"
+          height="md"
+          fit="cover"
+          rounded="inherit"
+        />
+        <CardBody
+          position="absolute"
+          top={0}
+          left={0}
           width="full"
           height="full"
-          paddingY="2rem"
-          spacing={{
-            base: "0.5rem",
-            md: "1rem",
-            xl: "1.5rem",
-            "2xl": "2rem",
+          rounded="inherit"
+          bgGradient="linear(to-b, blackAlpha.100, blackAlpha.700)"
+          opacity={0}
+          _hover={{
+            opacity: 1,
           }}
-          justifyContent="end"
+          transition="opacity 0.3s ease-in-out"
         >
-          <Heading
-            fontSize={{
-              base: "24px",
-              md: "32px",
-              xl: "40px",
-              "2xl": "48px",
-            }}
-            fontWeight="semibold"
-            textAlign="center"
-            letterSpacing="normal"
-            textColor="gray.8"
-          >
-            {title}
-          </Heading>
-          <Text
-            fontSize={{
-              base: "md",
-              md: "lg",
-              xl: "xl",
-              "2xl": "2xl",
-            }}
-            letterSpacing="normal"
-            textAlign="justify"
-            fontWeight="medium"
-            textColor="gray.7"
-          >
-            {description}
-          </Text>
-          <Wrap
+          <VStack
+            width="full"
+            height="full"
+            paddingY="2rem"
             spacing={{
               base: "0.5rem",
-              md: "0.75rem",
-              xl: "1rem",
-              "2xl": "1.25rem",
+              md: "1rem",
+              xl: "1.5rem",
+              "2xl": "2rem",
             }}
+            justifyContent="end"
           >
-            {displayTechStack(techStack)}
-          </Wrap>
-        </VStack>
-      </CardBody>
+            <Heading
+              fontSize={{
+                base: "24px",
+                md: "32px",
+                xl: "40px",
+                "2xl": "48px",
+              }}
+              fontWeight="semibold"
+              textAlign="center"
+              letterSpacing="normal"
+              textColor="gray.8"
+            >
+              {title}
+            </Heading>
+            <Text
+              fontSize={{
+                base: "md",
+                md: "lg",
+                xl: "xl",
+                "2xl": "2xl",
+              }}
+              letterSpacing="normal"
+              textAlign="justify"
+              fontWeight="medium"
+              textColor="gray.7"
+            >
+              {description}
+            </Text>
+            <Wrap
+              spacing={{
+                base: "0.5rem",
+                md: "0.75rem",
+                xl: "1rem",
+                "2xl": "1.25rem",
+              }}
+            >
+              {displayTechStack(techStack)}
+            </Wrap>
+          </VStack>
+        </CardBody>
+        </Button>
     </Card>
   );
 }

@@ -6,6 +6,7 @@ export interface Tech {
 
 export interface Project {
   title: string;
+  name: string;
   description: string;
   techStack: string[];
   imageUrl: string;
