@@ -1,19 +1,10 @@
 import { Project } from "@/utils/types";
-import { LinkIcon } from "@chakra-ui/icons";
 import {
-  Box,
   Button,
   Card,
   CardBody,
-  CardFooter,
-  CardHeader,
-  Divider,
-  HStack,
   Heading,
   Image,
-  Link,
-  LinkBox,
-  LinkOverlay,
   Tag,
   Text,
   VStack,
@@ -21,23 +12,10 @@ import {
   WrapItem,
   useColorMode,
 } from "@chakra-ui/react";
-import PrimaryLink from "./PrimaryLink";
-import { motion } from "framer-motion";
 import { useAppContext } from "@/context/state";
 
-const projectVariants = {
-  projectInitial: {
-    opacity: 0,
-    y: "2rem",
-  },
-  projectAnimate: {
-    opacity: 1,
-    y: 0,
-  },
-};
-
 export default function ProjectCard({ projectData }: { projectData: Project }) {
-  const { title, name, description, imageUrl, techStack, sourceUrl, previewUrl } =
+  const { title, name, description, imageUrl, techStack } =
     projectData;
   const { colorMode } = useColorMode();
   const { enroute } = useAppContext();
@@ -47,7 +25,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
     enroute(path, {scroll: true});
   }
 
-  function displayTechStack(techStack: string[]) {
+  function displayTechStack(title: string, techStack: string[]) {
     const allTech = [];
     for (let i = 0; i < techStack.length; i++) {
       const key = `${title}-tech-${i}`;
@@ -173,7 +151,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
                 "2xl": "1.25rem",
               }}
             >
-              {displayTechStack(techStack)}
+              {displayTechStack(title, techStack)}
             </Wrap>
           </VStack>
         </CardBody>

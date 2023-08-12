@@ -1,12 +1,13 @@
 import { Heading, Text, VStack } from "@chakra-ui/react";
-import { projects } from "../data/projects.json";
+import projects from "../data/projects.json";
 import ProjectCard from "./ProjectCard";
 
 export default function ProjectSummary() {
   function displayProjects() {
     const allProjects = [];
     for (let i = 0; i < projects.length; i++) {
-      const newProject = <ProjectCard key={i} projectData={projects[i]} />;
+      const key = `${projects[i].title}-card`;
+      const newProject = <ProjectCard key={key} projectData={projects[i]} />;
       allProjects.push(newProject);
     }
 

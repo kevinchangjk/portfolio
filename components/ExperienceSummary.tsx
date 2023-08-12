@@ -18,7 +18,8 @@ export default function ExperienceSummary() {
   function displayExperiences(experiences: Experience[]) {
     const allWork = [];
     for (let i = 0; i < experiences.length; i++) {
-      const newWork = <ExperienceCard key={i} experience={experiences[i]} />;
+      const key = `${experiences[i].title}-card`;
+      const newWork = <ExperienceCard key={key} experience={experiences[i]} />;
       allWork.push(newWork);
     }
 

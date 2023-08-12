@@ -13,8 +13,9 @@ export default function InterestedPositions() {
   function displayPositions(positions: string[]) {
     const allPositions: React.ReactNode[] = [];
     for (let i = 0; i < positions.length; i++) {
+      const key = `${positions[i]}-tag`;
       const newPosition = (
-        <WrapItem key={i}>
+        <WrapItem key={key}>
           <Tag
             padding={{
               base: "0.3rem",

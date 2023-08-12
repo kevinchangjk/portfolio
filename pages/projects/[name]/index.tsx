@@ -5,7 +5,6 @@ import {
   Heading,
   Icon,
   Image,
-  Link,
   LinkBox,
   LinkOverlay,
   Tag,
@@ -17,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { GetServerSideProps } from "next";
 
-import { projects } from "@/data/projects.json";
+import projects from "@/data/projects.json";
 import { useAppContext } from "@/context/state";
 import { useEffect, useState } from "react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
@@ -28,6 +27,7 @@ export default function ProjectPage({ project }: { project: Project }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    console.log(project);
     if (!project) {
       enroute("/404", { scroll: true });
     } else {
@@ -40,11 +40,50 @@ export default function ProjectPage({ project }: { project: Project }) {
   const buttonTextColor = useColorModeValue("gray.8", "gray.1");
   const buttonBgColor = useColorModeValue("gray.2", "gray.7");
 
+  function ProjectOverview() {
+    function displayParagraphs(title: string, text: string[]) {
+      const allParagraphs = [];
+      for (let i = 0; i < text.length; i++) {
+        const key = `${title}-overview-${i}`;
+        const newPara = (
+          <Text
+            variant="paragraph"
+            key={key}
+            fontSize={{
+              base: "md",
+              md: "lg",
+              xl: "xl",
+              "2xl": "2xl",
+            }}
+          >
+            {text[i]}
+          </Text>
+        );
+        allParagraphs.push(newPara);
+      }
+
+      return allParagraphs;
+    }
+
+    return (
+      <VStack
+        spacing={{
+          base: "1rem",
+          md: "1.25rem",
+          xl: "1.5rem",
+          "2xl": "1.75rem",
+        }}
+      >
+        {displayParagraphs(project.title, project.overview)}
+      </VStack>
+    );
+  }
+
   function ProjectStack() {
     function displayTechStack(title: string, techStack: string[]) {
       const allTech = [];
       for (let i = 0; i < techStack.length; i++) {
-        const key = `${title}-tech-${i}`;
+        const key = `${title}-techStack-${i}`;
         const newTech = (
           <WrapItem key={key}>
             <Tag
@@ -320,6 +359,7 @@ export default function ProjectPage({ project }: { project: Project }) {
             }}
           >
             <Heading variant="subPrimary">Overview</Heading>
+            <ProjectOverview />
           </VStack>
           <VStack
             align="inherit"
