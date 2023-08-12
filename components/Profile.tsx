@@ -42,7 +42,7 @@ export default function Profile() {
             xl: "64px",
             "2xl": "72px",
           }}
-          fontWeight="bold"
+          fontWeight="semibold"
           letterSpacing="normal"
           lineHeight="full"
           background={gradient}

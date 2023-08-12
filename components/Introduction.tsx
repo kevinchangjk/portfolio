@@ -85,7 +85,7 @@ export default function Introduction() {
             xl: "5xl",
             "2xl": "6xl",
           }}
-          fontWeight="bold"
+          fontWeight="semibold"
           letterSpacing="wide"
         >
           Welcome.
