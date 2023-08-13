@@ -56,6 +56,6 @@ export const introVariants = {
   },
 };
 
-export const ENTRY_DELAY = 2;
+export const ENTRY_DELAY = 1;
 export const PAGE_TRANSITION_DURATION = 0.5;
 export const GRADIENT_FLOW_DURATION = "5s";

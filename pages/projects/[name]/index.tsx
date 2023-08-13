@@ -385,6 +385,7 @@ export default function ProjectPage({ project }: { project: Project }) {
         <Skeleton>
           <Image
             width="full"
+            alt="Project Thumnail"
             height={{
               base: "lg",
               md: "xl",
