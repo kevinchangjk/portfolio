@@ -3,16 +3,29 @@ import {
   Heading,
   Image,
   VStack,
+  keyframes,
   useMediaQuery,
 } from "@chakra-ui/react";
 import profile from "@/data/profile.json";
 import MainFrame from "./MainFrame";
-import { getGradient } from "@/utils/gradient";
+import { getGradientFlow } from "@/utils/gradient";
 import { useAppContext } from "@/context/state";
 
 const { name, tagline } = profile;
+const shift = keyframes`
+    from {
+      background-position: 100% 50%;
+    }
+    to {
+      background-position: 0% 50%;
+    }
+  `;
+
+const gradientFlowAnimation = `${shift} 5s linear infinite`;
 
 export default function Profile() {
+  const { gradientTheme } = useAppContext();
+  const gradient = getGradientFlow(gradientTheme, "to right");
   const [isMobile] = useMediaQuery("(max-width: 1090px)");
 
   function displayAcrostic(acrostic: string[]) {
@@ -45,12 +58,11 @@ export default function Profile() {
           fontWeight="semibold"
           letterSpacing="normal"
           lineHeight="full"
-          background={gradient}
-          backgroundClip="text"
+          bgImage={gradient}
+        bgSize="300% 100%"
+          bgClip="text"
           textColor="transparent"
-          style={{
-            transition: "background 3s ease",
-          }}
+          animation={gradientFlowAnimation}
         >
           {name}
         </Heading>
@@ -83,6 +95,8 @@ export default function Profile() {
         objectFit="cover"
         borderRadius="full"
         bgGradient={gradient}
+        bgSize="300% 100%"
+        animation={gradientFlowAnimation}
       />
     );
   }
@@ -127,8 +141,6 @@ export default function Profile() {
       );
     }
   }
-  const { gradientTheme } = useAppContext();
-  const gradient = getGradient(gradientTheme, "to right");
 
   return (
     <HStack
@@ -142,7 +154,7 @@ export default function Profile() {
       }}
       justifyContent="center"
     >
-      <MainFrame gradient={gradient} />
+      <MainFrame gradient={gradient} animation={gradientFlowAnimation}/>
       {displayProfile()}
     </HStack>
   );

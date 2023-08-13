@@ -1,6 +1,12 @@
 import { Box, useColorModeValue } from "@chakra-ui/react";
 
-export default function MainFrame({ gradient }: { gradient: string }) {
+export default function MainFrame({
+  gradient,
+  animation,
+}: {
+  gradient: string;
+  animation: string;
+}) {
   const length = {
     base: "12rem",
     sm: "3xs",
@@ -39,6 +45,9 @@ export default function MainFrame({ gradient }: { gradient: string }) {
         zIndex="base"
         roundedTopLeft="xl"
         bgImage={gradient}
+        bgSize="300% 100%"
+        bgPosition="left"
+        animation={animation}
       />
       <Box
         position="absolute"
@@ -73,6 +82,9 @@ export default function MainFrame({ gradient }: { gradient: string }) {
         zIndex="base"
         roundedBottomRight="xl"
         bgImage={gradient}
+        bgSize="300% 100%"
+        bgPosition="right"
+        animation={animation}
       />
       <Box
         position="absolute"
