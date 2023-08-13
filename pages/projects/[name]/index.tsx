@@ -352,6 +352,7 @@ export default function ProjectPage({ project }: { project: Project }) {
           xl: "4xl",
           "2xl": "5xl",
         }}
+        maxWidth="full"
         align="left"
       >
         <VStack
@@ -518,6 +519,7 @@ export default function ProjectPage({ project }: { project: Project }) {
           xl: "4xl",
           "2xl": "5xl",
         }}
+        maxWidth="full"
         align="left"
       >
         <VStack

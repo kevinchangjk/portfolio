@@ -25,6 +25,7 @@ export default function About() {
           xl: "4xl",
           "2xl": "5xl",
         }}
+        maxWidth="full"
         alignItems="left"
       >
         <ExperienceSummary />

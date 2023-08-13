@@ -37,6 +37,7 @@ export default function ContactMe() {
           xl: "4xl",
           "2xl": "5xl",
         }}
+        maxWidth="full"
         spacing={{
           base: "2rem",
           md: "3rem",
