@@ -39,7 +39,7 @@ export default function TechStackGrid() {
         xl: "5rem",
         "2xl": "6.5rem",
       }}
-      justifyItems="start"
+      justifyItems="center"
     >
       {buildGrid(data.techStack)}
     </SimpleGrid>

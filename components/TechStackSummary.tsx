@@ -33,7 +33,7 @@ export default function TechStackSummary() {
           }}
           textAlign="justify"
         >
-          Some of the technologies {"I've"} been working with
+          Technologies {"I've"} been working with
         </Text>
       </VStack>
       <TechStackGrid />

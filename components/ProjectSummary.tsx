@@ -19,12 +19,12 @@ export default function ProjectSummary() {
       <VStack
         align="inherit"
         spacing={{
-          base: "1rem",
-          sm: "1.5rem",
-          md: "2rem",
-          lg: "2.5rem",
-          xl: "3rem",
-          "2xl": "4rem",
+          base: "2rem",
+          sm: "2.5rem",
+          md: "3rem",
+          lg: "3.5rem",
+          xl: "4rem",
+          "2xl": "4.5rem",
         }}
       >
         {displayProjects()}
@@ -62,7 +62,7 @@ export default function ProjectSummary() {
           }}
           textAlign="justify"
         >
-          Put some sweat and tears (no blood) into these
+          Shed some sweat and tears (no blood)
         </Text>
       </VStack>
       <ProjectStack />

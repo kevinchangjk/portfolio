@@ -24,8 +24,7 @@
     ],
     "imageUrl": "/images/projects/nft-artzone.png",
     "imageIsPortrait": false,
-    "techStack": ["Next.js", "Express.js", "IPFS", "Ethers.js", "TypeScript"],
-    "previewUrl": "https://nft.artzone.ai/"
+    "techStack": ["Next.js", "Express.js", "IPFS", "Ethers.js", "TypeScript"]
   },
   {
     "title": "CraiyoNFT",
