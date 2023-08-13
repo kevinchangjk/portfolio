@@ -9,6 +9,7 @@ import profile from "@/data/profile.json";
 import MainFrame from "./MainFrame";
 import { getGradientFlow } from "@/utils/gradient";
 import { useAppContext } from "@/context/state";
+import motion from "framer-motion";
 
 const { name, tagline } = profile;
 
@@ -108,7 +109,7 @@ export default function Profile({ animation }: { animation: string }) {
             lg: "2.5rem",
           }}
           justifyContent="space-evenly"
-          zIndex="docked"
+          zIndex="2"
         >
           {displayAvatar()}
           {displayFullAcrostic()}
@@ -123,7 +124,7 @@ export default function Profile({ animation }: { animation: string }) {
             "2xl": "5xl",
           }}
           justify="space-between"
-          zIndex="docked"
+          zIndex="2"
         >
           {displayFullAcrostic()}
           {displayAvatar()}
@@ -144,7 +145,7 @@ export default function Profile({ animation }: { animation: string }) {
       }}
       justifyContent="center"
     >
-      <MainFrame gradient={gradient} animation={animation} />
+      <MainFrame gradientTheme={gradientTheme} />
       {displayProfile()}
     </HStack>
   );

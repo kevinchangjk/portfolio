@@ -1,12 +1,72 @@
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, chakra, shouldForwardProp } from "@chakra-ui/react";
+import { isValidMotionProp, motion } from "framer-motion";
+import { createIcon } from "@chakra-ui/icons";
+import { FRAME_DELAY, FRAME_DURATION } from "@/utils/motion";
+
+const FrameContainer = chakra(motion.div, {
+  /**
+   * Allow motion props and non-Chakra props to be forwarded.
+   */
+  shouldForwardProp: (prop) =>
+    isValidMotionProp(prop) || shouldForwardProp(prop),
+});
 
 export default function MainFrame({
-  gradient,
-  animation,
+  gradientTheme,
 }: {
-  gradient: string;
-  animation: string;
+  gradientTheme: string[];
 }) {
+  const FrameIconLeft = createIcon({
+    displayName: "FrameIcon",
+    viewBox: "0 0 400 400",
+    path: (
+      <svg>
+        <defs>
+          <linearGradient id="myGradient">
+            <stop offset="0%" stop-color={gradientTheme[0]}></stop>
+            <stop offset="50%" stop-color={gradientTheme[1]}></stop>
+            <stop offset="100%" stop-color={gradientTheme[0]}></stop>
+            <animateTransform
+              attributeName="gradientTransform"
+              type="translate"
+              from="-1 0"
+              to="1 0"
+              dur="5s"
+              begin="0s"
+              repeatCount="indefinite"
+            />
+          </linearGradient>
+        </defs>
+        <g id="frame-left">
+          <path
+            id="path0"
+            d="M17.930 0.434 C 10.098 1.404,3.409 7.265,1.167 15.123 L 0.717 16.701 0.665 208.197 L 0.613 399.693 13.933 386.374 L 27.252 373.056 27.304 207.686 L 27.357 42.316 27.929 40.487 C 30.098 33.565,35.258 28.774,42.051 27.375 C 43.486 27.079,58.673 27.049,208.445 27.049 L 373.259 27.049 386.680 13.627 L 400.101 0.205 209.733 0.231 C 103.835 0.245,18.728 0.336,17.930 0.434 "
+            stroke="none"
+            fill="url('#myGradient')"
+            fill-rule="evenodd"
+          ></path>
+        </g>
+      </svg>
+    ),
+  });
+  const FrameIconRight = createIcon({
+    displayName: "FrameIcon",
+    viewBox: "0 0 400 400",
+    path: (
+      <svg>
+        <g id="frame-right">
+          <path
+            id="path0"
+            d="M386.629 13.883 L 373.361 27.153 373.361 191.817 C 373.361 306.011,373.295 356.855,373.145 357.698 C 371.869 364.904,366.778 370.464,359.523 372.578 L 357.889 373.053 192.519 373.106 L 27.148 373.158 13.831 386.476 L 0.513 399.795 191.394 399.792 C 376.756 399.790,382.328 399.779,384.123 399.408 C 391.447 397.897,397.132 392.630,399.425 385.232 L 399.898 383.709 399.949 225.717 C 399.978 138.822,399.978 52.625,399.949 34.169 L 399.898 0.614 386.629 13.883 "
+            stroke="none"
+            fill="url('#myGradient')"
+            fill-rule="evenodd"
+          ></path>
+        </g>
+      </svg>
+    ),
+  });
+
   const length = {
     base: "12rem",
     sm: "3xs",
@@ -14,15 +74,6 @@ export default function MainFrame({
     lg: "xs",
     xl: "sm",
     "2xl": "lg",
-  };
-
-  const thickness = {
-    base: "1rem",
-    sm: "1.25rem",
-    md: "1.5rem",
-    lg: "1.75rem",
-    xl: "2rem",
-    "2xl": "2.25rem",
   };
 
   return (
@@ -36,80 +87,53 @@ export default function MainFrame({
         lg: "38rem",
       }}
     >
-      <Box
+      <FrameContainer
+        initial={{
+          opacity: 0,
+          x: "-100vw",
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: {
+            duration: FRAME_DURATION,
+            delay: FRAME_DELAY,
+            type: "tween",
+            ease: "anticipate",
+          }
+        }}
         position="absolute"
-        top="0rem"
-        left="0rem"
-        width={length}
-        height={length}
-        zIndex="base"
-        roundedTopLeft="xl"
-        bgImage={gradient}
-        bgSize="300% 100%"
-        bgPosition="left"
-        animation={animation}
-      />
-      <Box
+        top={0}
+        left={0}
+      >
+        <FrameIconLeft position="absolute" top={0} left={0} boxSize={length} />
+      </FrameContainer>
+      <FrameContainer
+        initial={{
+          opacity: 0,
+          x: "100vw",
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: { 
+            duration: FRAME_DURATION,
+            delay: FRAME_DELAY,
+            type: "tween",
+            ease: "anticipate",
+          }
+        }}
         position="absolute"
-        top={thickness}
-        left={thickness}
-        width={length}
-        height={length}
-        zIndex="1"
-        bgColor={useColorModeValue("gray.9", "gray.0")}
-        roundedTopLeft="xl"
-      />
-      <Box
-        position="absolute"
-        top="0rem"
-        left="0rem"
-        width={length}
-        height={length}
-        zIndex="1"
-        borderStyle="solid"
-        borderWidth={thickness}
-        borderColor={useColorModeValue(
-          "transparent #FAFAFA #FAFAFA transparent",
-          "transparent #191919 #191919 transparent"
-        )}
-      />
-      <Box
-        position="absolute"
-        right="0rem"
-        bottom="0rem"
-        width={length}
-        height={length}
-        zIndex="base"
-        roundedBottomRight="xl"
-        bgImage={gradient}
-        bgSize="300% 100%"
-        bgPosition="right"
-        animation={animation}
-      />
-      <Box
-        position="absolute"
-        right={thickness}
-        bottom={thickness}
-        width={length}
-        height={length}
-        zIndex="1"
-        bgColor={useColorModeValue("gray.9", "gray.0")}
-        roundedBottomRight="xl"
-      />
-      <Box
-        position="absolute"
-        right="0rem"
-        bottom="0rem"
-        width={length}
-        height={length}
-        zIndex="1"
-        borderStyle="solid"
-        borderWidth={thickness}
-        borderColor={useColorModeValue(
-          "#FAFAFA transparent transparent #FAFAFA",
-          "#191919 transparent transparent #191919"
-        )}
-      />
+        right={0}
+        bottom={0}
+      >
+        <FrameIconRight
+          position="absolute"
+          right={0}
+          bottom={0}
+          boxSize={length}
+        />
+      </FrameContainer>
     </Box>
   );
 }

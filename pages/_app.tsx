@@ -29,6 +29,7 @@ export default function Application({
   pageProps: {};
   router: NextRouter;
 }) {
+
   return (
     <ChakraProvider theme={theme}>
       <Head>
