@@ -88,14 +88,12 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
       position="relative"
       width="max"
       maxWidth="full"
-      borderColor={colorMode === "light" ? "gray.200" : "gray.700"}
-      borderWidth="thin"
       boxShadow="2xl"
       rounded={{
         base: "lg",
         md: "xl",
         xl: "2xl",
-        "2xl": "3xl"
+        "2xl": "3xl",
       }}
     >
       <Button
@@ -118,6 +116,12 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           }}
           height="max"
           minHeight="xs"
+          maxHeight={{
+            base: "md",
+            md: "lg",
+            xl: "xl",
+            "2xl": "2xl",
+          }}
           fit="cover"
           rounded="inherit"
         />
