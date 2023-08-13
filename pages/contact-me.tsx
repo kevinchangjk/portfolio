@@ -12,7 +12,6 @@ import {
   keyframes
 } from "@chakra-ui/react";
 
-
 const shift = keyframes`
     from {
       background-position: 100% 50%;
@@ -22,7 +21,7 @@ const shift = keyframes`
     }
   `;
 
-const gradientFlowAnimation = `${shift} 3s linear infinite`;
+const gradientFlowAnimation = `${shift} 5s linear infinite`;
 
 export default function ContactMe() {
   const { gradientTheme } = useAppContext();

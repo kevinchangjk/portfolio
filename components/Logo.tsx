@@ -11,7 +11,7 @@ const shift = keyframes`
     }
   `;
 
-const gradientFlowAnimation = `${shift} 3s linear infinite`;
+const gradientFlowAnimation = `${shift} 5s linear infinite`;
 
 export default function Logo() {
   const { gradientTheme, setGradientTheme } = useAppContext();

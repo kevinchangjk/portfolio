@@ -97,8 +97,14 @@ export default function Profile() {
             sm: "lg",
             md: "xl",
           }}
+          paddingY={{
+            base: "1rem",
+            sm: "1.5rem",
+            md: "2rem",
+            lg: "2.5rem"
+          }}
           justifyContent="space-evenly"
-          zIndex="sticky"
+          zIndex="docked"
         >
           {displayAvatar()}
           {displayFullAcrostic()}
@@ -113,7 +119,7 @@ export default function Profile() {
             "2xl": "5xl",
           }}
           justify="space-between"
-          zIndex="9"
+          zIndex="docked"
         >
           {displayFullAcrostic()}
           {displayAvatar()}
