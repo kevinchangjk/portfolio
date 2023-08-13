@@ -46,6 +46,11 @@ export function getGradient(colors: string[], direction: string) {
   return res;
 }
 
+export function getGradientFlow(colors: string[], direction: string) {
+  const res = `linear-gradient(${direction}, ${colors[0]}, ${colors[1]}, ${colors[0]}, ${colors[1]})`
+  return res;
+}
+
 function choose<T>(choices: T[]) {
   var index = Math.floor(Math.random() * choices.length);
   return choices[index];

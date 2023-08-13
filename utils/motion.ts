@@ -1,3 +1,5 @@
+import { keyframes } from "@chakra-ui/react";
+
 // Page Animations
 export const pageVariants = {
   pageInitial: {

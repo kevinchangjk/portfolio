@@ -65,8 +65,9 @@ export default function Introduction() {
       <VStack
         position="relative"
         width={{
-          base: "2xl",
-          sm: "3xl",
+          base: "full",
+          md: "2xl",
+          lg: "3xl",
           xl: "4xl",
           "2xl": "5xl",
         }}
