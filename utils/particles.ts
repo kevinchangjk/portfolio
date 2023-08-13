@@ -4,16 +4,17 @@ const options: ISourceOptions = {
   name: "Links",
   particles: {
     number: {
-      value: 80,
+      value: 50,
       density: {
         enable: true,
       },
+      max: 75
     },
     color: {
-      value: "#FF0000",
+      value: "#0000FF",
       animation: {
         enable: true,
-        speed: 100,
+        speed: 5,
         sync: true,
       },
     },
@@ -31,7 +32,7 @@ const options: ISourceOptions = {
     },
     links: {
       enable: true,
-      distance: 130,
+      distance: 100,
       color: "#666666",
       opacity: 0.3,
       width: 1,
@@ -43,41 +44,30 @@ const options: ISourceOptions = {
     },
     move: {
       enable: true,
-      speed: 2,
+      speed: 1,
     },
   },
   interactivity: {
     events: {
       onHover: {
         enable: true,
-        mode: "repulse",
+        mode: "grab",
       },
       onClick: {
         enable: true,
         mode: "push",
       },
+      resize: true
     },
     modes: {
       grab: {
-        distance: 400,
+        distance: 150,
         links: {
-          opacity: 1,
+          opacity: 0.8,
         },
       },
-      bubble: {
-        distance: 400,
-        size: 40,
-        duration: 2,
-        opacity: 0.8,
-      },
-      repulse: {
-        distance: 200,
-      },
       push: {
-        quantity: 4,
-      },
-      remove: {
-        quantity: 2,
+        quantity: 3,
       },
     },
   },

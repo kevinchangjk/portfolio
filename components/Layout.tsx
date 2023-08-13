@@ -44,12 +44,6 @@ export default function Layout({
       overflow="hidden"
       justifyContent="center"
     >
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
-        options={options}
-      />
       <VStack
         alignItems="center"
         width={{
@@ -65,6 +59,12 @@ export default function Layout({
           "2xl": "3rem",
         }}
       >
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={options}
+        />
         <AnimatePresence mode="popLayout">
           <motion.div
             key="navbar-motion"
