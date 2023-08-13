@@ -15,14 +15,13 @@ import {
 import { useAppContext } from "@/context/state";
 
 export default function ProjectCard({ projectData }: { projectData: Project }) {
-  const { title, name, description, imageUrl, techStack } =
-    projectData;
+  const { title, name, description, imageUrl, techStack } = projectData;
   const { colorMode } = useColorMode();
   const { enroute } = useAppContext();
 
   function onClickHandler(name: string) {
     const path = `/projects/${name}`;
-    enroute(path, {scroll: true});
+    enroute(path, { scroll: true });
   }
 
   function displayTechStack(title: string, techStack: string[]) {
@@ -95,6 +94,9 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           left={0}
           width="full"
           height="full"
+          display="flex"
+          flexDirection="column"
+          justifyContent="end"
           rounded="inherit"
           bgGradient="linear(to-b, blackAlpha.100, blackAlpha.700)"
           opacity={0}
@@ -104,8 +106,6 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           transition="opacity 0.3s ease-in-out"
         >
           <VStack
-            width="full"
-            height="full"
             paddingY="2rem"
             spacing={{
               base: "0.5rem",
@@ -113,7 +113,6 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
               xl: "1.5rem",
               "2xl": "2rem",
             }}
-            justifyContent="end"
           >
             <Heading
               fontSize={{
@@ -137,7 +136,9 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
                 "2xl": "2xl",
               }}
               letterSpacing="normal"
-              textAlign="justify"
+              textAlign="center"
+              overflowWrap="break-word"
+              whiteSpace="normal"
               fontWeight="medium"
               textColor="gray.7"
             >
@@ -155,7 +156,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
             </Wrap>
           </VStack>
         </CardBody>
-        </Button>
+      </Button>
     </Card>
   );
 }

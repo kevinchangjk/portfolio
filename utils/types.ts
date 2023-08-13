@@ -11,6 +11,7 @@ export interface Project {
   overview: string[];
   techStack: string[];
   imageUrl: string;
+  imageIsPortrait: boolean;
   sourceUrl?: string;
   previewUrl?: string;
 }

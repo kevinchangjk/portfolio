@@ -1,4 +1,10 @@
-import { Heading, Image, Text, VStack, useColorModeValue } from "@chakra-ui/react";
+import {
+  Heading,
+  Image,
+  Text,
+  VStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 export default function WakatimeSummary() {
   const lightSum =
@@ -32,10 +38,10 @@ export default function WakatimeSummary() {
         <Text
           variant="descriptor"
           fontSize={{
-            base: "md",
-            md: "lg",
-            xl: "xl",
-            "2xl": "2xl"
+            base: "lg",
+            md: "xl",
+            xl: "2xl",
+            "2xl": "3xl",
           }}
           textAlign="justify"
         >

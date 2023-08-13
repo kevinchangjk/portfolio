@@ -37,21 +37,24 @@ export default function ProjectSummary() {
         <Text
           variant="descriptor"
           fontSize={{
-            base: "xl",
-            md: "2xl",
-            xl: "3xl",
-            "2xl": "4xl",
+            base: "lg",
+            md: "xl",
+            xl: "2xl",
+            "2xl": "3xl",
           }}
         >
           Put some sweat and tears (no blood) into these
         </Text>
       </VStack>
-      <VStack align="inherit" spacing={{
-        base: "4rem",
-        md: "5rem",
-        xl: "6rem",
-        "2xl": "7rem",
-      }}>
+      <VStack
+        align="inherit"
+        spacing={{
+          base: "4rem",
+          md: "5rem",
+          xl: "6rem",
+          "2xl": "7rem",
+        }}
+      >
         {displayProjects()}
       </VStack>
     </VStack>

@@ -8,6 +8,7 @@
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     ],
     "imageUrl": "/images/projects/niftyzone.png",
+    "imageIsPortrait": false,
     "techStack": ["Next.js", "Solidity", "MongoDB"],
     "previewUrl": "https://www.niftyzone.com/"
   },
@@ -20,6 +21,7 @@
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     ],
     "imageUrl": "/images/projects/nft-artzone.png",
+    "imageIsPortrait": false,
     "techStack": ["Next.js", "Express.js", "IPFS"],
     "previewUrl": "https://nft.artzone.ai/"
   },
@@ -32,6 +34,7 @@
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     ],
     "imageUrl": "/images/projects/craiyonft.png",
+    "imageIsPortrait": false,
     "techStack": ["Express.js", "Flask", "SmartPy", "IPFS"],
     "sourceUrl": "https://github.com/VMP-SG/CraiyoNFT"
   },
@@ -44,6 +47,7 @@
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     ],
     "imageUrl": "/images/projects/bubbleteasort.jpg",
+    "imageIsPortrait": true,
     "techStack": ["React Native", "Firebase"],
     "sourceUrl": "https://github.com/VMP-SG/BubbleTeaSort"
   },
@@ -56,6 +60,7 @@
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     ],
     "imageUrl": "/images/projects/chirple.png",
+    "imageIsPortrait": false,
     "techStack": ["React.js", "Node.js"],
     "sourceUrl": "https://github.com/Onlyfriendz/chirple",
     "previewUrl": "https://chirple.netlify.app/"
@@ -69,6 +74,7 @@
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     ],
     "imageUrl": "/images/projects/coydir.png",
+    "imageIsPortrait": false,
     "techStack": ["Java", "JavaFX"],
     "sourceUrl": "https://github.com/AY2223S1-CS2103T-T15-1/tp"
   }

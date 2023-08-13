@@ -26,10 +26,10 @@ export default function TechStackSummary() {
         <Text
           variant="descriptor"
           fontSize={{
-            base: "md",
-            md: "lg",
-            xl: "xl",
-            "2xl": "2xl"
+            base: "lg",
+            md: "xl",
+            xl: "2xl",
+            "2xl": "3xl",
           }}
           textAlign="justify"
         >
