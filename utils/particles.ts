@@ -4,7 +4,7 @@ const options: ISourceOptions = {
   name: "Links",
   particles: {
     number: {
-      value: 50,
+      value: 70,
       density: {
         enable: true,
       },

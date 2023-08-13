@@ -9,7 +9,6 @@ import profile from "@/data/profile.json";
 import MainFrame from "./MainFrame";
 import { getGradientFlow } from "@/utils/gradient";
 import { useAppContext } from "@/context/state";
-import { FrameIcon } from "./FrameIcon";
 
 const { name, tagline } = profile;
 
@@ -145,7 +144,7 @@ export default function Profile({ animation }: { animation: string }) {
       }}
       justifyContent="center"
     >
-      <MainFrame gradient={gradient} animation={animation} />
+      <MainFrame gradientTheme={gradientTheme} />
       {displayProfile()}
     </HStack>
   );
