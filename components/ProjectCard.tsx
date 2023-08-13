@@ -53,13 +53,14 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
               xl: "0.8rem",
               "2xl": "1rem",
             }}
-            variant="solid"
-            colorScheme="whiteAlpha"
+            variant="unstyled"
+            bgColor="whiteAlpha.500"
             opacity={0.8}
           >
             <Text
               textAlign="center"
               fontWeight="bold"
+              textColor="gray.8"
               letterSpacing={{
                 base: "normal",
                 md: "wide",
@@ -124,7 +125,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           flexDirection="column"
           justifyContent="end"
           rounded="inherit"
-          bgGradient="linear(to-b, blackAlpha.100, blackAlpha.700)"
+          bgGradient="linear(to-b, blackAlpha.200, blackAlpha.800)"
           opacity={isDesktop ? 0 : 1}
           _hover={{
             opacity: 1,
