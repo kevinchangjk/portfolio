@@ -55,6 +55,7 @@ export default function ProjectPage({ project }: { project: Project }) {
             "2xl": "3xl",
           }}
           boxShadow="2xl"
+          placeholder="blur"
         />
       );
     } else {

@@ -12,7 +12,7 @@ import { useAppContext } from "@/context/state";
 
 const { name, tagline } = profile;
 
-export default function Profile({animation}: {animation: string}) {
+export default function Profile({ animation }: { animation: string }) {
   const { gradientTheme } = useAppContext();
   const gradient = getGradientFlow(gradientTheme, "to right");
   const [isMobile] = useMediaQuery("(max-width: 1090px)");
@@ -48,7 +48,7 @@ export default function Profile({animation}: {animation: string}) {
           letterSpacing="normal"
           lineHeight="full"
           bgImage={gradient}
-        bgSize="300% 100%"
+          bgSize="300% 100%"
           bgClip="text"
           textColor="transparent"
           animation={animation}
@@ -86,6 +86,7 @@ export default function Profile({animation}: {animation: string}) {
         bgGradient={gradient}
         bgSize="300% 100%"
         animation={animation}
+        placeholder="blur"
       />
     );
   }
@@ -104,7 +105,7 @@ export default function Profile({animation}: {animation: string}) {
             base: "1rem",
             sm: "1.5rem",
             md: "2rem",
-            lg: "2.5rem"
+            lg: "2.5rem",
           }}
           justifyContent="space-evenly"
           zIndex="docked"
@@ -143,7 +144,7 @@ export default function Profile({animation}: {animation: string}) {
       }}
       justifyContent="center"
     >
-      <MainFrame gradient={gradient} animation={animation}/>
+      <MainFrame gradient={gradient} animation={animation} />
       {displayProfile()}
     </HStack>
   );
