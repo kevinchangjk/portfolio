@@ -1,6 +1,4 @@
 import ProjectSummary from "@/components/ProjectSummary";
-import TechStackSummary from "@/components/TechStackSummary";
-import WakatimeSummary from "@/components/WakatimeSummary";
 import { VStack } from "@chakra-ui/react";
 
 export default function Projects() {
@@ -13,16 +11,10 @@ export default function Projects() {
           xl: "16vh",
           "2xl": "20vh",
         }}
-        spacing={{
-          base: "4rem",
-          md: "6rem",
-          xl: "8rem",
-          "2xl": "10rem",
-        }}
+        width="full"
+        alignItems="left"
       >
         <ProjectSummary />
-        <TechStackSummary />
-        <WakatimeSummary />
       </VStack>
     </main>
   );

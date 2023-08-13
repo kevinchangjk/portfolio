@@ -6,9 +6,12 @@ export interface Tech {
 
 export interface Project {
   title: string;
+  name: string;
   description: string;
-  techStack: string;
+  overview: string[];
+  techStack: string[];
   imageUrl: string;
+  imageIsPortrait: boolean;
   sourceUrl?: string;
   previewUrl?: string;
 }

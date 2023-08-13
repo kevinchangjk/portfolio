@@ -1,17 +1,19 @@
 import Introduction from "@/components/Introduction";
 import Profile from "@/components/Profile";
-import { colors } from "@/utils/gradient";
-import { VStack, Wrap, WrapItem } from "@chakra-ui/react";
+import { VStack, keyframes } from "@chakra-ui/react";
+
+const shift = keyframes`
+    from {
+      background-position: 100% 50%;
+    }
+    to {
+      background-position: 0% 50%;
+    }
+  `;
+
+const gradientFlowAnimation = `${shift} 5s linear infinite`;
 
 export default function Home() {
-  function displayAllColors() {
-    const all = [];
-    for (const color of colors) {
-      all.push(<WrapItem height="6rem" width="6rem" bgColor={color} />);
-    }
-    return <Wrap>{all}</Wrap>;
-  }
-
   return (
     <main>
       <VStack
@@ -28,8 +30,8 @@ export default function Home() {
           "2xl": "16rem",
         }}
       >
-        <Profile />
-        <Introduction />
+        <Profile animation={gradientFlowAnimation}/>
+        <Introduction animation={gradientFlowAnimation}/>
       </VStack>
     </main>
   );

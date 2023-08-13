@@ -1,20 +1,19 @@
 import InterestedPositions from "@/components/InterestedPositions";
 import { useAppContext } from "@/context/state";
+import { getGradientFlow } from "@/utils/gradient";
+import { GRADIENT_FLOW_DURATION } from "@/utils/motion";
 import {
+  Button,
   HStack,
   Heading,
   LinkBox,
   LinkOverlay,
   Text,
   VStack,
-  keyframes,
+  keyframes
 } from "@chakra-ui/react";
 
-export default function ContactMe() {
-  const { gradientTheme } = useAppContext();
-  const gradient = `linear(to-r, ${gradientTheme[0]}, ${gradientTheme[1]}, ${gradientTheme[0]}, ${gradientTheme[1]})`;
-
-  const shift = keyframes`
+const shift = keyframes`
     from {
       background-position: 100% 50%;
     }
@@ -23,7 +22,11 @@ export default function ContactMe() {
     }
   `;
 
-  const animation = `${shift} 3s linear infinite`;
+const gradientFlowAnimation = `${shift} ${GRADIENT_FLOW_DURATION} linear infinite`;
+
+export default function ContactMe() {
+  const { gradientTheme } = useAppContext();
+  const gradient = getGradientFlow(gradientTheme, "to right");
 
   return (
     <main>
@@ -31,9 +34,10 @@ export default function ContactMe() {
         width={{
           base: "full",
           md: "2xl",
-          xl: "3xl",
-          "2xl": "4xl",
+          xl: "4xl",
+          "2xl": "5xl",
         }}
+        maxWidth="full"
         spacing={{
           base: "2rem",
           md: "3rem",
@@ -96,31 +100,37 @@ export default function ContactMe() {
             You can reach out to me at
           </Text>
           <HStack width="full">
-            <LinkBox>
+            <Button
+              as={LinkBox}
+              padding="0rem"
+              variant="unstyled"
+              _hover={{ transform: "scale(1.05)" }}
+              _active={{ transform: "scale(0.95)" }}
+            >
               <Heading
                 fontWeight="semibold"
                 letterSpacing="normal"
                 width="min"
-                bgGradient={gradient}
+                bg={gradient}
                 bgClip="text"
                 bgSize="300% 100%"
                 bgPosition="right"
                 textColor="transparent"
+                animation={gradientFlowAnimation}
                 fontSize={{
-                  base: "2xl",
-                  md: "4xl",
+                  base: "xl",
+                  sm: "2xl",
+                  md: "3xl",
+                  lg: "4xl",
                   xl: "5xl",
                   "2xl": "6xl",
-                }}
-                _hover={{
-                  animation: animation,
                 }}
               >
                 <LinkOverlay href="mailto:kevinchangjk@gmail.com">
                   kevinchangjk@gmail.com
                 </LinkOverlay>
               </Heading>
-            </LinkBox>
+            </Button>
           </HStack>
         </VStack>
       </VStack>

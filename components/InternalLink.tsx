@@ -28,7 +28,7 @@ export default function InternalLink({
       variant="unstyled"
       padding="0rem"
       height="min"
-      key={href}
+      key={`route-${href}`}
       onClick={onClickHandler}
       display="inline-block"
       position="relative"

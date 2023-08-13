@@ -41,8 +41,8 @@ export const colors = [
   "#A26769", // Rose Taupe
 ];
 
-export function getGradient(colors: string[], direction: string) {
-  const res = `linear-gradient(${direction}, ${colors[0]}, ${colors[1]})`;
+export function getGradientFlow(colors: string[], direction: string) {
+  const res = `linear-gradient(${direction}, ${colors[0]}, ${colors[1]}, ${colors[0]}, ${colors[1]})`
   return res;
 }
 

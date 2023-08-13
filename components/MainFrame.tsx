@@ -1,6 +1,30 @@
 import { Box, useColorModeValue } from "@chakra-ui/react";
 
-export default function MainFrame({ gradient }: { gradient: string }) {
+export default function MainFrame({
+  gradient,
+  animation,
+}: {
+  gradient: string;
+  animation: string;
+}) {
+  const length = {
+    base: "12rem",
+    sm: "3xs",
+    md: "2xs",
+    lg: "xs",
+    xl: "sm",
+    "2xl": "lg",
+  };
+
+  const thickness = {
+    base: "1rem",
+    sm: "1.25rem",
+    md: "1.5rem",
+    lg: "1.75rem",
+    xl: "2rem",
+    "2xl": "2.25rem",
+  };
+
   return (
     <Box
       position="absolute"
@@ -16,48 +40,21 @@ export default function MainFrame({ gradient }: { gradient: string }) {
         position="absolute"
         top="0rem"
         left="0rem"
-        width={{
-          base: "3xs",
-          sm: "2xs",
-          lg: "xs",
-          "2xl": "sm",
-        }}
-        height={{
-          base: "3xs",
-          sm: "2xs",
-          lg: "xs",
-          "2xl": "sm",
-        }}
-        zIndex="0"
+        width={length}
+        height={length}
+        zIndex="base"
         roundedTopLeft="xl"
         bgImage={gradient}
+        bgSize="300% 100%"
+        bgPosition="left"
+        animation={animation}
       />
       <Box
         position="absolute"
-        top={{
-          base: "1rem",
-          sm: "1.25rem",
-          lg: "1.5rem",
-          "2xl": "2rem",
-        }}
-        left={{
-          base: "1rem",
-          sm: "1.25rem",
-          lg: "1.5rem",
-          "2xl": "2rem",
-        }}
-        width={{
-          base: "3xs",
-          sm: "2xs",
-          lg: "xs",
-          "2xl": "sm",
-        }}
-        height={{
-          base: "3xs",
-          sm: "2xs",
-          lg: "xs",
-          "2xl": "sm",
-        }}
+        top={thickness}
+        left={thickness}
+        width={length}
+        height={length}
         zIndex="1"
         bgColor={useColorModeValue("gray.9", "gray.0")}
         roundedTopLeft="xl"
@@ -66,21 +63,11 @@ export default function MainFrame({ gradient }: { gradient: string }) {
         position="absolute"
         top="0rem"
         left="0rem"
-        width={{
-          base: "3xs",
-          sm: "2xs",
-          lg: "xs",
-          "2xl": "sm",
-        }}
-        height={{
-          base: "3xs",
-          sm: "2xs",
-          lg: "xs",
-          "2xl": "sm",
-        }}
+        width={length}
+        height={length}
         zIndex="1"
         borderStyle="solid"
-        borderWidth="2rem"
+        borderWidth={thickness}
         borderColor={useColorModeValue(
           "transparent #FAFAFA #FAFAFA transparent",
           "transparent #191919 #191919 transparent"
@@ -90,48 +77,21 @@ export default function MainFrame({ gradient }: { gradient: string }) {
         position="absolute"
         right="0rem"
         bottom="0rem"
-        width={{
-          base: "3xs",
-          sm: "2xs",
-          lg: "xs",
-          "2xl": "sm",
-        }}
-        height={{
-          base: "3xs",
-          sm: "2xs",
-          lg: "xs",
-          "2xl": "sm",
-        }}
-        zIndex="0"
+        width={length}
+        height={length}
+        zIndex="base"
         roundedBottomRight="xl"
         bgImage={gradient}
+        bgSize="300% 100%"
+        bgPosition="right"
+        animation={animation}
       />
       <Box
         position="absolute"
-        right={{
-          base: "1rem",
-          sm: "1.25rem",
-          lg: "1.5rem",
-          "2xl": "2rem",
-        }}
-        bottom={{
-          base: "1rem",
-          sm: "1.25rem",
-          lg: "1.5rem",
-          "2xl": "2rem",
-        }}
-        width={{
-          base: "3xs",
-          sm: "2xs",
-          lg: "xs",
-          "2xl": "sm",
-        }}
-        height={{
-          base: "3xs",
-          sm: "2xs",
-          lg: "xs",
-          "2xl": "sm",
-        }}
+        right={thickness}
+        bottom={thickness}
+        width={length}
+        height={length}
         zIndex="1"
         bgColor={useColorModeValue("gray.9", "gray.0")}
         roundedBottomRight="xl"
@@ -140,21 +100,11 @@ export default function MainFrame({ gradient }: { gradient: string }) {
         position="absolute"
         right="0rem"
         bottom="0rem"
-        width={{
-          base: "3xs",
-          sm: "2xs",
-          lg: "xs",
-          "2xl": "sm",
-        }}
-        height={{
-          base: "3xs",
-          sm: "2xs",
-          lg: "xs",
-          "2xl": "sm",
-        }}
+        width={length}
+        height={length}
         zIndex="1"
         borderStyle="solid"
-        borderWidth="2rem"
+        borderWidth={thickness}
         borderColor={useColorModeValue(
           "#FAFAFA transparent transparent #FAFAFA",
           "#191919 transparent transparent #191919"

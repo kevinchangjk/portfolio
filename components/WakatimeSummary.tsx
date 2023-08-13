@@ -1,4 +1,10 @@
-import { Heading, Image, VStack, useColorModeValue } from "@chakra-ui/react";
+import {
+  Heading,
+  Image,
+  Text,
+  VStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 export default function WakatimeSummary() {
   const lightSum =
@@ -21,32 +27,35 @@ export default function WakatimeSummary() {
       <VStack
         spacing={{
           base: "1rem",
-          md: "2rem",
-          xl: "3rem",
-          "2xl": "4rem",
+          md: "1.5rem",
+          xl: "2rem",
+          "2xl": "2.5rem",
         }}
         align="inherit"
         width="full"
       >
-        <Heading variant="primary">Coding</Heading>
-        <Heading
-          variant="secondary"
-          marginX={{
-            base: "2rem",
-            sm: "0rem",
+        <Heading variant="subPrimary">Coding</Heading>
+        <Text
+          variant="descriptor"
+          fontSize={{
+            base: "lg",
+            md: "xl",
+            xl: "2xl",
+            "2xl": "3xl",
           }}
+          textAlign="justify"
         >
-          Some of the languages {"I've"} been using
-        </Heading>
+          Programming languages {"I've"} been using
+        </Text>
       </VStack>
       <Image
         alt="Wakatime Summary"
         maxHeight={{
-          base: "lg",
-          md: "xl",
-          lg: "2xl",
-          xl: "3xl",
-          "2xl": "4xl",
+          base: "md",
+          md: "lg",
+          lg: "xl",
+          xl: "2xl",
+          "2xl": "3xl",
         }}
         rounded="xl"
         src={summary}

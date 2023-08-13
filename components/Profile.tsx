@@ -7,19 +7,21 @@ import {
 } from "@chakra-ui/react";
 import profile from "@/data/profile.json";
 import MainFrame from "./MainFrame";
-import { getGradient } from "@/utils/gradient";
+import { getGradientFlow } from "@/utils/gradient";
 import { useAppContext } from "@/context/state";
 
 const { name, tagline } = profile;
 
-export default function Profile() {
+export default function Profile({animation}: {animation: string}) {
+  const { gradientTheme } = useAppContext();
+  const gradient = getGradientFlow(gradientTheme, "to right");
   const [isMobile] = useMediaQuery("(max-width: 1090px)");
 
   function displayAcrostic(acrostic: string[]) {
     const result = [];
     for (const line of acrostic) {
       const newLine = (
-        <Heading key={`acrostic${line}`} variant="primary">
+        <Heading key={`acrostic-${line}`} variant="primary">
           {line}
         </Heading>
       );
@@ -45,12 +47,11 @@ export default function Profile() {
           fontWeight="semibold"
           letterSpacing="normal"
           lineHeight="full"
-          background={gradient}
-          backgroundClip="text"
+          bgImage={gradient}
+        bgSize="300% 100%"
+          bgClip="text"
           textColor="transparent"
-          style={{
-            transition: "background 3s ease",
-          }}
+          animation={animation}
         >
           {name}
         </Heading>
@@ -83,6 +84,8 @@ export default function Profile() {
         objectFit="cover"
         borderRadius="full"
         bgGradient={gradient}
+        bgSize="300% 100%"
+        animation={animation}
       />
     );
   }
@@ -91,18 +94,20 @@ export default function Profile() {
     if (isMobile) {
       return (
         <VStack
-          width={{
-            base: "2xl",
-            sm: "3xl",
-          }}
           height="60vh"
           minHeight={{
             base: "md",
             sm: "lg",
             md: "xl",
           }}
+          paddingY={{
+            base: "1rem",
+            sm: "1.5rem",
+            md: "2rem",
+            lg: "2.5rem"
+          }}
           justifyContent="space-evenly"
-          zIndex="sticky"
+          zIndex="docked"
         >
           {displayAvatar()}
           {displayFullAcrostic()}
@@ -117,7 +122,7 @@ export default function Profile() {
             "2xl": "5xl",
           }}
           justify="space-between"
-          zIndex="9"
+          zIndex="docked"
         >
           {displayFullAcrostic()}
           {displayAvatar()}
@@ -125,8 +130,6 @@ export default function Profile() {
       );
     }
   }
-  const { gradientTheme } = useAppContext();
-  const gradient = getGradient(gradientTheme, "to right");
 
   return (
     <HStack
@@ -140,7 +143,7 @@ export default function Profile() {
       }}
       justifyContent="center"
     >
-      <MainFrame gradient={gradient} />
+      <MainFrame gradient={gradient} animation={animation}/>
       {displayProfile()}
     </HStack>
   );

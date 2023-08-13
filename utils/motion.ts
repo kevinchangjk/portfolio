@@ -1,3 +1,5 @@
+import { keyframes } from "@chakra-ui/react";
+
 // Page Animations
 export const pageVariants = {
   pageInitial: {
@@ -56,3 +58,4 @@ export const introVariants = {
 
 export const ENTRY_DELAY = 2;
 export const PAGE_TRANSITION_DURATION = 0.5;
+export const GRADIENT_FLOW_DURATION = "5s";

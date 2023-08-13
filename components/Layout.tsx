@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { Box, HStack, VStack, useColorModeValue } from "@chakra-ui/react";
 import Footer from "./Footer";
-import { AnimatePresence, motion, usePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { NextRouter } from "next/router";
 import {
   ENTRY_DELAY,
@@ -45,6 +45,7 @@ export default function Layout({
       >
         <AnimatePresence mode="popLayout">
           <motion.div
+            key="navbar-motion"
             initial="barInitial"
             animate="barAnimate"
             variants={navBarVariants}
@@ -77,6 +78,7 @@ export default function Layout({
             <Box minHeight="55vh">{children}</Box>
           </motion.div>
           <motion.div
+            key="footer-motion"
             initial="footerInitial"
             animate="footerAnimate"
             variants={footerVariants}

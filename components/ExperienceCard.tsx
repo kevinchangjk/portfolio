@@ -18,14 +18,7 @@ export default function ExperienceCard({
 }) {
   const { title, type, location, period } = experience;
   return (
-    <VStack
-      spacing={{
-        base: "0.2rem",
-        md: "0.35rem",
-        xl: "0.5rem",
-        "2xl": "0.75rem",
-      }}
-    >
+    <VStack>
       <HStack width="full" justifyContent="space-between">
         <Text
           fontSize={{
@@ -58,9 +51,9 @@ export default function ExperienceCard({
       <HStack
         marginBottom={{
           base: "0.5rem",
-          md: "1rem",
-          xl: "1.5rem",
-          "2xl": "2rem",
+          md: "0.75rem",
+          xl: "1rem",
+          "2xl": "1.25rem",
         }}
         paddingX={{
           base: "0rem",
