@@ -14,6 +14,24 @@ export default function ProjectSummary() {
     return allProjects;
   }
 
+  function ProjectStack() {
+    return (
+      <VStack
+        align="inherit"
+        spacing={{
+          base: "1rem",
+          sm: "1.5rem",
+          md: "2rem",
+          lg: "2.5rem",
+          xl: "3rem",
+          "2xl": "4rem",
+        }}
+      >
+        {displayProjects()}
+      </VStack>
+    );
+  }
+
   return (
     <VStack
       align="inherit"
@@ -46,17 +64,7 @@ export default function ProjectSummary() {
           Put some sweat and tears (no blood) into these
         </Text>
       </VStack>
-      <VStack
-        align="inherit"
-        spacing={{
-          base: "4rem",
-          md: "5rem",
-          xl: "6rem",
-          "2xl": "7rem",
-        }}
-      >
-        {displayProjects()}
-      </VStack>
+      <ProjectStack />
     </VStack>
   );
 }

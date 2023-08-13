@@ -91,10 +91,6 @@ export default function Profile() {
     if (isMobile) {
       return (
         <VStack
-          width={{
-            base: "2xl",
-            sm: "3xl",
-          }}
           height="60vh"
           minHeight={{
             base: "md",

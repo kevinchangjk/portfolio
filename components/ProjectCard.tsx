@@ -11,13 +11,28 @@ import {
   Wrap,
   WrapItem,
   useColorMode,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { useAppContext } from "@/context/state";
+import { useEffect, useState } from "react";
 
 export default function ProjectCard({ projectData }: { projectData: Project }) {
   const { title, name, description, imageUrl, techStack } = projectData;
   const { colorMode } = useColorMode();
   const { enroute } = useAppContext();
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      setIsDesktop(false);
+    } else {
+      setIsDesktop(true);
+    }
+  }, []);
 
   function onClickHandler(name: string) {
     const path = `/projects/${name}`;
@@ -26,7 +41,8 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
 
   function displayTechStack(title: string, techStack: string[]) {
     const allTech = [];
-    for (let i = 0; i < techStack.length; i++) {
+    const limit = Math.min(3, techStack.length);
+    for (let i = 0; i < limit; i++) {
       const key = `${title}-tech-${i}`;
       const newTech = (
         <WrapItem key={key}>
@@ -70,6 +86,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
     <Card
       position="relative"
       width="max"
+      maxWidth="full"
       rounded="lg"
       borderColor={colorMode === "light" ? "gray.200" : "gray.700"}
       borderWidth="thin"
@@ -84,7 +101,16 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
         <Image
           src={imageUrl}
           alt="Project Thumbnail"
-          height="md"
+          width={{
+            base: "lg",
+            sm: "xl",
+            md: "2xl",
+            lg: "3xl",
+            xl: "4xl",
+            "2xl": "5xl",
+          }}
+          height="max"
+          minHeight="xs"
           fit="cover"
           rounded="inherit"
         />
@@ -99,27 +125,33 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           justifyContent="end"
           rounded="inherit"
           bgGradient="linear(to-b, blackAlpha.100, blackAlpha.700)"
-          opacity={0}
+          opacity={isDesktop ? 0 : 1}
           _hover={{
             opacity: 1,
           }}
           transition="opacity 0.3s ease-in-out"
         >
           <VStack
-            paddingY="2rem"
+            paddingY={{
+              base: "1rem",
+              md: "1.5rem",
+              xl: "2rem",
+              "2xl": "2.5rem",
+            }}
             spacing={{
               base: "0.5rem",
               md: "1rem",
               xl: "1.5rem",
               "2xl": "2rem",
             }}
+            alignItems="center"
           >
             <Heading
               fontSize={{
-                base: "24px",
-                md: "32px",
-                xl: "40px",
-                "2xl": "48px",
+                base: "16px",
+                md: "24px",
+                xl: "32px",
+                "2xl": "40px",
               }}
               fontWeight="semibold"
               textAlign="center"
