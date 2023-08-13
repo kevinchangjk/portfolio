@@ -1,6 +1,15 @@
-import { Box } from "@chakra-ui/react";
-
+import { Box, chakra, shouldForwardProp } from "@chakra-ui/react";
+import { isValidMotionProp, motion } from "framer-motion";
 import { createIcon } from "@chakra-ui/icons";
+import { FRAME_DELAY, FRAME_DURATION } from "@/utils/motion";
+
+const FrameContainer = chakra(motion.div, {
+  /**
+   * Allow motion props and non-Chakra props to be forwarded.
+   */
+  shouldForwardProp: (prop) =>
+    isValidMotionProp(prop) || shouldForwardProp(prop),
+});
 
 export default function MainFrame({
   gradientTheme,
@@ -78,13 +87,53 @@ export default function MainFrame({
         lg: "38rem",
       }}
     >
-      <FrameIconLeft position="absolute" top={0} left={0} boxSize={length} />
-      <FrameIconRight
+      <FrameContainer
+        initial={{
+          opacity: 0,
+          x: "-100vw",
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: {
+            duration: FRAME_DURATION,
+            delay: FRAME_DELAY,
+            type: "tween",
+            ease: "anticipate",
+          }
+        }}
+        position="absolute"
+        top={0}
+        left={0}
+      >
+        <FrameIconLeft position="absolute" top={0} left={0} boxSize={length} />
+      </FrameContainer>
+      <FrameContainer
+        initial={{
+          opacity: 0,
+          x: "100vw",
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: { 
+            duration: FRAME_DURATION,
+            delay: FRAME_DELAY,
+            type: "tween",
+            ease: "anticipate",
+          }
+        }}
         position="absolute"
         right={0}
         bottom={0}
-        boxSize={length}
-      />
+      >
+        <FrameIconRight
+          position="absolute"
+          right={0}
+          bottom={0}
+          boxSize={length}
+        />
+      </FrameContainer>
     </Box>
   );
 }
