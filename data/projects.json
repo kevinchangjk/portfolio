@@ -43,7 +43,7 @@
   {
     "title": "BubbleTeaSort",
     "name": "bubbleteasort",
-    "description": "Social media mobile app just for bubble tea!",
+    "description": "Social media mobile app just for bubble tea",
     "overview": [
       "A social media app, BubbleTeaSort was a project submission for NUS Hack & Roll 2023. The ideation from my group was fun and simple; we wanted to make a mobile application just for bubble tea. Thus we built an app that provided social media functionality such as browsing posts, sharing posts, likes and ratings, along with a map to locate nearby bubble tea stores.",
       "As a short 24hr hackathon, our group split up the roles rather haphazardly. I ended up doing mostly front-end, developing the interface with React Native, but also touched a little bit on the “back-end” that we had, which was entirely hosted on Firebase."

@@ -60,6 +60,7 @@ export default function ProjectSummary() {
             xl: "2xl",
             "2xl": "3xl",
           }}
+          textAlign="justify"
         >
           Put some sweat and tears (no blood) into these
         </Text>

@@ -45,7 +45,7 @@ export default function WakatimeSummary() {
           }}
           textAlign="justify"
         >
-          Some of the languages {"I've"} been using
+          Some of the programming languages {"I've"} been using
         </Text>
       </VStack>
       <Image

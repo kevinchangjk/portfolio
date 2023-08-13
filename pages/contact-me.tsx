@@ -117,8 +117,10 @@ export default function ContactMe() {
                 textColor="transparent"
                 animation={gradientFlowAnimation}
                 fontSize={{
-                  base: "2xl",
-                  md: "4xl",
+                  base: "xl",
+                  sm: "2xl",
+                  md: "3xl",
+                  lg: "4xl",
                   xl: "5xl",
                   "2xl": "6xl",
                 }}

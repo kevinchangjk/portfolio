@@ -37,10 +37,10 @@ export const Text = defineStyleConfig({
     subtle: {
       fontWeight: "light",
       _light: {
-        color: "gray.4",
+        color: "gray.3",
       },
       _dark: {
-        color: "gray.3",
+        color: "gray.4",
       },
     },
     tag: {

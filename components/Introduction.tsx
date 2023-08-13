@@ -118,7 +118,7 @@ export default function Introduction({animation}: {animation: string}) {
           I{" don't"} want to prattle on too much{" "}
           {buildLink("about me", "/about")}, but programming is my passion, and
           I enjoy working on all kinds of {buildLink("projects", "/projects")},
-          from web to blockchain development. Feel free to{" "}
+          from web to mobile development. Feel free to{" "}
           {buildLink("contact me", "/contact-me")} any time for a chat.
         </Box>
       </VStack>

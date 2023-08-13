@@ -34,9 +34,10 @@ export default function Logo() {
       <Heading
         fontSize={{
           base: "md",
-          md: "lg",
-          xl: "xl",
-          "2xl": "2xl",
+          sm: "lg",
+          md: "xl",
+          xl: "2xl",
+          "2xl": "3xl",
         }}
         fontWeight="semibold"
         lineHeight="full"
