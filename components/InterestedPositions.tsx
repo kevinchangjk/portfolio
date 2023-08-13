@@ -24,6 +24,10 @@ export default function InterestedPositions() {
               "2xl": "1rem",
             }}
             variant="outline"
+            _hover={{
+              transform: "scale(1.03)",
+            }}
+            cursor="default"
           >
             <Text
               variant="powerful"

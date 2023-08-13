@@ -11,7 +11,6 @@ import {
   Wrap,
   WrapItem,
   useColorMode,
-  useMediaQuery,
 } from "@chakra-ui/react";
 import { useAppContext } from "@/context/state";
 import { useEffect, useState } from "react";
@@ -89,15 +88,21 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
       position="relative"
       width="max"
       maxWidth="full"
-      rounded="lg"
       borderColor={colorMode === "light" ? "gray.200" : "gray.700"}
       borderWidth="thin"
       boxShadow="2xl"
+      rounded={{
+        base: "lg",
+        md: "xl",
+        xl: "2xl",
+        "2xl": "3xl"
+      }}
     >
       <Button
         variant="unstyled"
         width="full"
         height="full"
+        rounded="inherit"
         onClick={() => onClickHandler(name)}
       >
         <Image
