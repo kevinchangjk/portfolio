@@ -20,13 +20,15 @@ export default function MainFrame({
     displayName: "FrameIcon",
     viewBox: "0 0 400 400",
     path: (
-      <svg>
+      <>
         <defs>
           <linearGradient id="myGradient">
             <stop offset="0%" stop-color={gradientTheme[0]}></stop>
             <stop offset="50%" stop-color={gradientTheme[1]}></stop>
             <stop offset="100%" stop-color={gradientTheme[0]}></stop>
             <animateTransform
+              xlinkHref="#myGradient"
+              attributeType="XML"
               attributeName="gradientTransform"
               type="translate"
               from="-1 0"
@@ -46,14 +48,14 @@ export default function MainFrame({
             fill-rule="evenodd"
           ></path>
         </g>
-      </svg>
+      </>
     ),
   });
   const FrameIconRight = createIcon({
     displayName: "FrameIcon",
     viewBox: "0 0 400 400",
     path: (
-      <svg>
+      <>
         <g id="frame-right">
           <path
             id="path0"
@@ -63,7 +65,7 @@ export default function MainFrame({
             fill-rule="evenodd"
           ></path>
         </g>
-      </svg>
+      </>
     ),
   });
 

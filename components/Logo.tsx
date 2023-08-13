@@ -30,6 +30,9 @@ export default function Logo() {
       _hover={{ transform: "scale(1.05)" }}
       _active={{ transform: "scale(0.95)" }}
       onClick={newGradient}
+      display="flex"
+      flexDirection="row"
+      alignItems="center"
     >
       <Heading
         fontSize={{
