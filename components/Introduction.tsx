@@ -7,15 +7,15 @@ import {
 } from "@chakra-ui/react";
 import profile from "@/data/profile.json";
 import { useAppContext } from "@/context/state";
-import { getGradient } from "@/utils/gradient";
+import { getGradientFlow } from "@/utils/gradient";
 import InternalLink from "./InternalLink";
 import PrimaryLink from "./PrimaryLink";
 import { motion } from "framer-motion";
 import { ENTRY_DELAY, introVariants } from "@/utils/motion";
 
-export default function Introduction() {
+export default function Introduction({animation}: {animation: string}) {
   const { gradientTheme, isEntryComplete } = useAppContext();
-  const gradient = getGradient(gradientTheme, "to right");
+  const gradient = getGradientFlow(gradientTheme, "to right");
   const primaryColor = useColorModeValue("gray.2", "gray.5");
 
   function buildLink(text: string, route: string) {
@@ -83,6 +83,7 @@ export default function Introduction() {
         <Heading
           textAlign="justify"
           bg={gradient}
+          bgSize="300% 100%"
           bgClip="text"
           textColor="transparent"
           fontSize={{
@@ -93,6 +94,7 @@ export default function Introduction() {
           }}
           fontWeight="semibold"
           letterSpacing="wide"
+          animation={animation}
         >
           Welcome.
         </Heading>

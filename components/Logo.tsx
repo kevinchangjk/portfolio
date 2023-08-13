@@ -1,5 +1,6 @@
 import { useAppContext } from "@/context/state";
 import { getGradientFlow, randomGradient } from "@/utils/gradient";
+import { GRADIENT_FLOW_DURATION } from "@/utils/motion";
 import { Button, Heading, keyframes } from "@chakra-ui/react";
 
 const shift = keyframes`
@@ -11,7 +12,7 @@ const shift = keyframes`
     }
   `;
 
-const gradientFlowAnimation = `${shift} 5s linear infinite`;
+const gradientFlowAnimation = `${shift} ${GRADIENT_FLOW_DURATION} linear infinite`;
 
 export default function Logo() {
   const { gradientTheme, setGradientTheme } = useAppContext();

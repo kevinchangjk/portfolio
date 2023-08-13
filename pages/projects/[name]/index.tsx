@@ -191,7 +191,7 @@ export default function ProjectPage({ project }: { project: Project }) {
             "2xl": "2.5rem",
           }}
         >
-          <Heading variant="subPrimary">Sources (External Links)</Heading>
+          <Heading variant="subPrimary">External Links</Heading>
           <HStack
             spacing={{
               base: "1rem",

@@ -3,7 +3,6 @@ import {
   Heading,
   Image,
   VStack,
-  keyframes,
   useMediaQuery,
 } from "@chakra-ui/react";
 import profile from "@/data/profile.json";
@@ -12,18 +11,8 @@ import { getGradientFlow } from "@/utils/gradient";
 import { useAppContext } from "@/context/state";
 
 const { name, tagline } = profile;
-const shift = keyframes`
-    from {
-      background-position: 100% 50%;
-    }
-    to {
-      background-position: 0% 50%;
-    }
-  `;
 
-const gradientFlowAnimation = `${shift} 5s linear infinite`;
-
-export default function Profile() {
+export default function Profile({animation}: {animation: string}) {
   const { gradientTheme } = useAppContext();
   const gradient = getGradientFlow(gradientTheme, "to right");
   const [isMobile] = useMediaQuery("(max-width: 1090px)");
@@ -62,7 +51,7 @@ export default function Profile() {
         bgSize="300% 100%"
           bgClip="text"
           textColor="transparent"
-          animation={gradientFlowAnimation}
+          animation={animation}
         >
           {name}
         </Heading>
@@ -96,7 +85,7 @@ export default function Profile() {
         borderRadius="full"
         bgGradient={gradient}
         bgSize="300% 100%"
-        animation={gradientFlowAnimation}
+        animation={animation}
       />
     );
   }
@@ -154,7 +143,7 @@ export default function Profile() {
       }}
       justifyContent="center"
     >
-      <MainFrame gradient={gradient} animation={gradientFlowAnimation}/>
+      <MainFrame gradient={gradient} animation={animation}/>
       {displayProfile()}
     </HStack>
   );

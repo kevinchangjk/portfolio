@@ -1,6 +1,7 @@
 import InterestedPositions from "@/components/InterestedPositions";
 import { useAppContext } from "@/context/state";
 import { getGradientFlow } from "@/utils/gradient";
+import { GRADIENT_FLOW_DURATION } from "@/utils/motion";
 import {
   Button,
   HStack,
@@ -21,7 +22,7 @@ const shift = keyframes`
     }
   `;
 
-const gradientFlowAnimation = `${shift} 5s linear infinite`;
+const gradientFlowAnimation = `${shift} ${GRADIENT_FLOW_DURATION} linear infinite`;
 
 export default function ContactMe() {
   const { gradientTheme } = useAppContext();
