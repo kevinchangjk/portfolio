@@ -59,6 +59,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           >
             <Text
               textAlign="center"
+              fontFamily="Menlo"
               fontWeight="bold"
               textColor="gray.8"
               letterSpacing={{

@@ -142,6 +142,7 @@ export default function ProjectPage({ project }: { project: Project }) {
                 textAlign="center"
                 textColor={tagTextColor}
                 fontWeight="bold"
+                fontFamily="Menlo"
                 letterSpacing={{
                   base: "normal",
                   md: "wide",
