@@ -89,11 +89,11 @@ export default function Layout({
             exit="pageExit"
             variants={pageVariants}
             transition={{
-              type: "spring",
+              type: "tween",
               duration: isEntryComplete
                 ? PAGE_TRANSITION_DURATION
                 : ENTRY_DELAY,
-              bounce: 0.25,
+              ease: "anticipate"
             }}
             style={{ width: "inherit" }}
           >

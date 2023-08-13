@@ -60,6 +60,7 @@ export default function WakatimeSummary() {
         rounded="xl"
         src={summary}
         boxShadow="2xl"
+        placeholder="blur"
       />
     </VStack>
   );
