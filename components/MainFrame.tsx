@@ -1,10 +1,6 @@
-import { Box, Icon, Image, chakra, shouldForwardProp } from "@chakra-ui/react";
+import { Box, Icon, chakra, shouldForwardProp } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
-import {
-  ENTRY_DELAY,
-  FRAME_DELAY,
-  PAGE_TRANSITION_DURATION,
-} from "@/utils/motion";
+import { ENTRY_DELAY, PAGE_TRANSITION_DURATION } from "@/utils/motion";
 import { useAppContext } from "@/context/state";
 
 const FrameContainer = chakra(motion.div, {
