@@ -4,8 +4,9 @@ const positions = [
   "Software Engineering",
   "Web Development",
   "Cybersecurity",
-  "Data Analytics",
+  "Machine Learning",
   "Web 3.0",
+  "DevOps",
   "Blockchain Development",
 ];
 

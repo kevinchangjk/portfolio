@@ -10,7 +10,7 @@ import {
   LinkOverlay,
   Text,
   VStack,
-  keyframes
+  keyframes,
 } from "@chakra-ui/react";
 
 const shift = keyframes`
@@ -72,7 +72,7 @@ export default function ContactMe() {
               "2xl": "2xl",
             }}
           >
-            I am always on the look out for opportunities in fields like these.
+            I am always on the lookout for opportunities in fields like these.
           </Text>
         </VStack>
         <InterestedPositions />

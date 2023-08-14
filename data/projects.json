@@ -5,7 +5,7 @@
     "description": "NFT marketplace for curated art on Binance Chain",
     "overview": [
       "The Non-Fungible Token (NFT) industry is largely focused on generative NFTs, such as the Bored Ape Yacht Club Collection. At NiftyZone, the focus is instead on curated art, produced by artists who are passionate about their work. ",
-      "I joined NiftyZone to work on this marketplace application during summer 2023. The initial design had been completed, and I worked on polishing the user interface, fixing several bugs, and adding new features to the application.",
+      "I joined NiftyZone to work on this marketplace application during summer 2023. The initial design had been completed prior, and so I worked on polishing the user interface, fixing several bugs, and adding new features to the application.",
       "The front-end is built with Next.js and Chakra-UI, while the back-end is powered by MongoDB, Ethers.js, and smart contracts on the Binance Chain written in Solidity."
     ],
     "imageUrl": "/images/projects/niftyzone.png",
