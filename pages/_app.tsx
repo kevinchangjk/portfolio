@@ -11,14 +11,8 @@ import "@fontsource/montserrat/600.css";
 import "@fontsource/montserrat/700.css";
 import { AppWrapper } from "@/context/state";
 import { NextRouter } from "next/router";
-import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
-
-export const metadata: Metadata = {
-  title: "kevinchangjk",
-  description: "Digital Portfolio of Software Developer, Kevin Chang.",
-};
 
 export default function Application({
   Component,
@@ -29,21 +23,29 @@ export default function Application({
   pageProps: {};
   router: NextRouter;
 }) {
-
   return (
     <ChakraProvider theme={theme}>
       <Head>
+        <meta content="en_US" property="og:locale" />
+        <meta name="charset" content="UTF-8" />
+        <meta name="google" content="nositelinkssearchbox" key="sitelinks" />
+        <meta name="google" content="notranslate" key="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:site_name" content="kevinchangjk" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="kevinchangjk" />
+        <meta
+          property="og:description"
+          content="Digital Portfolio of Kevin Chang, a Software Developer"
+        />
+        <meta property="og:image" content="/images/preview.png" />
         <link rel="icon" href="/images/favicon.ico" sizes="any" />
+        <meta name="title" content="kevinchangjk" />
         <meta
           name="description"
           content="Digital Portfolio of Kevin Chang, a Software Developer"
           key="desc"
         />
-        <meta content="en_US" property="og:locale" />
-        <meta content="kevinchangjk" property="og:site_name" />
-        <meta name="google" content="nositelinkssearchbox" key="sitelinks" />
-        <meta name="google" content="notranslate" key="notranslate" />
-        <meta property="og:type" content="website" />
       </Head>
       <AppWrapper>
         <ColorModeScript
