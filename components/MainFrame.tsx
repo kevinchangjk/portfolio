@@ -1,6 +1,7 @@
 import { Box, Icon, Image, chakra, shouldForwardProp } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
-import { FRAME_DELAY, FRAME_DURATION } from "@/utils/motion";
+import { ENTRY_DELAY, FRAME_DELAY, FRAME_DURATION } from "@/utils/motion";
+import { useAppContext } from "@/context/state";
 
 const FrameContainer = chakra(motion.div, {
   /**
@@ -15,25 +16,15 @@ export default function MainFrame({
 }: {
   gradientTheme: string[];
 }) {
+  const { isEntryComplete } = useAppContext();
+
   const FrameIconLeft = (props: any) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" {...props}>
       <defs>
-        <linearGradient id="myGradient">
+        <linearGradient id="myGradient" x1="0%" x2="100%" y1="100%" y2="0%">
           <stop offset="0%" stop-color={gradientTheme[0]}></stop>
-          <stop offset="45%" stop-color={gradientTheme[1]}></stop>
-          <stop offset="55%" stop-color={gradientTheme[1]}></stop>
+          <stop offset="50%" stop-color={gradientTheme[1]}></stop>
           <stop offset="100%" stop-color={gradientTheme[0]}></stop>
-          <animateTransform
-            xlinkHref="#myGradient"
-            attributeType="XML"
-            attributeName="gradientTransform"
-            type="translate"
-            from="-1 0"
-            to="1 0"
-            dur="5s"
-            begin="0s"
-            repeatCount="indefinite"
-          />
         </linearGradient>
       </defs>
       <g id="frame-left">
@@ -80,25 +71,33 @@ export default function MainFrame({
       }}
     >
       <FrameContainer
-        initial={{
-          opacity: 0,
-          x: "-100vw",
-        }}
-        animate={{
-          opacity: 1,
-          x: 0,
-          transition: {
-            duration: FRAME_DURATION,
-            delay: FRAME_DELAY,
-            type: "tween",
-            ease: "anticipate",
-          },
-        }}
         position="absolute"
         top={0}
         left={0}
+        initial={
+          isEntryComplete
+            ? {
+                opacity: 1,
+              }
+            : {
+                x: "-100vw",
+              }
+        }
+        animate={
+          isEntryComplete
+            ? {}
+            : {
+                x: 0,
+                transition: {
+                  duration: FRAME_DURATION,
+                  delay: ENTRY_DELAY,
+                  type: "tween",
+                  ease: "anticipate",
+                },
+              }
+        }
       >
-        <Box
+        <Icon
           as={FrameIconLeft}
           position="absolute"
           top={0}
@@ -107,25 +106,33 @@ export default function MainFrame({
         />
       </FrameContainer>
       <FrameContainer
-        initial={{
-          opacity: 0,
-          x: "100vw",
-        }}
-        animate={{
-          opacity: 1,
-          x: 0,
-          transition: {
-            duration: FRAME_DURATION,
-            delay: FRAME_DELAY,
-            type: "tween",
-            ease: "anticipate",
-          },
-        }}
+        initial={
+          isEntryComplete
+            ? {
+                opacity: 1,
+              }
+            : {
+                x: "100vw",
+              }
+        }
+        animate={
+          isEntryComplete
+            ? {}
+            : {
+                x: 0,
+                transition: {
+                  duration: FRAME_DURATION,
+                  delay: ENTRY_DELAY,
+                  type: "tween",
+                  ease: "anticipate",
+                },
+              }
+        }
         position="absolute"
         right={0}
         bottom={0}
       >
-        <Box
+        <Icon
           as={FrameIconRight}
           position="absolute"
           right={0}
