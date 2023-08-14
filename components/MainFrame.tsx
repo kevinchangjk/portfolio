@@ -1,4 +1,4 @@
-import { Box, Icon, chakra, shouldForwardProp } from "@chakra-ui/react";
+import { Box, Icon, Image, chakra, shouldForwardProp } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
 import { FRAME_DELAY, FRAME_DURATION } from "@/utils/motion";
 
@@ -99,7 +99,7 @@ export default function MainFrame({
         top={0}
         left={0}
       >
-        <Icon
+        <Image
           as={FrameIconLeft}
           position="absolute"
           top={0}
@@ -126,7 +126,7 @@ export default function MainFrame({
         right={0}
         bottom={0}
       >
-        <Icon
+        <Image
           as={FrameIconRight}
           position="absolute"
           right={0}
