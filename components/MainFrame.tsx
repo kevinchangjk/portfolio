@@ -1,6 +1,10 @@
 import { Box, Icon, Image, chakra, shouldForwardProp } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
-import { ENTRY_DELAY, FRAME_DELAY, FRAME_DURATION } from "@/utils/motion";
+import {
+  ENTRY_DELAY,
+  FRAME_DELAY,
+  PAGE_TRANSITION_DURATION,
+} from "@/utils/motion";
 import { useAppContext } from "@/context/state";
 
 const FrameContainer = chakra(motion.div, {
@@ -80,16 +84,20 @@ export default function MainFrame({
                 opacity: 1,
               }
             : {
-                x: "-100vw",
+                opacity: 0,
+                x: "-10vw",
+                y: "-10vw",
               }
         }
         animate={
           isEntryComplete
             ? {}
             : {
+                opacity: 1,
                 x: 0,
+                y: 0,
                 transition: {
-                  duration: FRAME_DURATION,
+                  duration: PAGE_TRANSITION_DURATION,
                   delay: ENTRY_DELAY,
                   type: "tween",
                   ease: "anticipate",
@@ -112,16 +120,20 @@ export default function MainFrame({
                 opacity: 1,
               }
             : {
-                x: "100vw",
+                opacity: 0,
+                x: "10vw",
+                y: "10vw",
               }
         }
         animate={
           isEntryComplete
             ? {}
             : {
+                opacity: 1,
                 x: 0,
+                y: 0,
                 transition: {
-                  duration: FRAME_DURATION,
+                  duration: PAGE_TRANSITION_DURATION,
                   delay: ENTRY_DELAY,
                   type: "tween",
                   ease: "anticipate",

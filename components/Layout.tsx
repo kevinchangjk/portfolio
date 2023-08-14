@@ -92,8 +92,8 @@ export default function Layout({
               type: "tween",
               duration: isEntryComplete
                 ? PAGE_TRANSITION_DURATION
-                : ENTRY_DELAY,
-              ease: "anticipate"
+                : ENTRY_DELAY + PAGE_TRANSITION_DURATION,
+              ease: isEntryComplete ? "anticipate" : "easeOut",
             }}
             style={{ width: "inherit" }}
           >
