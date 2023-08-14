@@ -11,7 +11,7 @@ import InternalLink from "./InternalLink";
 
 export default function Footer() {
   const primaryColor = useColorModeValue("gray.2", "gray.4");
-  const [isMobile] = useMediaQuery("(max-width: 624px)");
+  const [isMobile] = useMediaQuery("(max-width: 592px)");
 
   function displayLink(route: string, text: string) {
     return (
@@ -19,10 +19,12 @@ export default function Footer() {
         <Text
           variant="footer"
           fontSize={{
-            base: "sm",
-            md: "md",
-            xl: "lg",
-            "2xl": "xl",
+            base: "12px",
+            sm: "13px",
+            md: "14px",
+            lg: "16px",
+            xl: "18px",
+            "2xl": "20px",
           }}
         >
           {text}
@@ -44,9 +46,7 @@ export default function Footer() {
           }}
           spacing={{
             base: "0.5rem",
-            md: "1rem",
-            xl: "2rem",
-            "2xl": "2.5rem",
+            sm: "0.75rem",
           }}
         >
           <Divider />
@@ -68,10 +68,8 @@ export default function Footer() {
             <Text
               variant="subtle"
               fontSize={{
-                base: "sm",
-                md: "md",
-                xl: "lg",
-                "2xl": "xl",
+                  base: "12px",
+                  sm: "13px",
               }}
             >
               Designed and Built by
@@ -91,8 +89,9 @@ export default function Footer() {
             "2xl": "24vh",
           }}
           spacing={{
-            base: "0.5rem",
+            sm: "0.75rem",
             md: "1rem",
+            lg: "1.5rem",
             xl: "2rem",
             "2xl": "2.5rem",
           }}
@@ -101,9 +100,11 @@ export default function Footer() {
           <HStack width="full" justifyContent="space-between">
             <HStack
               spacing={{
-                base: "0.5rem",
+                sm: "1rem",
                 md: "1.5rem",
+                lg: "2rem",
                 xl: "3rem",
+                "2xl": "3.5rem",
               }}
               alignSelf="center"
               justifyContent="start"
@@ -117,10 +118,11 @@ export default function Footer() {
               <Text
                 variant="subtle"
                 fontSize={{
-                  base: "sm",
-                  md: "md",
-                  xl: "lg",
-                  "2xl": "xl",
+                  sm: "13px",
+                  md: "14px",
+                  lg: "16px",
+                  xl: "18px",
+                  "2xl": "20px",
                 }}
               >
                 Designed and Built by

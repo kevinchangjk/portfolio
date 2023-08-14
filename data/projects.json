@@ -1,47 +1,82 @@
-{
-  "projects": [
-    {
-      "title": "NiftyZone",
-      "description": "NFT marketplace for curated art, built on Binance Chain.",
-      "imageUrl": "/images/projects/niftyzone.png",
-      "techStack": "Next.js, Solidity, MongoDB",
-      "previewUrl": "https://www.niftyzone.com/"
-    },
-    {
-      "title": "NFT @ ArtZone",
-      "description": "Application for creating and claiming NFTs of curated AI art from ArtZone.",
-      "imageUrl": "/images/projects/nft-artzone.png",
-      "techStack": "Next.js, Express.js, IPFS",
-      "previewUrl": "https://nft.artzone.ai/"
-    },
-    {
-      "title": "CraiyoNFT",
-      "description": "Generative NFT platform, using AI to design and create a 3D art gallery for viewing.",
-      "imageUrl": "/images/projects/craiyonft.png",
-      "techStack": "Express.js, Flask, SmartPy",
-      "sourceUrl": "https://github.com/VMP-SG/CraiyoNFT"
-    },
-    {
-      "title": "BubbleTeaSort",
-      "description": "Social media app on mobile, specifically designed just for bubble tea!",
-      "imageUrl": "/images/projects/bubbleteasort.jpg",
-      "techStack": "React Native, Firebase",
-      "sourceUrl": "https://github.com/VMP-SG/BubbleTeaSort"
-    },
-    {
-      "title": "Chirple",
-      "description": "Twitter-scraping application that provides trend and market analytics for provided keywords.",
-      "imageUrl": "/images/projects/chirple.png",
-      "techStack": "React.js, Node.js",
-      "sourceUrl": "https://github.com/Onlyfriendz/chirple",
-      "previewUrl": "https://chirple.netlify.app/"
-    },
-    {
-      "title": "Coydir",
-      "description": "HR desktop application with a CLI flavour, meant for blazingly fast operations.",
-      "imageUrl": "/images/projects/coydir.png",
-      "techStack": "Java, JavaFX",
-      "sourceUrl": "https://github.com/AY2223S1-CS2103T-T15-1/tp"
-    }
-  ]
-}
+[
+  {
+    "title": "NiftyZone",
+    "name": "niftyzone",
+    "description": "NFT marketplace for curated art on Binance Chain",
+    "overview": [
+      "The Non-Fungible Token (NFT) industry is largely focused on generative NFTs, such as the Bored Ape Yacht Club Collection. At NiftyZone, the focus is instead on curated art, produced by artists who are passionate about their work. ",
+      "I joined NiftyZone to work on this marketplace application during summer 2023. The initial design had been completed prior, and so I worked on polishing the user interface, fixing several bugs, and adding new features to the application.",
+      "The front-end is built with Next.js and Chakra-UI, while the back-end is powered by MongoDB, Ethers.js, and smart contracts on the Binance Chain written in Solidity."
+    ],
+    "imageUrl": "/images/projects/niftyzone.png",
+    "imageIsPortrait": false,
+    "techStack": ["Next.js", "Solidity", "MongoDB", "Ethers.js"],
+    "previewUrl": "https://www.niftyzone.com/"
+  },
+  {
+    "title": "NFT @ ArtZone",
+    "name": "nft-artzone",
+    "description": "Create and claim NFTs of curated AI art",
+    "overview": [
+      "ArtZone is a platform specially crafted to be a community for AI artists to share their artwork. Here, artists can upload their digital AI art in albums, and viewers can browse through galleries of their art.",
+      "NFT @ ArtZone aims to allow artists to monetize their artwork by providing a bridge for them to market their work as NFTs, through a function known as “Claim Pages”. Artists can deploy an artwork as an Non-Fungible Token (NFT), allowing customers to claim one at a listed price.",
+      "I began work on this from scratch, during an internship in summer 2023, though unfortunately my internship ended before I could complete it. The front-end is built with Next.js and Chakra-UI, and the back-end is hosted through Express.js, and supported with Ethers.js to interact with Solidity smart contracts on the Binance Chain."
+    ],
+    "imageUrl": "/images/projects/nft-artzone.png",
+    "imageIsPortrait": false,
+    "techStack": ["Next.js", "Express.js", "IPFS", "Ethers.js", "TypeScript"]
+  },
+  {
+    "title": "CraiyoNFT",
+    "name": "craiyonft",
+    "description": "AI-powered generative NFT platform and gallery",
+    "overview": [
+      "CraiyoNFT was a project submission for the TezAsia Hackathon 2022, by Tezos APAC. My group decided to build an Non-Fungible Token (NFT) platform where the images are generated with an AI model, in this case, Craiyon. With each user input, 5 images are generated, and these images are displayed together in a 3D viewing gallery, thus the complete NFT is the full 3D viewing experience.",
+      "In my group of 3, I was in charge of the back-end. I built the back-end Flask server calling Craiyon’s API, and added the required IPFS integration to store the images that we would generate. Not to forget the biggest challenge, coding the NFT smart contracts in SmartPy, the native smart contract language on the Tezos blockchain."
+    ],
+    "imageUrl": "/images/projects/craiyonft.png",
+    "imageIsPortrait": false,
+    "techStack": ["Express.js", "Flask", "SmartPy", "IPFS"],
+    "sourceUrl": "https://github.com/VMP-SG/CraiyoNFT"
+  },
+  {
+    "title": "BubbleTeaSort",
+    "name": "bubbleteasort",
+    "description": "Social media mobile app just for bubble tea",
+    "overview": [
+      "A social media app, BubbleTeaSort was a project submission for NUS Hack & Roll 2023. The ideation from my group was fun and simple; we wanted to make a mobile application just for bubble tea. Thus we built an app that provided social media functionality such as browsing posts, sharing posts, likes and ratings, along with a map to locate nearby bubble tea stores.",
+      "As a short 24hr hackathon, our group split up the roles rather haphazardly. I ended up doing mostly front-end, developing the interface with React Native, but also touched a little bit on the “back-end” that we had, which was entirely hosted on Firebase."
+    ],
+    "imageUrl": "/images/projects/bubbleteasort.png",
+    "imageIsPortrait": true,
+    "techStack": ["React Native", "Firebase"],
+    "sourceUrl": "https://github.com/VMP-SG/BubbleTeaSort"
+  },
+  {
+    "title": "Chirple",
+    "name": "chirple",
+    "description": "Twitter-scraping application with market analytics",
+    "overview": [
+      "A project submission for Appetizer Hackathon 2022, an API-centric hackathon with assigned APIs to develop with. My group chose to work with a Twitter hash-scrapping API, and used this to build an application for providing market and trend analysis based on keywords provided.",
+      "Being a short hackathon, the application is minimal. The front-end is built with React.js and deployed on Netlify, and the back-end is a simple Express.js server hosted on Heroku. "
+    ],
+    "imageUrl": "/images/projects/chirple.png",
+    "imageIsPortrait": false,
+    "techStack": ["React.js", "Node.js", "Express.js"],
+    "sourceUrl": "https://github.com/Onlyfriendz/chirple",
+    "previewUrl": "https://chirple.netlify.app/"
+  },
+  {
+    "title": "Coydir",
+    "name": "coydir",
+    "description": "HR desktop application with a CLI flavour",
+    "overview": [
+      "A relatively longer-term project, completed as part of my coursework at the National University of Singapore (NUS), in a course called Software Engineering, CS2103T. Coydir is a desktop application for HR executives to manage their company and staffing data efficiently, and is designed for use mainly through a command-line like interface.",
+      "As a requirement of the course, the application is built using Java, with JavaFX as the front-end library. "
+    ],
+    "imageUrl": "/images/projects/coydir.png",
+    "imageIsPortrait": false,
+    "techStack": ["Java", "JavaFX"],
+    "sourceUrl": "https://github.com/AY2223S1-CS2103T-T15-1/tp"
+  }
+]

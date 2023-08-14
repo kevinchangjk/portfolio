@@ -4,8 +4,9 @@ const positions = [
   "Software Engineering",
   "Web Development",
   "Cybersecurity",
-  "Data Analytics",
+  "Machine Learning",
   "Web 3.0",
+  "DevOps",
   "Blockchain Development",
 ];
 
@@ -13,8 +14,9 @@ export default function InterestedPositions() {
   function displayPositions(positions: string[]) {
     const allPositions: React.ReactNode[] = [];
     for (let i = 0; i < positions.length; i++) {
+      const key = `${positions[i]}-tag`;
       const newPosition = (
-        <WrapItem key={i}>
+        <WrapItem key={key}>
           <Tag
             padding={{
               base: "0.3rem",
@@ -23,6 +25,10 @@ export default function InterestedPositions() {
               "2xl": "1rem",
             }}
             variant="outline"
+            _hover={{
+              transform: "scale(1.03)",
+            }}
+            cursor="default"
           >
             <Text
               variant="powerful"

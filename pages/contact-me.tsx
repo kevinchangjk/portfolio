@@ -1,7 +1,9 @@
 import InterestedPositions from "@/components/InterestedPositions";
 import { useAppContext } from "@/context/state";
-import { getGradient } from "@/utils/gradient";
+import { getGradientFlow } from "@/utils/gradient";
+import { GRADIENT_FLOW_DURATION } from "@/utils/motion";
 import {
+  Button,
   HStack,
   Heading,
   LinkBox,
@@ -11,20 +13,20 @@ import {
   keyframes,
 } from "@chakra-ui/react";
 
-export default function ContactMe() {
-  const { gradientTheme } = useAppContext();
-  const gradient = getGradient(gradientTheme, "to right");
-
-  const shift = keyframes`
-    from, to{
-      background-position: 0% 50%;
-    }
-    50% {
+const shift = keyframes`
+    from {
       background-position: 100% 50%;
+    }
+    to {
+      background-position: 0% 50%;
     }
   `;
 
-  const animation = `${shift} 5s ease-in-out infinite`;
+const gradientFlowAnimation = `${shift} ${GRADIENT_FLOW_DURATION} linear infinite`;
+
+export default function ContactMe() {
+  const { gradientTheme } = useAppContext();
+  const gradient = getGradientFlow(gradientTheme, "to right");
 
   return (
     <main>
@@ -32,9 +34,10 @@ export default function ContactMe() {
         width={{
           base: "full",
           md: "2xl",
-          xl: "3xl",
-          "2xl": "4xl",
+          xl: "4xl",
+          "2xl": "5xl",
         }}
+        maxWidth="full"
         spacing={{
           base: "2rem",
           md: "3rem",
@@ -69,7 +72,7 @@ export default function ContactMe() {
               "2xl": "2xl",
             }}
           >
-            I am always on the look out for opportunities in fields like these.
+            I am always on the lookout for opportunities in fields like these.
           </Text>
         </VStack>
         <InterestedPositions />
@@ -97,30 +100,37 @@ export default function ContactMe() {
             You can reach out to me at
           </Text>
           <HStack width="full">
-            <LinkBox>
+            <Button
+              as={LinkBox}
+              padding="0rem"
+              variant="unstyled"
+              _hover={{ transform: "scale(1.05)" }}
+              _active={{ transform: "scale(0.95)" }}
+            >
               <Heading
                 fontWeight="semibold"
                 letterSpacing="normal"
                 width="min"
                 bg={gradient}
                 bgClip="text"
-                bgSize="150% 100%"
+                bgSize="300% 100%"
+                bgPosition="right"
                 textColor="transparent"
+                animation={gradientFlowAnimation}
                 fontSize={{
-                  base: "2xl",
-                  md: "4xl",
+                  base: "xl",
+                  sm: "2xl",
+                  md: "3xl",
+                  lg: "4xl",
                   xl: "5xl",
                   "2xl": "6xl",
-                }}
-                _hover={{
-                  animation: animation,
                 }}
               >
                 <LinkOverlay href="mailto:kevinchangjk@gmail.com">
                   kevinchangjk@gmail.com
                 </LinkOverlay>
               </Heading>
-            </LinkBox>
+            </Button>
           </HStack>
         </VStack>
       </VStack>

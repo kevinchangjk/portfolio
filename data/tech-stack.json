@@ -36,16 +36,6 @@
       "sourceUrl": "https://www.postgresql.org/"
     },
     {
-      "name": "mongodb",
-      "imageUrl": "/images/tech-stack/mongodb.svg",
-      "sourceUrl": "https://www.mongodb.com/"
-    },
-    {
-      "name": "git",
-      "imageUrl": "/images/tech-stack/git.svg",
-      "sourceUrl": "https://git-scm.com/"
-    },
-    {
       "name": "neovim",
       "imageUrl": "/images/tech-stack/neovim.svg",
       "sourceUrl": "https://neovim.io/"

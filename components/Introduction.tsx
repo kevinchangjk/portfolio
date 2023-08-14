@@ -7,15 +7,15 @@ import {
 } from "@chakra-ui/react";
 import profile from "@/data/profile.json";
 import { useAppContext } from "@/context/state";
-import { getGradient } from "@/utils/gradient";
+import { getGradientFlow } from "@/utils/gradient";
 import InternalLink from "./InternalLink";
 import PrimaryLink from "./PrimaryLink";
 import { motion } from "framer-motion";
 import { ENTRY_DELAY, introVariants } from "@/utils/motion";
 
-export default function Introduction() {
+export default function Introduction({animation}: {animation: string}) {
   const { gradientTheme, isEntryComplete } = useAppContext();
-  const gradient = getGradient(gradientTheme, "to right");
+  const gradient = getGradientFlow(gradientTheme, "to right");
   const primaryColor = useColorModeValue("gray.2", "gray.5");
 
   function buildLink(text: string, route: string) {
@@ -64,7 +64,13 @@ export default function Introduction() {
     return (
       <VStack
         position="relative"
-        width="full"
+        width={{
+          base: "full",
+          md: "2xl",
+          lg: "3xl",
+          xl: "4xl",
+          "2xl": "5xl",
+        }}
         spacing={{
           base: "1rem",
           md: "1.5rem",
@@ -77,6 +83,7 @@ export default function Introduction() {
         <Heading
           textAlign="justify"
           bg={gradient}
+          bgSize="300% 100%"
           bgClip="text"
           textColor="transparent"
           fontSize={{
@@ -87,6 +94,7 @@ export default function Introduction() {
           }}
           fontWeight="semibold"
           letterSpacing="wide"
+          animation={animation}
         >
           Welcome.
         </Heading>
@@ -110,7 +118,7 @@ export default function Introduction() {
           I{" don't"} want to prattle on too much{" "}
           {buildLink("about me", "/about")}, but programming is my passion, and
           I enjoy working on all kinds of {buildLink("projects", "/projects")},
-          from web to blockchain development. Feel free to{" "}
+          from web to mobile development. Feel free to{" "}
           {buildLink("contact me", "/contact-me")} any time for a chat.
         </Box>
       </VStack>

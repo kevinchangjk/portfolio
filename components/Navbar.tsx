@@ -27,7 +27,7 @@ export default function Navbar() {
     "/images/social-media/linkedin-light.svg",
     "/images/social-media/linkedin-dark.svg"
   );
-  const [isMobile] = useMediaQuery("(max-width: 624px)");
+  const [isMobile] = useMediaQuery("(max-width: 592px)");
 
   function headerLink(route: string, text: string) {
     return (
@@ -35,10 +35,12 @@ export default function Navbar() {
         <Text
           variant="strong"
           fontSize={{
-            base: "md",
-            md: "lg",
-            xl: "xl",
-            "2xl": "2xl",
+            base: "14px",
+            sm: "15px",
+            md: "16px",
+            lg: "18px",
+            xl: "20px",
+            "2xl": "24px",
           }}
         >
           {text}
@@ -63,7 +65,9 @@ export default function Navbar() {
               alt="Social Media"
               boxSize={{
                 base: "1.5rem",
+                sm: "1.6rem",
                 md: "1.75rem",
+                lg: "1.9rem",
                 xl: "2rem",
                 "2xl": "2.25rem",
               }}
@@ -115,8 +119,10 @@ export default function Navbar() {
           <HStack
             spacing={{
               base: "0.5rem",
-              md: "1.5rem",
+              md: "1rem",
+              lg: "2rem",
               xl: "3rem",
+              "2xl": "4rem"
             }}
           >
             {headerLink("/", "Home")}
@@ -127,6 +133,7 @@ export default function Navbar() {
               spacing={{
                 base: "0.5rem",
                 md: "0.75rem",
+                lg: "0.9rem",
                 xl: "1rem",
                 "2xl": "1.25rem",
               }}

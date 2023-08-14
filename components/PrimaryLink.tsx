@@ -13,7 +13,7 @@ export default function PrimaryLink({
 }) {
   return (
     <LinkBox
-      key={href}
+      key={`primary-link-${href}`}
       display="inline-block"
       position="relative"
       _after={{

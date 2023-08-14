@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { Box, HStack, VStack, useColorModeValue } from "@chakra-ui/react";
 import Footer from "./Footer";
-import { AnimatePresence, motion, usePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { NextRouter } from "next/router";
 import {
   ENTRY_DELAY,
@@ -11,6 +11,11 @@ import {
   pageVariants,
 } from "@/utils/motion";
 import { useAppContext } from "@/context/state";
+import { useCallback } from "react";
+import Particles from "react-particles";
+import type { Container, Engine } from "tsparticles-engine";
+import { loadFull } from "tsparticles";
+import options from "@/utils/particles";
 
 export default function Layout({
   router,
@@ -20,6 +25,17 @@ export default function Layout({
   children: React.ReactNode;
 }) {
   const { isEntryComplete, completeEntry } = useAppContext();
+  const particlesInit = useCallback(async (engine: Engine) => {
+    console.log(engine);
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(
+    async (container: Container | undefined) => {
+      console.log(container);
+    },
+    []
+  );
 
   return (
     <HStack
@@ -43,8 +59,15 @@ export default function Layout({
           "2xl": "3rem",
         }}
       >
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={options}
+        />
         <AnimatePresence mode="popLayout">
           <motion.div
+            key="navbar-motion"
             initial="barInitial"
             animate="barAnimate"
             variants={navBarVariants}
@@ -66,17 +89,18 @@ export default function Layout({
             exit="pageExit"
             variants={pageVariants}
             transition={{
-              type: "spring",
+              type: "tween",
               duration: isEntryComplete
                 ? PAGE_TRANSITION_DURATION
-                : ENTRY_DELAY,
-              bounce: 0.25,
+                : ENTRY_DELAY + PAGE_TRANSITION_DURATION,
+              ease: isEntryComplete ? "anticipate" : "easeOut",
             }}
             style={{ width: "inherit" }}
           >
             <Box minHeight="55vh">{children}</Box>
           </motion.div>
           <motion.div
+            key="footer-motion"
             initial="footerInitial"
             animate="footerAnimate"
             variants={footerVariants}
