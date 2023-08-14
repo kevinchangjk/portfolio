@@ -4,17 +4,17 @@ const options: ISourceOptions = {
   name: "Links",
   particles: {
     number: {
-      value: 70,
+      value: 60,
+      max: 80,
       density: {
         enable: true,
       },
-      max: 75
     },
     color: {
       value: "#0000FF",
       animation: {
         enable: true,
-        speed: 5,
+        speed: 3,
         sync: true,
       },
     },
@@ -22,7 +22,7 @@ const options: ISourceOptions = {
       type: "circle",
     },
     opacity: {
-      value: 0.5,
+      value: 0.3,
     },
     size: {
       value: {
@@ -32,9 +32,9 @@ const options: ISourceOptions = {
     },
     links: {
       enable: true,
-      distance: 100,
+      distance: 130,
       color: "#666666",
-      opacity: 0.3,
+      opacity: 0.25,
       width: 1,
       triangles: {
         enable: true,
@@ -57,7 +57,7 @@ const options: ISourceOptions = {
         enable: true,
         mode: "push",
       },
-      resize: true
+      resize: true,
     },
     modes: {
       grab: {
