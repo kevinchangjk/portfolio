@@ -39,6 +39,8 @@ export default function Application({
           content="Digital Portfolio of Kevin Chang, a Software Developer"
         />
         <meta property="og:image" content="/images/preview.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/images/preview.png" />
         <link rel="icon" href="/images/favicon.ico" sizes="any" />
         <meta name="title" content="kevinchangjk" />
         <meta
