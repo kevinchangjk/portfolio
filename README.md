@@ -14,7 +14,7 @@ _Digital portfolio of Kevin Chang, a Software Developer_
 </p>
 
 <p style="text-align: justify;">
-    Do check out the website [here](https://www.kevinchangjk.com)!
+    Do check out the website <a href="https://www.kevinchangjk.com/">here</a>!
 </p>
 
 ## References & Inspiration
@@ -25,7 +25,7 @@ _Digital portfolio of Kevin Chang, a Software Developer_
 </p>
 
 <p style="text-align: justify;">
-    Before I began designing my own portfolio website, I spent hours going through several built by other web developers, taking reference from sites like [this](https://www.hostinger.com/tutorials/web-developer-portfolio).
+    Before I began designing my own portfolio website, I spent hours going through several built by other web developers, taking reference from sites like <a href="https://www.hostinger.com/tutorials/web-developer-portfolio">this</a>.
     In addition, I took inspiration from:
 </p>
 
@@ -67,21 +67,21 @@ _Digital portfolio of Kevin Chang, a Software Developer_
 
 <p style="text-align: justify;">
     If you wish to run this project locally, to test it or to develop on it, feel free to fork or clone this repository.
-    Note that this is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), and built with [Chakra-UI](https://chakra-ui.com/).
+    Note that this is a <a href="https://nextjs.org/">Next.js</a> project bootstrapped with <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"><code>create-next-app</code></a>, and built with <a href="https://chakra-ui.com/">Chakra-UI</a>.
 </p>
 
 ### Getting Started
 
 <p style="text-align: justify;">
-    First, install packages with `yarn`. Then, run the development server with `yarn dev`.
+    First, install packages with <code>yarn</code>. Then, run the development server with <code>yarn dev</code>.
 </p>
 
 <p style="text-align: justify;">
-    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    Open <a href="http://localhost:3000">http://localhost:3000</a> with your browser to see the result.
 </p>
 
 ### Deployment
 
 <p style="text-align: justify;">
-    I have deployed this website on [Vercel](https://vercel.com), which is the simplest to use for Next.js projects.
+    I have deployed this website on <a href="https://vercel.com">Vercel</a>, which is the simplest to use for Next.js projects.
 </p>
