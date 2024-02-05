@@ -122,7 +122,6 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           }}
           fit="cover"
           rounded="inherit"
-          placeholder="blur"
         />
         <CardBody
           position="absolute"
