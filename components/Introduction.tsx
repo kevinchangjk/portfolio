@@ -13,7 +13,7 @@ import PrimaryLink from "./PrimaryLink";
 import { motion } from "framer-motion";
 import { ENTRY_DELAY, introVariants } from "@/utils/motion";
 
-export default function Introduction({animation}: {animation: string}) {
+export default function Introduction({ animation }: { animation: string }) {
   const { gradientTheme, isEntryComplete } = useAppContext();
   const gradient = getGradientFlow(gradientTheme, "to right");
   const primaryColor = useColorModeValue("gray.2", "gray.5");

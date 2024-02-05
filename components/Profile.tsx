@@ -9,7 +9,6 @@ import profile from "@/data/profile.json";
 import MainFrame from "./MainFrame";
 import { getGradientFlow } from "@/utils/gradient";
 import { useAppContext } from "@/context/state";
-import motion from "framer-motion";
 
 const { name, tagline } = profile;
 
@@ -87,7 +86,6 @@ export default function Profile({ animation }: { animation: string }) {
         bgGradient={gradient}
         bgSize="300% 100%"
         animation={animation}
-        placeholder="blur"
       />
     );
   }
