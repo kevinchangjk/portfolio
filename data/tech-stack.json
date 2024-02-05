@@ -6,14 +6,14 @@
       "sourceUrl": "https://www.typescriptlang.org/"
     },
     {
-      "name": "cpp",
-      "imageUrl": "/images/tech-stack/cpp.svg",
-      "sourceUrl": "https://cplusplus.com/"
-    },
-    {
       "name": "python",
       "imageUrl": "/images/tech-stack/python.svg",
       "sourceUrl": "https://www.python.org/"
+    },
+    {
+      "name": "cpp",
+      "imageUrl": "/images/tech-stack/cpp.svg",
+      "sourceUrl": "https://cplusplus.com/"
     },
     {
       "name": "java",
