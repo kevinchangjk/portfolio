@@ -15,6 +15,8 @@
     "@emotion/styled": "^11.11.0",
     "@fontsource/dm-sans": "^5.0.4",
     "@fontsource/montserrat": "^5.0.8",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/react-workspace": "tsparticles/react",
     "@types/node": "^20.11.16",
     "@types/react": "^18.2.53",
     "@types/react-dom": "^18.2.18",
@@ -28,7 +30,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
-    "react-particles": "^2.12.2",
     "styled-components": "^6.1.8",
     "tsparticles": "^3.2.1",
     "typescript": "^5.3.3"
