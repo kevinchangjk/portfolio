@@ -12,6 +12,7 @@ import "@fontsource/montserrat/700.css";
 import { AppWrapper } from "@/context/state";
 import { NextRouter } from "next/router";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
 import { useEffect, useState, useMemo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
@@ -119,7 +120,7 @@ export default function Application({
       },
       delay: 1,
     }),
-    []
+    [],
   );
 
   if (init) {
@@ -165,6 +166,7 @@ export default function Application({
             <Component {...pageProps} />
           </Layout>
           <Analytics />
+          <SpeedInsights />
         </AppWrapper>
       </ChakraProvider>
     );
