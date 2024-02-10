@@ -1,7 +1,7 @@
 import { VStack } from "@chakra-ui/react";
-import TechStackSummary from "@/components/TechStackSummary";
-import WakatimeSummary from "@/components/WakatimeSummary";
-import ExperienceSummary from "@/components/ExperienceSummary";
+import TechStackSummary from "@/components/about/TechStackSummary";
+import WakatimeSummary from "@/components/about/WakatimeSummary";
+import ExperienceSummary from "@/components/about/ExperienceSummary";
 
 export default function About() {
   return (

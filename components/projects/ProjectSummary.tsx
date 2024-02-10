@@ -1,5 +1,5 @@
 import { Heading, Text, VStack } from "@chakra-ui/react";
-import projects from "../data/projects.json";
+import projects from "@/data/projects.json";
 import ProjectCard from "./ProjectCard";
 
 export default function ProjectSummary() {

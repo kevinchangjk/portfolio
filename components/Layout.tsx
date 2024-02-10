@@ -1,6 +1,4 @@
-import Navbar from "@/components/Navbar";
 import { Box, HStack, VStack, useColorModeValue } from "@chakra-ui/react";
-import Footer from "./Footer";
 import { AnimatePresence, motion } from "framer-motion";
 import { NextRouter } from "next/router";
 import {
@@ -11,6 +9,8 @@ import {
   pageVariants,
 } from "@/utils/motion";
 import { useAppContext } from "@/context/state";
+import Navbar from "./general/Navbar";
+import Footer from "./general/Footer";
 
 export default function Layout({
   router,

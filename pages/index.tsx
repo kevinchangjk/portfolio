@@ -1,5 +1,5 @@
-import Introduction from "@/components/Introduction";
-import Profile from "@/components/Profile";
+import Introduction from "@/components/general/Introduction";
+import Profile from "@/components/general/Profile";
 import { VStack, keyframes } from "@chakra-ui/react";
 
 const shift = keyframes`
@@ -30,8 +30,8 @@ export default function Home() {
           "2xl": "16rem",
         }}
       >
-        <Profile animation={gradientFlowAnimation}/>
-        <Introduction animation={gradientFlowAnimation}/>
+        <Profile animation={gradientFlowAnimation} />
+        <Introduction animation={gradientFlowAnimation} />
       </VStack>
     </main>
   );

@@ -1,4 +1,4 @@
-import ProjectSummary from "@/components/ProjectSummary";
+import ProjectSummary from "@/components/projects/ProjectSummary";
 import { VStack } from "@chakra-ui/react";
 
 export default function Projects() {
