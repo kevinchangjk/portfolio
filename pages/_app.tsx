@@ -14,6 +14,7 @@ import { NextRouter } from "next/router";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
+import { darkWakatime, lightWakatime } from "@/utils/links";
 
 export default function Application({
   Component,
@@ -49,6 +50,8 @@ export default function Application({
           content="Digital Portfolio of Kevin Chang, a Software Developer"
           key="desc"
         />
+        <link rel="preload" href={lightWakatime} as="image" />
+        <link rel="preload" href={darkWakatime} as="image" />
       </Head>
       <AppWrapper>
         <ColorModeScript
