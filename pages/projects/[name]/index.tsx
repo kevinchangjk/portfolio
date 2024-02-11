@@ -583,7 +583,6 @@ export default function ProjectPage({ project }: { project: Project }) {
   );
 }
 
-// TODO: maybe this is the cause of the latency
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { name } = context.query;
   if (typeof name !== "string") {
@@ -602,4 +601,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   };
 
   return { props };
+};
+
+export const config = {
+  runtime: "experimental-edge",
 };
