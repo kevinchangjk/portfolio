@@ -55,7 +55,6 @@ export default function ProjectPage({ project }: { project: Project }) {
             "2xl": "3xl",
           }}
           boxShadow="2xl"
-          placeholder="blur"
         />
       );
     } else {
@@ -602,4 +601,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   };
 
   return { props };
+};
+
+export const config = {
+  runtime: "experimental-edge", // experimental, API might change
 };

@@ -18,21 +18,22 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
   const { title, name, description, imageUrl, techStack } = projectData;
   const { enroute } = useAppContext();
   const [isDesktop, setIsDesktop] = useState(true);
+  const path = `/projects/${name}`;
 
   useEffect(() => {
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
+        navigator.userAgent,
       )
     ) {
       setIsDesktop(false);
     } else {
       setIsDesktop(true);
     }
+    // eslint-disable-next-line
   }, []);
 
-  function onClickHandler(name: string) {
-    const path = `/projects/${name}`;
+  function onClickHandler() {
     enroute(path, { scroll: true });
   }
 
@@ -99,7 +100,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
         width="full"
         height="full"
         rounded="inherit"
-        onClick={() => onClickHandler(name)}
+        onClick={() => onClickHandler()}
       >
         <Image
           src={imageUrl}
@@ -122,7 +123,6 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           }}
           fit="cover"
           rounded="inherit"
-          placeholder="blur"
         />
         <CardBody
           position="absolute"

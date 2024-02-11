@@ -1,4 +1,4 @@
-import InterestedPositions from "@/components/InterestedPositions";
+import InterestedPositions from "@/components/contact/InterestedPositions";
 import { useAppContext } from "@/context/state";
 import { getGradientFlow } from "@/utils/gradient";
 import { GRADIENT_FLOW_DURATION } from "@/utils/motion";

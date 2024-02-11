@@ -1,7 +1,7 @@
 import { SimpleGrid } from "@chakra-ui/react";
 import TechStackCell from "./TechStackCell";
 import { Tech } from "@/utils/types";
-import data from "../data/tech-stack.json" assert { type: "json" };
+import data from "@/data/tech-stack.json" assert { type: "json" };
 
 function buildCell(techData: Tech) {
   return <TechStackCell techData={techData} key={`techStack-${techData.name}`} />;

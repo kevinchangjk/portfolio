@@ -1,4 +1,4 @@
-import ExperienceCard from "@/components/ExperienceCard";
+import ExperienceCard from "./ExperienceCard";
 import {
   Button,
   HStack,
@@ -10,7 +10,7 @@ import {
   VStack,
   useColorModeValue,
 } from "@chakra-ui/react";
-import experiences from "../data/experiences.json";
+import experiences from "@/data/experiences.json";
 import { Experience } from "@/utils/types";
 import { FaRegFilePdf } from "react-icons/fa";
 
@@ -61,10 +61,10 @@ export default function ExperienceSummary() {
     <VStack
       align="inherit"
       spacing={{
-          base: "4rem",
-          md: "5rem",
-          xl: "6rem",
-          "2xl": "7rem",
+        base: "4rem",
+        md: "5rem",
+        xl: "6rem",
+        "2xl": "7rem",
       }}
     >
       <VStack
@@ -101,36 +101,40 @@ export default function ExperienceSummary() {
         <Heading variant="subPrimary" textAlign="left">
           Work Experience
         </Heading>
-        <VStack align="inherit"
-        spacing={{
-          base: "0.5rem",
-          md: "0.75rem",
-          xl: "1rem",
-          "2xl": "1.25rem",
-        }}>
-        {displayExperiences(work)}
+        <VStack
+          align="inherit"
+          spacing={{
+            base: "0.5rem",
+            md: "0.75rem",
+            xl: "1rem",
+            "2xl": "1.25rem",
+          }}
+        >
+          {displayExperiences(work)}
         </VStack>
       </VStack>
-      <VStack align="inherit"
+      <VStack
+        align="inherit"
         spacing={{
           base: "1rem",
           md: "1.5rem",
           xl: "2rem",
           "2xl": "2.5rem",
-        }}>
-        <Heading
-          variant="subPrimary"
-          textAlign="left"
-        >
+        }}
+      >
+        <Heading variant="subPrimary" textAlign="left">
           Education
         </Heading>
-        <VStack align="inherit" spacing={{
-          base: "0.5rem",
-          md: "0.75rem",
-          xl: "1rem",
-          "2xl": "1.25rem",
-        }}>
-        {displayExperiences(education)}
+        <VStack
+          align="inherit"
+          spacing={{
+            base: "0.5rem",
+            md: "0.75rem",
+            xl: "1rem",
+            "2xl": "1.25rem",
+          }}
+        >
+          {displayExperiences(education)}
         </VStack>
       </VStack>
     </VStack>

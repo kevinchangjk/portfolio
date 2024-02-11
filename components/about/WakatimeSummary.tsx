@@ -1,3 +1,4 @@
+import { darkWakatime, lightWakatime } from "@/utils/links";
 import {
   Heading,
   Image,
@@ -7,11 +8,7 @@ import {
 } from "@chakra-ui/react";
 
 export default function WakatimeSummary() {
-  const lightSum =
-    "https://wakatime.com/share/@kevinchangjk/bd115c38-03d5-4a45-8a73-c6b89911232c.svg";
-  const darkSum =
-    "https://wakatime.com/share/@kevinchangjk/b1bac554-077c-43de-8ea2-7a04d3f426e5.svg";
-  const summary = useColorModeValue(lightSum, darkSum);
+  const summary = useColorModeValue(lightWakatime, darkWakatime);
 
   return (
     <VStack
@@ -60,7 +57,7 @@ export default function WakatimeSummary() {
         rounded="xl"
         src={summary}
         boxShadow="2xl"
-        placeholder="blur"
+        fetchPriority="high"
       />
     </VStack>
   );
