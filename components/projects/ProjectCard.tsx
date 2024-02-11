@@ -16,7 +16,7 @@ import { useEffect, useState } from "react";
 
 export default function ProjectCard({ projectData }: { projectData: Project }) {
   const { title, name, description, imageUrl, techStack } = projectData;
-  const { router, enroute } = useAppContext();
+  const { enroute } = useAppContext();
   const [isDesktop, setIsDesktop] = useState(true);
   const path = `/projects/${name}`;
 
@@ -30,7 +30,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
     } else {
       setIsDesktop(true);
     }
-    router?.prefetch(path);
+    // eslint-disable-next-line
   }, []);
 
   function onClickHandler() {

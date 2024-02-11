@@ -604,5 +604,5 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 };
 
 export const config = {
-  runtime: "experimental-edge",
+  runtime: "experimental-edge", // experimental, API might change
 };
