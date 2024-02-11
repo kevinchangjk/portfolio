@@ -14,7 +14,6 @@ import { NextRouter } from "next/router";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
-import TriangleParticles from "@/components/general/TriangleParticles";
 
 export default function Application({
   Component,
@@ -55,7 +54,6 @@ export default function Application({
         <ColorModeScript
           initialColorMode={theme.colorConfig.initialColorMode}
         />
-        <TriangleParticles />
         <Layout router={router}>
           <Component {...pageProps} />
         </Layout>
