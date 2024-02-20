@@ -1,3 +1,6 @@
+// Resume file path
+export const resumeFileName = "/Kevin_Chang_Jon_Kit_Resume.pdf";
+
 // Wakatime
 export const lightWakatime =
   "https://wakatime.com/share/@kevinchangjk/bd115c38-03d5-4a45-8a73-c6b89911232c.svg";

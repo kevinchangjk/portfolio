@@ -13,6 +13,7 @@ import {
 import experiences from "@/data/experiences.json";
 import { Experience } from "@/utils/types";
 import { FaRegFilePdf } from "react-icons/fa";
+import { resumeFileName } from "@/utils/links";
 
 export default function ExperienceSummary() {
   function displayExperiences(experiences: Experience[]) {
@@ -45,7 +46,7 @@ export default function ExperienceSummary() {
                 }}
               />
               <Text variant="powerful" fontSize={{ base: "md", xl: "lg" }}>
-                <LinkOverlay href="/Resume_Portfolio.pdf" isExternal>
+                <LinkOverlay href={resumeFileName} isExternal>
                   View My Resume
                 </LinkOverlay>
               </Text>
