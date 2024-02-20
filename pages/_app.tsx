@@ -38,7 +38,7 @@ export default function Application({
         <meta property="og:title" content="kevinchangjk" />
         <meta
           property="og:description"
-          content="Digital Portfolio of Kevin Chang, a Software Developer"
+          content="Digital Portfolio of Kevin Chang Jon Kit, a Software Engineer"
         />
         <meta property="og:image" content="/images/preview.png" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -47,7 +47,7 @@ export default function Application({
         <meta name="title" content="kevinchangjk" />
         <meta
           name="description"
-          content="Digital Portfolio of Kevin Chang, a Software Developer"
+          content="Digital Portfolio of Kevin Chang Jon Kit, a Software Engineer"
           key="desc"
         />
         <link rel="preload" href={lightWakatime} as="image" />
