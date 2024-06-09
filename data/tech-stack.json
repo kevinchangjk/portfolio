@@ -11,14 +11,9 @@
       "sourceUrl": "https://www.python.org/"
     },
     {
-      "name": "cpp",
-      "imageUrl": "/images/tech-stack/cpp.svg",
-      "sourceUrl": "https://cplusplus.com/"
-    },
-    {
-      "name": "java",
-      "imageUrl": "/images/tech-stack/java.svg",
-      "sourceUrl": "https://dev.java/"
+      "name": "rust",
+      "imageUrl": "/images/tech-stack/rust.svg",
+      "sourceUrl": "https://www.rust-lang.org/"
     },
     {
       "name": "react",
@@ -34,6 +29,11 @@
       "name": "postgres",
       "imageUrl": "/images/tech-stack/postgres.svg",
       "sourceUrl": "https://www.postgresql.org/"
+    },
+    {
+      "name": "redis",
+      "imageUrl": "/images/tech-stack/redis.svg",
+      "sourceUrl": "https://redis.io/"
     },
     {
       "name": "neovim",

@@ -1,5 +1,21 @@
 [
   {
+    "title": "PayScribe",
+    "name": "payscribe",
+    "description": "Group Payment Tracking Bot on Telegram",
+    "overview": [
+      "Throughout my years studying in NUS, I’ve mostly spent my time with the same groups of friends. We shared meals together, did many activities together, and to help track how much we owe one another for these payments we used Splitwise.",
+      "However, it can sometimes be tiresome to create a new group for Splitwise, especially if it’s just for a trip, or some temporary situation. Oftentimes, I already have a group prepared for me in Telegram, the messaging platform. Why not bring the group expense tracking functionality to Telegram?",
+      "PayScribe is written in Rust using Teloxide, and communicates with a Redis server as its database; both Rust and Redis are new skills that I was interested to pick up. It was rather challenging learning these unfamiliar technologies in the equally unfamiliar context of Telegram bots, and it certainly took many weekends to accomplish this (I was also interning full-time).",
+      "Even so, this was a very rewarding project. I had the opportunity to explore Rust, Redis, debt simplification algorithms, end user testing, data migration, and being my own product manager."
+    ],
+    "imageUrl": "/images/projects/payscribe.jpeg",
+    "imageIsPortrait": true,
+    "techStack": ["Rust", "Redis", "Telegram API"],
+    "sourceUrl": "https://github.com/kevinchangjk/PayScribe",
+    "previewUrl": "https://t.me/PayScribeBot"
+  },
+  {
     "title": "NiftyZone",
     "name": "niftyzone",
     "description": "NFT marketplace for curated art on Binance Chain",
