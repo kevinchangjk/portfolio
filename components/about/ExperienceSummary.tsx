@@ -85,7 +85,7 @@ export default function ExperienceSummary() {
           fontSize={{ base: "md", md: "lg", xl: "xl", "2xl": "2xl" }}
         >
           {
-            "I am currently in my third year as an undergraduate at the National University of Singapore's School of Computing, and I'm looking to graduate in summer 2025. I have extensive experience as a software developer, primarily in back-end and blockchain development."
+            "I am in my final year as an undergraduate at the National University of Singapore's School of Computing, and I'm looking to graduate in summer 2025. I enjoy working on code, solving problems, and learning about new technologies. On the side, I do a bunch of a bit of calisthenics, speedcubing, cooking, and piano, to keep my mental health in check."
           }
         </Text>
         <ResumeButton />
