@@ -16,8 +16,7 @@ import { useAppContext } from "@/context/state";
 import { useEffect, useState } from "react";
 
 export default function ProjectCard({ projectData }: { projectData: Project }) {
-  const { title, name, description, imageUrl, imageIsPortrait, techStack } =
-    projectData;
+  const { title, name, description, imageUrl, techStack } = projectData;
   const { enroute } = useAppContext();
   const [isDesktop, setIsDesktop] = useState(true);
   const path = `/projects/${name}`;
@@ -87,7 +86,14 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
   return (
     <Card
       position="relative"
-      width="max"
+      width={{
+        base: "lg",
+        sm: "xl",
+        md: "2xl",
+        lg: "3xl",
+        xl: "4xl",
+        "2xl": "5xl",
+      }}
       maxWidth="full"
       boxShadow="2xl"
       rounded={{
@@ -106,14 +112,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
       >
         <Box
           position="relative"
-          width={{
-            base: "lg",
-            sm: "xl",
-            md: "2xl",
-            lg: "3xl",
-            xl: "4xl",
-            "2xl": "5xl",
-          }}
+          width="full"
           height={{
             base: "md",
             md: "lg",
@@ -123,19 +122,17 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           overflow="hidden"
           rounded="inherit"
         >
-          {imageIsPortrait && (
-            <Image
-              src={imageUrl}
-              alt=""
-              position="absolute"
-              inset={0}
-              width="full"
-              height="full"
-              fit="cover"
-              filter="blur(16px)"
-              transform="scale(1.08)"
-            />
-          )}
+          <Image
+            src={imageUrl}
+            alt=""
+            position="absolute"
+            inset={0}
+            width="full"
+            height="full"
+            fit="cover"
+            filter="blur(16px)"
+            transform="scale(1.08)"
+          />
           <Image
             src={imageUrl}
             alt="Project Thumbnail"
@@ -143,7 +140,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
             display="block"
             width="full"
             height="full"
-            fit={imageIsPortrait ? "contain" : "cover"}
+            fit="contain"
             margin="auto"
           />
         </Box>
@@ -152,6 +149,7 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
           top={0}
           left={0}
           width="full"
+          maxWidth="full"
           height="full"
           display="flex"
           flexDirection="column"
@@ -225,3 +223,4 @@ export default function ProjectCard({ projectData }: { projectData: Project }) {
     </Card>
   );
 }
+
