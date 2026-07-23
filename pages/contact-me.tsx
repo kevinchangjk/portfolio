@@ -72,7 +72,8 @@ export default function ContactMe() {
               "2xl": "2xl",
             }}
           >
-            I am always on the lookout for opportunities in fields like these.
+            I am always on the lookout for interesting news and opportunities in
+            these:
           </Text>
         </VStack>
         <InterestedPositions />

@@ -4,12 +4,12 @@
 
 # kevinchangjk
 
-_Digital portfolio of Kevin Chang, a Software Engineer_
+_Digital portfolio of Kevin Chang, Software Engineer_
 
 ## Background
 
 <p style="text-align: justify;">
-    This is a web application meant for providing a look into my software development skills.
+    This is a web application meant for providing a look at <strong>me as a software engineer</strong>.
     The app itself is built with Next.js, with Chakra-UI as the front-end framework, and deployed on Vercel.
 </p>
 

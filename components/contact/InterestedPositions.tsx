@@ -2,12 +2,12 @@ import { Tag, Text, Wrap, WrapItem } from "@chakra-ui/react";
 
 const positions = [
   "Software Engineering",
-  "Web Development",
-  "Cybersecurity",
-  "Machine Learning",
-  "Web 3.0",
-  "DevOps",
-  "Blockchain Development",
+  "Back-end Infrastructure",
+  "Distributed Systems",
+  "Database Systems",
+  "Artificial Intelligence",
+  "Blockchain & Web3",
+  "Developer Tooling",
 ];
 
 export default function InterestedPositions() {

@@ -62,7 +62,7 @@ export default function ProjectSummary() {
           }}
           textAlign="justify"
         >
-          Shed some sweat and tears (no blood)
+          Some challenges, some journeys, and a lot of kicking ass
         </Text>
       </VStack>
       <ProjectStack />
