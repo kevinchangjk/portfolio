@@ -114,12 +114,13 @@ export default function Introduction({ animation }: { animation: string }) {
           _light={{ color: "gray.3" }}
           _dark={{ color: "gray.4" }}
         >
-          {"I'm"} {buildGithubLink()}, a software developer based in Singapore.
-          I{" don't"} want to prattle on too much{" "}
-          {buildLink("about me", "/about")}, but programming is my passion, and
-          I enjoy working on all kinds of {buildLink("projects", "/projects")},
-          from web to mobile development. Feel free to{" "}
-          {buildLink("contact me", "/contact-me")} any time for a chat.
+          {"I'm"} {buildGithubLink()}, a software engineer based in Singapore. I
+          {" don't"} want to prattle on too much{" "}
+          {buildLink("about me", "/about")}, but I enjoy learning and building
+          stuff. I've played around with some interesting{" "}
+          {buildLink("projects", "/projects")} recently, with more along the
+          way. Feel free to {buildLink("contact me", "/contact-me")} any time
+          for a chat!
         </Box>
       </VStack>
     );

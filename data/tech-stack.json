@@ -1,9 +1,9 @@
 {
   "techStack": [
     {
-      "name": "typescript",
-      "imageUrl": "/images/tech-stack/typescript.svg",
-      "sourceUrl": "https://www.typescriptlang.org/"
+      "name": "rust",
+      "imageUrl": "/images/tech-stack/rust.svg",
+      "sourceUrl": "https://www.rust-lang.org/"
     },
     {
       "name": "python",
@@ -11,24 +11,19 @@
       "sourceUrl": "https://www.python.org/"
     },
     {
-      "name": "rust",
-      "imageUrl": "/images/tech-stack/rust.svg",
-      "sourceUrl": "https://www.rust-lang.org/"
-    },
-    {
-      "name": "react",
-      "imageUrl": "/images/tech-stack/react.svg",
-      "sourceUrl": "https://react.dev/"
-    },
-    {
-      "name": "node",
-      "imageUrl": "/images/tech-stack/node.svg",
-      "sourceUrl": "https://nodejs.org/en/about"
+      "name": "java",
+      "imageUrl": "/images/tech-stack/java.svg",
+      "sourceUrl": "https://www.java.com/"
     },
     {
       "name": "postgres",
       "imageUrl": "/images/tech-stack/postgres.svg",
       "sourceUrl": "https://www.postgresql.org/"
+    },
+    {
+      "name": "kafka",
+      "imageUrl": "/images/tech-stack/kafka.svg",
+      "sourceUrl": "https://kafka.apache.org/"
     },
     {
       "name": "redis",
@@ -39,6 +34,11 @@
       "name": "neovim",
       "imageUrl": "/images/tech-stack/neovim.svg",
       "sourceUrl": "https://neovim.io/"
+    },
+    {
+      "name": "claude",
+      "imageUrl": "/images/tech-stack/claude.svg",
+      "sourceUrl": "https://claude.ai/"
     }
   ]
 }

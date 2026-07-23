@@ -4,7 +4,7 @@
 
 # kevinchangjk
 
-_Digital portfolio of Kevin Chang, a Software Developer_
+_Digital portfolio of Kevin Chang, a Software Engineer_
 
 ## Background
 

@@ -80,14 +80,46 @@ export default function ExperienceSummary() {
         <Heading variant="primary" textAlign="left">
           About Me
         </Heading>
-        <Text
-          variant="paragraph"
-          fontSize={{ base: "md", md: "lg", xl: "xl", "2xl": "2xl" }}
+        <VStack
+          align="inherit"
+          spacing={{
+            base: "0.5rem",
+            md: "0.75rem",
+            xl: "1rem",
+            "2xl": "1.25rem",
+          }}
         >
-          {
-            "I am in my final year as an undergraduate at the National University of Singapore's School of Computing, and I'm looking to graduate in summer 2025. I enjoy working on code, solving problems, and learning about new technologies. On the side, I do a bunch of a bit of calisthenics, speedcubing, cooking, and piano, to keep my mental health in check."
-          }
-        </Text>
+          <Text
+            variant="paragraph"
+            fontSize={{ base: "md", md: "lg", xl: "xl", "2xl": "2xl" }}
+          >
+            Well, I'm a software engineer. I have been working on production
+            back-end systems for over a few year. I enjoy working on all kinds
+            of back-end logic, from designing APIs and implementing complex
+            business logic to optimizing memory consumption.
+          </Text>
+          <Text
+            variant="paragraph"
+            fontSize={{ base: "md", md: "lg", xl: "xl", "2xl": "2xl" }}
+          >
+            Currently, I'm most interested in building large-scale distributed
+            systems that are highly available and performant. While exploring
+            these concepts, I've worked in the blockchain space for years
+            (arguably some of the most massive distributed systems in the
+            world), and now I'm diving deep into high-frequency trading systems.
+          </Text>
+          <Text
+            variant="paragraph"
+            fontSize={{ base: "md", md: "lg", xl: "xl", "2xl": "2xl" }}
+          >
+            Oh you want to know more about my <em>personality</em>? Alright
+            alright, sure. I'm a dreamer but also a simple man. I enjoy deep,
+            moving stories, and I listen to intense, emotional music, like rock
+            and metalcore. Sometimes, I play the piano, do calisthenics, solve
+            3x3-5x5 Rubik's cubes, and read books. I pursue fulfilment in what I
+            do. I believe fate exists for us to weave.
+          </Text>
+        </VStack>
         <ResumeButton />
       </VStack>
       <VStack
