@@ -117,7 +117,7 @@ export default function Introduction({ animation }: { animation: string }) {
           {"I'm"} {buildGithubLink()}, a software engineer based in Singapore. I
           {" don't"} want to prattle on too much{" "}
           {buildLink("about me", "/about")}, but I enjoy learning and building
-          stuff. I've played around with some interesting{" "}
+          stuff. I&apos;ve played around with some interesting{" "}
           {buildLink("projects", "/projects")} recently, with more along the
           way. Feel free to {buildLink("contact me", "/contact-me")} any time
           for a chat!

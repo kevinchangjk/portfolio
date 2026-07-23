@@ -93,7 +93,7 @@ export default function ExperienceSummary() {
             variant="paragraph"
             fontSize={{ base: "md", md: "lg", xl: "xl", "2xl": "2xl" }}
           >
-            Well, I'm a software engineer. I have been working on production
+            Well, I&apos;m a software engineer. I have been working on production
             back-end systems for over a few year. I enjoy working on all kinds
             of back-end logic, from designing APIs and implementing complex
             business logic to optimizing memory consumption.
@@ -102,21 +102,21 @@ export default function ExperienceSummary() {
             variant="paragraph"
             fontSize={{ base: "md", md: "lg", xl: "xl", "2xl": "2xl" }}
           >
-            Currently, I'm most interested in building large-scale distributed
+            Currently, I&apos;m most interested in building large-scale distributed
             systems that are highly available and performant. While exploring
-            these concepts, I've worked in the blockchain space for years
+            these concepts, I&apos;ve worked in the blockchain space for years
             (arguably some of the most massive distributed systems in the
-            world), and now I'm diving deep into high-frequency trading systems.
+            world), and now I&apos;m diving deep into high-frequency trading systems.
           </Text>
           <Text
             variant="paragraph"
             fontSize={{ base: "md", md: "lg", xl: "xl", "2xl": "2xl" }}
           >
             Oh you want to know more about my <em>personality</em>? Alright
-            alright, sure. I'm a dreamer but also a simple man. I enjoy deep,
+            alright, sure. I&apos;m a dreamer but also a simple man. I enjoy deep,
             moving stories, and I listen to intense, emotional music, like rock
             and metalcore. Sometimes, I play the piano, do calisthenics, solve
-            3x3-5x5 Rubik's cubes, and read books. I pursue fulfilment in what I
+            3x3-5x5 Rubik&apos;s cubes, and read books. I pursue fulfilment in what I
             do. I believe fate exists for us to weave.
           </Text>
         </VStack>
